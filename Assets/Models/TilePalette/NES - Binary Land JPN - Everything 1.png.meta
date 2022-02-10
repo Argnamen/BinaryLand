@@ -1,0 +1,4920 @@
+fileFormatVersion: 2
+guid: ff10859898db0cb4897d1ae002f3bacc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5810243788024820035
+    second: ManGreenStay
+  - first:
+      213: 6647273937526163490
+    second: ManGreenDown(1)
+  - first:
+      213: 6283797042121969537
+    second: ManGreenDown(2)
+  - first:
+      213: 5628371518247911066
+    second: ManGreenDown(3)
+  - first:
+      213: 3500853750154373358
+    second: ManGreenUp(1)
+  - first:
+      213: 1070880505084156222
+    second: ManGreenUp(2)
+  - first:
+      213: 5689885839377546351
+    second: ManGreenUp(3)
+  - first:
+      213: 3966931142029040213
+    second: ManGreenLeft(1)
+  - first:
+      213: -7075615306728255342
+    second: ManGreenLeft(2)
+  - first:
+      213: 7290419888840888281
+    second: ManGreenLeft(3)
+  - first:
+      213: -6972479501186044963
+    second: ManGreenClick(1)
+  - first:
+      213: -7290614608703083790
+    second: ManGreenClick(2)
+  - first:
+      213: -7865135227123472863
+    second: ManGreenFinal(1)
+  - first:
+      213: 8285663218321701011
+    second: ManGreenFinal(2)
+  - first:
+      213: -1255400639766836843
+    second: NES - Binary Land JPN - Everything_14
+  - first:
+      213: -3267033450630879290
+    second: NES - Binary Land JPN - Everything_15
+  - first:
+      213: 2476079898256518408
+    second: NES - Binary Land JPN - Everything_16
+  - first:
+      213: -7807325779317066854
+    second: NES - Binary Land JPN - Everything_17
+  - first:
+      213: 5968137327929350572
+    second: NES - Binary Land JPN - Everything_18
+  - first:
+      213: 4956360553700461867
+    second: NES - Binary Land JPN - Everything_19
+  - first:
+      213: -1751038236352083203
+    second: NES - Binary Land JPN - Everything_20
+  - first:
+      213: 1358680717909899305
+    second: NES - Binary Land JPN - Everything_21
+  - first:
+      213: 5099389754746045268
+    second: NES - Binary Land JPN - Everything_22
+  - first:
+      213: 471771823194543547
+    second: NES - Binary Land JPN - Everything_23
+  - first:
+      213: -25363879997403996
+    second: NES - Binary Land JPN - Everything_24
+  - first:
+      213: -3125766751575758898
+    second: NES - Binary Land JPN - Everything_25
+  - first:
+      213: -2939688535385264044
+    second: NES - Binary Land JPN - Everything_26
+  - first:
+      213: -1831053732765792195
+    second: NES - Binary Land JPN - Everything_27
+  - first:
+      213: -6137714970927273546
+    second: NES - Binary Land JPN - Everything_28
+  - first:
+      213: -6502927613414658808
+    second: NES - Binary Land JPN - Everything_29
+  - first:
+      213: -5090947662396748563
+    second: NES - Binary Land JPN - Everything_30
+  - first:
+      213: -961868357385377343
+    second: NES - Binary Land JPN - Everything_31
+  - first:
+      213: -8268600947464769944
+    second: NES - Binary Land JPN - Everything_32
+  - first:
+      213: 3974619912418421469
+    second: NES - Binary Land JPN - Everything_33
+  - first:
+      213: 9039453513705942611
+    second: NES - Binary Land JPN - Everything_34
+  - first:
+      213: -2018339888785698123
+    second: NES - Binary Land JPN - Everything_35
+  - first:
+      213: 4614686997726652082
+    second: NES - Binary Land JPN - Everything_36
+  - first:
+      213: 1114112646455454963
+    second: NES - Binary Land JPN - Everything_37
+  - first:
+      213: -6982711729323453060
+    second: NES - Binary Land JPN - Everything_38
+  - first:
+      213: -6449742937085345809
+    second: NES - Binary Land JPN - Everything_39
+  - first:
+      213: 7909917781401529071
+    second: NES - Binary Land JPN - Everything_40
+  - first:
+      213: 5677256424476761498
+    second: NES - Binary Land JPN - Everything_41
+  - first:
+      213: 1076952119965251518
+    second: NES - Binary Land JPN - Everything_42
+  - first:
+      213: 1480534800585753731
+    second: NES - Binary Land JPN - Everything_43
+  - first:
+      213: -4295535688318408358
+    second: NES - Binary Land JPN - Everything_44
+  - first:
+      213: 7765797889937442898
+    second: NES - Binary Land JPN - Everything_45
+  - first:
+      213: -8075241483469608769
+    second: NES - Binary Land JPN - Everything_46
+  - first:
+      213: -7911336267885787131
+    second: NES - Binary Land JPN - Everything_47
+  - first:
+      213: -8430324254793589044
+    second: NES - Binary Land JPN - Everything_48
+  - first:
+      213: 6025824540873377977
+    second: NES - Binary Land JPN - Everything_49
+  - first:
+      213: -2739536416759589702
+    second: NES - Binary Land JPN - Everything_50
+  - first:
+      213: 8288838058488863143
+    second: NES - Binary Land JPN - Everything_51
+  - first:
+      213: 6469755234221491319
+    second: NES - Binary Land JPN - Everything_52
+  - first:
+      213: 2511737309319857842
+    second: NES - Binary Land JPN - Everything_53
+  - first:
+      213: -3002249107425470318
+    second: NES - Binary Land JPN - Everything_54
+  - first:
+      213: 7843050770519319576
+    second: NES - Binary Land JPN - Everything_55
+  - first:
+      213: 5641545910963720941
+    second: NES - Binary Land JPN - Everything_56
+  - first:
+      213: 5300322692779385893
+    second: NES - Binary Land JPN - Everything_57
+  - first:
+      213: -9185896463571463199
+    second: NES - Binary Land JPN - Everything_58
+  - first:
+      213: -6057231124237322146
+    second: NES - Binary Land JPN - Everything_59
+  - first:
+      213: -1749042198209325592
+    second: NES - Binary Land JPN - Everything_60
+  - first:
+      213: -1300827040547362725
+    second: NES - Binary Land JPN - Everything_61
+  - first:
+      213: 2482308189542732392
+    second: NES - Binary Land JPN - Everything_62
+  - first:
+      213: 3949400934543004783
+    second: NES - Binary Land JPN - Everything_63
+  - first:
+      213: 8733834054222598050
+    second: NES - Binary Land JPN - Everything_64
+  - first:
+      213: -2771842342984826607
+    second: NES - Binary Land JPN - Everything_65
+  - first:
+      213: 864999265903544112
+    second: NES - Binary Land JPN - Everything_66
+  - first:
+      213: -6075660510122289776
+    second: NES - Binary Land JPN - Everything_67
+  - first:
+      213: -5500280345314660255
+    second: NES - Binary Land JPN - Everything_68
+  - first:
+      213: 2634775824531997459
+    second: NES - Binary Land JPN - Everything_69
+  - first:
+      213: 180130218646920195
+    second: NES - Binary Land JPN - Everything_70
+  - first:
+      213: 1112819579551821632
+    second: NES - Binary Land JPN - Everything_71
+  - first:
+      213: 7615547782637578032
+    second: NES - Binary Land JPN - Everything_72
+  - first:
+      213: -4122727175832563657
+    second: NES - Binary Land JPN - Everything_73
+  - first:
+      213: 5244334111145253740
+    second: NES - Binary Land JPN - Everything_74
+  - first:
+      213: 1910684969193612978
+    second: NES - Binary Land JPN - Everything_75
+  - first:
+      213: 122052562381892983
+    second: NES - Binary Land JPN - Everything_76
+  - first:
+      213: 4524946235343237878
+    second: NES - Binary Land JPN - Everything_77
+  - first:
+      213: -7782492671443515870
+    second: NES - Binary Land JPN - Everything_78
+  - first:
+      213: -1897811222076970658
+    second: NES - Binary Land JPN - Everything_79
+  - first:
+      213: 1221280240406575361
+    second: NES - Binary Land JPN - Everything_80
+  - first:
+      213: 654611822979182965
+    second: NES - Binary Land JPN - Everything_81
+  - first:
+      213: 4302589727614126377
+    second: NES - Binary Land JPN - Everything_82
+  - first:
+      213: 5386733413635804049
+    second: NES - Binary Land JPN - Everything_83
+  - first:
+      213: 6718711330819361423
+    second: NES - Binary Land JPN - Everything_84
+  - first:
+      213: 4629050496093877841
+    second: NES - Binary Land JPN - Everything_85
+  - first:
+      213: -19094562752745958
+    second: NES - Binary Land JPN - Everything_86
+  - first:
+      213: -2695600858696719324
+    second: NES - Binary Land JPN - Everything_87
+  - first:
+      213: 6032019930780694865
+    second: NES - Binary Land JPN - Everything_88
+  - first:
+      213: -9061471681899598029
+    second: NES - Binary Land JPN - Everything_89
+  - first:
+      213: 1334555466004528194
+    second: NES - Binary Land JPN - Everything_90
+  - first:
+      213: 5378052337001680099
+    second: NES - Binary Land JPN - Everything_91
+  - first:
+      213: -1017471052395911442
+    second: NES - Binary Land JPN - Everything_92
+  - first:
+      213: 9148177648484844153
+    second: NES - Binary Land JPN - Everything_93
+  - first:
+      213: -4453790355958675223
+    second: NES - Binary Land JPN - Everything_94
+  - first:
+      213: 6144202315638418452
+    second: NES - Binary Land JPN - Everything_95
+  - first:
+      213: -3529496940133120763
+    second: NES - Binary Land JPN - Everything_96
+  - first:
+      213: -3323364593291923878
+    second: NES - Binary Land JPN - Everything_97
+  - first:
+      213: 477004977348538249
+    second: NES - Binary Land JPN - Everything_98
+  - first:
+      213: -4671370328317986726
+    second: NES - Binary Land JPN - Everything_99
+  - first:
+      213: 4198668875795615892
+    second: NES - Binary Land JPN - Everything_100
+  - first:
+      213: -2975754769545908014
+    second: NES - Binary Land JPN - Everything_101
+  - first:
+      213: -4980645936047589265
+    second: NES - Binary Land JPN - Everything_102
+  - first:
+      213: 4626267771849232141
+    second: NES - Binary Land JPN - Everything_103
+  - first:
+      213: 5701987913110425403
+    second: NES - Binary Land JPN - Everything_104
+  - first:
+      213: -5702577893621672590
+    second: NES - Binary Land JPN - Everything_105
+  - first:
+      213: -4200399501530719430
+    second: NES - Binary Land JPN - Everything_106
+  - first:
+      213: 1004461437292457971
+    second: NES - Binary Land JPN - Everything_107
+  - first:
+      213: -5599973754849653661
+    second: NES - Binary Land JPN - Everything_108
+  - first:
+      213: 6758830313458872696
+    second: NES - Binary Land JPN - Everything_109
+  - first:
+      213: -5846370594958767652
+    second: NES - Binary Land JPN - Everything_110
+  - first:
+      213: -574058063902926406
+    second: NES - Binary Land JPN - Everything_111
+  - first:
+      213: -7802211810856292403
+    second: NES - Binary Land JPN - Everything_112
+  - first:
+      213: -3535527932927794947
+    second: NES - Binary Land JPN - Everything_113
+  - first:
+      213: 7514026358030955917
+    second: NES - Binary Land JPN - Everything_114
+  - first:
+      213: -5402250902086404838
+    second: NES - Binary Land JPN - Everything_115
+  - first:
+      213: -3295799720487124038
+    second: NES - Binary Land JPN - Everything_116
+  - first:
+      213: 8251850838711740788
+    second: NES - Binary Land JPN - Everything_117
+  - first:
+      213: -8240006080585759423
+    second: NES - Binary Land JPN - Everything_118
+  - first:
+      213: 3671299598678218617
+    second: NES - Binary Land JPN - Everything_119
+  - first:
+      213: 3933254038950618964
+    second: NES - Binary Land JPN - Everything_120
+  - first:
+      213: -3104191277698974467
+    second: NES - Binary Land JPN - Everything_121
+  - first:
+      213: -8233034759598656451
+    second: NES - Binary Land JPN - Everything_122
+  - first:
+      213: -4903615499085879515
+    second: NES - Binary Land JPN - Everything_123
+  - first:
+      213: 9108558341094267540
+    second: NES - Binary Land JPN - Everything_124
+  - first:
+      213: 6178209980184370249
+    second: NES - Binary Land JPN - Everything_125
+  - first:
+      213: 4116316800560066251
+    second: NES - Binary Land JPN - Everything_126
+  - first:
+      213: -6940568905760947567
+    second: NES - Binary Land JPN - Everything_127
+  - first:
+      213: 9003601197237153535
+    second: NES - Binary Land JPN - Everything_128
+  - first:
+      213: 1237571476059461851
+    second: NES - Binary Land JPN - Everything_129
+  - first:
+      213: 3415425946362904542
+    second: NES - Binary Land JPN - Everything_130
+  - first:
+      213: -6694933641785913220
+    second: NES - Binary Land JPN - Everything_131
+  - first:
+      213: 1758371389940781015
+    second: NES - Binary Land JPN - Everything_132
+  - first:
+      213: -1135488771333408966
+    second: NES - Binary Land JPN - Everything_133
+  - first:
+      213: -7552591778921877146
+    second: NES - Binary Land JPN - Everything_134
+  - first:
+      213: 3164693512428865981
+    second: NES - Binary Land JPN - Everything_135
+  - first:
+      213: -2065774524733956972
+    second: NES - Binary Land JPN - Everything_136
+  - first:
+      213: 7192902885789300323
+    second: NES - Binary Land JPN - Everything_137
+  - first:
+      213: 8338869465685186330
+    second: NES - Binary Land JPN - Everything_138
+  - first:
+      213: 4983787840193358915
+    second: NES - Binary Land JPN - Everything_139
+  - first:
+      213: -2019898113776679342
+    second: NES - Binary Land JPN - Everything_140
+  - first:
+      213: 4233016482004630874
+    second: NES - Binary Land JPN - Everything_141
+  - first:
+      213: -68445247507578798
+    second: NES - Binary Land JPN - Everything_142
+  - first:
+      213: -4936799772236044252
+    second: NES - Binary Land JPN - Everything_143
+  - first:
+      213: 122735884364172068
+    second: NES - Binary Land JPN - Everything_144
+  - first:
+      213: 6273853755647642076
+    second: NES - Binary Land JPN - Everything_145
+  - first:
+      213: 3808662044737427342
+    second: NES - Binary Land JPN - Everything_146
+  - first:
+      213: 2589944028888525020
+    second: NES - Binary Land JPN - Everything_147
+  - first:
+      213: 3338677019975226061
+    second: NES - Binary Land JPN - Everything_148
+  - first:
+      213: -4512237563354081911
+    second: NES - Binary Land JPN - Everything_149
+  - first:
+      213: 715973509361747415
+    second: NES - Binary Land JPN - Everything_150
+  - first:
+      213: -4141503158648252574
+    second: NES - Binary Land JPN - Everything_151
+  - first:
+      213: -1165703279944760168
+    second: NES - Binary Land JPN - Everything_152
+  - first:
+      213: 9176976762382962437
+    second: NES - Binary Land JPN - Everything_153
+  - first:
+      213: -4206079542100713926
+    second: NES - Binary Land JPN - Everything_154
+  - first:
+      213: -617623596127062411
+    second: NES - Binary Land JPN - Everything_155
+  - first:
+      213: -8852596663759845613
+    second: NES - Binary Land JPN - Everything_156
+  - first:
+      213: 1647363939931461656
+    second: NES - Binary Land JPN - Everything_157
+  - first:
+      213: -1070879778330808190
+    second: NES - Binary Land JPN - Everything_158
+  - first:
+      213: -8162188333597194501
+    second: NES - Binary Land JPN - Everything_159
+  - first:
+      213: -5612478757905739467
+    second: NES - Binary Land JPN - Everything_160
+  - first:
+      213: 5791503231302610039
+    second: NES - Binary Land JPN - Everything_161
+  - first:
+      213: -7345891044290098682
+    second: NES - Binary Land JPN - Everything_162
+  - first:
+      213: -928024249374506850
+    second: NES - Binary Land JPN - Everything_163
+  - first:
+      213: -7759284829123839628
+    second: NES - Binary Land JPN - Everything_164
+  - first:
+      213: 2023603745412815152
+    second: NES - Binary Land JPN - Everything_165
+  - first:
+      213: -4690144436719118614
+    second: NES - Binary Land JPN - Everything_166
+  - first:
+      213: -1422990212847164185
+    second: NES - Binary Land JPN - Everything_167
+  - first:
+      213: -5867888935257600283
+    second: NES - Binary Land JPN - Everything_168
+  - first:
+      213: 8144610033578026982
+    second: NES - Binary Land JPN - Everything_169
+  - first:
+      213: -2651101741941225861
+    second: NES - Binary Land JPN - Everything_170
+  - first:
+      213: -1228706882033216747
+    second: NES - Binary Land JPN - Everything_171
+  - first:
+      213: 2095813558184041929
+    second: NES - Binary Land JPN - Everything_172
+  - first:
+      213: -6249377681621094175
+    second: NES - Binary Land JPN - Everything_173
+  - first:
+      213: -3713013374190313525
+    second: NES - Binary Land JPN - Everything_174
+  - first:
+      213: 7214949604835287744
+    second: NES - Binary Land JPN - Everything_175
+  - first:
+      213: -6652044400634008033
+    second: NES - Binary Land JPN - Everything_176
+  - first:
+      213: -7605750134881629467
+    second: NES - Binary Land JPN - Everything_177
+  - first:
+      213: 3704992231586134236
+    second: NES - Binary Land JPN - Everything_178
+  - first:
+      213: 7805266549896705554
+    second: NES - Binary Land JPN - Everything_179
+  - first:
+      213: 2657040496811942603
+    second: NES - Binary Land JPN - Everything_180
+  - first:
+      213: -2601253702400427814
+    second: NES - Binary Land JPN - Everything_181
+  - first:
+      213: -4434814924788522134
+    second: NES - Binary Land JPN - Everything_182
+  - first:
+      213: 6909563484311567858
+    second: NES - Binary Land JPN - Everything_183
+  - first:
+      213: 5021508087557819765
+    second: NES - Binary Land JPN - Everything_184
+  - first:
+      213: 4326697596176296490
+    second: NES - Binary Land JPN - Everything_185
+  - first:
+      213: 5605598311615065677
+    second: NES - Binary Land JPN - Everything_186
+  - first:
+      213: -7751447562198537122
+    second: NES - Binary Land JPN - Everything_187
+  - first:
+      213: -8430036497261007595
+    second: NES - Binary Land JPN - Everything_188
+  - first:
+      213: -2259983248203534010
+    second: NES - Binary Land JPN - Everything_189
+  - first:
+      213: 379915804018016466
+    second: NES - Binary Land JPN - Everything_190
+  - first:
+      213: 8123696971360603581
+    second: NES - Binary Land JPN - Everything_191
+  - first:
+      213: 4424087340039759040
+    second: NES - Binary Land JPN - Everything_192
+  - first:
+      213: -8918445830237460558
+    second: NES - Binary Land JPN - Everything_193
+  - first:
+      213: -7722457232629971885
+    second: NES - Binary Land JPN - Everything_194
+  - first:
+      213: 6484908955498148801
+    second: NES - Binary Land JPN - Everything_195
+  - first:
+      213: 8444008874195467989
+    second: NES - Binary Land JPN - Everything_196
+  - first:
+      213: 7892278485310546110
+    second: NES - Binary Land JPN - Everything_197
+  - first:
+      213: 5925876971498377616
+    second: NES - Binary Land JPN - Everything_198
+  - first:
+      213: 4791506004599155114
+    second: NameGame
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManGreenStay
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b3a3f0f122a050800000000000000
+      internalID: 5810243788024820035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenDown(1)
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22885fa6d6cdf3c50800000000000000
+      internalID: 6647273937526163490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenDown(2)
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f8458ed18843750800000000000000
+      internalID: 6283797042121969537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenDown(3)
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9eb711531efb1e40800000000000000
+      internalID: 5628371518247911066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenUp(1)
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8ab8cffe7859030800000000000000
+      internalID: 3500853750154373358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenUp(2)
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e399e6645288cde00800000000000000
+      internalID: 1070880505084156222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenUp(3)
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cbf9c460986fe40800000000000000
+      internalID: 5689885839377546351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenLeft(1)
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a53112bde5d0730800000000000000
+      internalID: 3966931142029040213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenLeft(2)
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2905523ed5d5ecd90800000000000000
+      internalID: -7075615306728255342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenLeft(3)
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfcdc93346cc2560800000000000000
+      internalID: 7290419888840888281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenClick(1)
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbec10e5d6cc3f90800000000000000
+      internalID: -6972479501186044963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenClick(2)
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faaaf504a882da90800000000000000
+      internalID: -7290614608703083790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenFinal(1)
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126e4e4ae2d69d290800000000000000
+      internalID: -7865135227123472863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManGreenFinal(2)
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398b5983cc69cf270800000000000000
+      internalID: 8285663218321701011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59946eff4cbe39ee0800000000000000
+      internalID: -1255400639766836843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_15
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7e3d9d26a29a2d0800000000000000
+      internalID: -3267033450630879290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_16
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80da0137c8dcc5220800000000000000
+      internalID: 2476079898256518408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_17
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a937e06919ec6a390800000000000000
+      internalID: -7807325779317066854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_18
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca95af9774513d250800000000000000
+      internalID: 5968137327929350572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_19
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d0316e9a788c440800000000000000
+      internalID: 4956360553700461867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa8b1e500013b7e0800000000000000
+      internalID: -1751038236352083203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_21
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92831321ae00bd210800000000000000
+      internalID: 1358680717909899305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_22
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45387e6d6fba4c640800000000000000
+      internalID: 5099389754746045268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_23
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb59c8049f11c8600800000000000000
+      internalID: 471771823194543547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_24
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac01ae7fa3e5aff0800000000000000
+      internalID: -25363879997403996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_25
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7a99153bb0f94d0800000000000000
+      internalID: -3125766751575758898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_26
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450b21a2ad02437d0800000000000000
+      internalID: -2939688535385264044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_27
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 221
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3887d5d45ac696e0800000000000000
+      internalID: -1831053732765792195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b96841c0c472daa0800000000000000
+      internalID: -6137714970927273546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_29
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d27522ac5f0c5a0800000000000000
+      internalID: -6502927613414658808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_30
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec8cb4f2125959b0800000000000000
+      internalID: -5090947662396748563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_31
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c92b5d33d1c6a2f0800000000000000
+      internalID: -961868357385377343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_32
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e67e84f37004d80800000000000000
+      internalID: -8268600947464769944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_33
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddae4ec70cfa82730800000000000000
+      internalID: 3974619912418421469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_34
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e6910e317927d70800000000000000
+      internalID: 9039453513705942611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_35
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b25de4909a6df3e0800000000000000
+      internalID: -2018339888785698123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_36
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b66c11ff59aa0040800000000000000
+      internalID: 4614686997726652082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_37
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc6fb39c8f167f00800000000000000
+      internalID: 1114112646455454963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75d8bc9dac681f90800000000000000
+      internalID: -6982711729323453060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_39
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef717e88f8ed76a0800000000000000
+      internalID: -6449742937085345809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_40
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feaebfa405ca5cd60800000000000000
+      internalID: 7909917781401529071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_41
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dddbf73aaa9ce40800000000000000
+      internalID: 5677256424476761498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7f1a64f3a12fe00800000000000000
+      internalID: 1076952119965251518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_43
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38484829e8aeb8410800000000000000
+      internalID: 1480534800585753731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_44
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59a4c9dc013364c0800000000000000
+      internalID: -4295535688318408358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_45
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25803333908a5cb60800000000000000
+      internalID: 7765797889937442898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_46
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8ab4eb7aafeef80800000000000000
+      internalID: -8075241483469608769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_47
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508c0069499453290800000000000000
+      internalID: -7911336267885787131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_48
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce1bab81c8710b80800000000000000
+      internalID: -8430324254793589044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_49
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8c6956e7700a350800000000000000
+      internalID: 6025824540873377977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_50
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab45cc5c4263bf9d0800000000000000
+      internalID: -2739536416759589702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_51
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a997fc4c4ed70370800000000000000
+      internalID: 8288838058488863143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_52
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7740f777b1039c950800000000000000
+      internalID: 6469755234221491319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_53
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b60b1b66cb7bd220800000000000000
+      internalID: 2511737309319857842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_54
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298dba8e75ed556d0800000000000000
+      internalID: -3002249107425470318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_55
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814682c1f1d18dc60800000000000000
+      internalID: 7843050770519319576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2dc07ad1cca4e40800000000000000
+      internalID: 5641545910963720941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_57
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524ae0228678e8940800000000000000
+      internalID: 5300322692779385893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_58
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e35e49d5d3258080800000000000000
+      internalID: -9185896463571463199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_59
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58f465926460fba0800000000000000
+      internalID: -6057231124237322146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_60
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5909633672ab7e0800000000000000
+      internalID: -1749042198209325592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_61
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58a3fdd2b882fde0800000000000000
+      internalID: -1300827040547362725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_62
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862dcb4852ee27220800000000000000
+      internalID: 2482308189542732392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_63
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f641803a9371fc630800000000000000
+      internalID: 3949400934543004783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_64
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afc5296ccfc43970800000000000000
+      internalID: 8733834054222598050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_65
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111c00d23107889d0800000000000000
+      internalID: -2771842342984826607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_66
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0378727df38110c00800000000000000
+      internalID: 864999265903544112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_67
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095da4ec4faeeaba0800000000000000
+      internalID: -6075660510122289776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_68
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160f47cea241ba3b0800000000000000
+      internalID: -5500280345314660255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_69
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 170
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313440c17aa909420800000000000000
+      internalID: 2634775824531997459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_70
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c53cfba73ff7200800000000000000
+      internalID: 180130218646920195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_71
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f294af287817f00800000000000000
+      internalID: 1112819579551821632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_72
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03760220c5cdfa960800000000000000
+      internalID: 7615547782637578032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_73
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73096aa0a7129c6c0800000000000000
+      internalID: -4122727175832563657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_74
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bd642a61e97c840800000000000000
+      internalID: 5244334111145253740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_75
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6a6723bdd148a10800000000000000
+      internalID: 1910684969193612978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_76
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77de2b8a82e91b100800000000000000
+      internalID: 122052562381892983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_77
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2ff5970a6dbce30800000000000000
+      internalID: 4524946235343237878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_78
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226478316280ff390800000000000000
+      internalID: -7782492671443515870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_79
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e592a51afbe99a5e0800000000000000
+      internalID: -1897811222076970658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_80
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10933a478ebd2f010800000000000000
+      internalID: 1221280240406575361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_81
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571f1761cf5a51900800000000000000
+      internalID: 654611822979182965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_82
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9294fa8af8ed5bb30800000000000000
+      internalID: 4302589727614126377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_83
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 153
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b4d73ef7581ca40800000000000000
+      internalID: 5386733413635804049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_84
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a41edab58ad3d50800000000000000
+      internalID: 6718711330819361423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_85
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 128
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156750386e0bd3040800000000000000
+      internalID: 4629050496093877841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_86
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 128
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e2bf9a8992cbff0800000000000000
+      internalID: -19094562752745958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_87
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 128
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424e4290d4d479ad0800000000000000
+      internalID: -2695600858696719324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_88
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 144
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15972440b2a06b350800000000000000
+      internalID: 6032019930780694865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_89
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 135
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fec1ad38f2f3280800000000000000
+      internalID: -9061471681899598029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_90
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c7144202b458210800000000000000
+      internalID: 1334555466004528194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_91
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecc17a3b1ea2aa40800000000000000
+      internalID: 5378052337001680099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_92
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6e2b8f77731e1f0800000000000000
+      internalID: -1017471052395911442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_93
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9728b182a1bd4fe70800000000000000
+      internalID: 9148177648484844153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_94
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8c509b445f032c0800000000000000
+      internalID: -4453790355958675223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_95
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ca2c3e377944550800000000000000
+      internalID: 6144202315638418452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_96
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5058987ab35b40fc0800000000000000
+      internalID: -3529496940133120763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_97
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e69b5a28901e1d0800000000000000
+      internalID: -3323364593291923878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_98
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fe3f6ef79ae9600800000000000000
+      internalID: 477004977348538249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_99
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a587e46bf65fb2fb0800000000000000
+      internalID: -4671370328317986726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_100
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4905947d81ba44a30800000000000000
+      internalID: 4198668875795615892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_101
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0ba86adcef3b6d0800000000000000
+      internalID: -2975754769545908014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_102
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68f3e5e8e031eab0800000000000000
+      internalID: -4980645936047589265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_103
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f49e8070ec33040800000000000000
+      internalID: 4626267771849232141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_104
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f848aebc7812f40800000000000000
+      internalID: 5701987913110425403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_105
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2755faa8e9f5cd0b0800000000000000
+      internalID: -5702577893621672590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_106
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b988478ee25b5c0800000000000000
+      internalID: -4200399501530719430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_107
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff2568fa5090fd00800000000000000
+      internalID: 1004461437292457971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_108
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c0da63a85e842b0800000000000000
+      internalID: -5599973754849653661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_109
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871bbda3c503ccd50800000000000000
+      internalID: 6758830313458872696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_110
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd981365be48ddea0800000000000000
+      internalID: -5846370594958767652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_111
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab91e9c7b398808f0800000000000000
+      internalID: -574058063902926406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_112
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfad8722b9f8b390800000000000000
+      internalID: -7802211810856292403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_113
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df02e58b3184feec0800000000000000
+      internalID: -3535527932927794947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_114
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d857b5f592f274860800000000000000
+      internalID: 7514026358030955917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_115
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a153b994d695705b0800000000000000
+      internalID: -5402250902086404838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_116
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab38889bd97f242d0800000000000000
+      internalID: -3295799720487124038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_117
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4792cec1e96748270800000000000000
+      internalID: 8251850838711740788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_118
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14580ab802e95ad80800000000000000
+      internalID: -8240006080585759423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_119
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977df3b988313f230800000000000000
+      internalID: 3671299598678218617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_120
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457a50b85b9b59630800000000000000
+      internalID: 3933254038950618964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_121
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcf2e9ca72bbe4d0800000000000000
+      internalID: -3104191277698974467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_122
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34bda2b1826ebd80800000000000000
+      internalID: -8233034759598656451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_123
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527e2ed1fabd2fbb0800000000000000
+      internalID: -4903615499085879515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_124
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a58d05d89186e70800000000000000
+      internalID: 9108558341094267540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_125
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c99a05e396db550800000000000000
+      internalID: 6178209980184370249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_126
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bceea582258102930800000000000000
+      internalID: 4116316800560066251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_127
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1924ff85a552eaf90800000000000000
+      internalID: -6940568905760947567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_128
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe2a94f59733fc70800000000000000
+      internalID: 9003601197237153535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_129
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd81ea653bcbc2110800000000000000
+      internalID: 1237571476059461851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_130
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edffc917dc7066f20800000000000000
+      internalID: 3415425946362904542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_131
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70d986f251d613a0800000000000000
+      internalID: -6694933641785913220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_132
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df41a0867df66810800000000000000
+      internalID: 1758371389940781015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_133
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a373a328afeed30f0800000000000000
+      internalID: -1135488771333408966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_134
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66173dbdacdcf2790800000000000000
+      internalID: -7552591778921877146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_135
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 77
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db94e477bff3beb20800000000000000
+      internalID: 3164693512428865981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_136
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 77
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c5e23c305e453e0800000000000000
+      internalID: -2065774524733956972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_137
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3667a53a01352d360800000000000000
+      internalID: 7192902885789300323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_138
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17548a099d99b370800000000000000
+      internalID: 8338869465685186330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_139
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ce2aaa2a8f92540800000000000000
+      internalID: 4983787840193358915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_140
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2560cdd0e51e7f3e0800000000000000
+      internalID: -2019898113776679342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_141
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d724a1012beba30800000000000000
+      internalID: 4233016482004630874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_142
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2504fb7f865dc0ff0800000000000000
+      internalID: -68445247507578798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_143
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42824a073c6fc7bb0800000000000000
+      internalID: -4936799772236044252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_144
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b48b4f2ab04b100800000000000000
+      internalID: 122735884364172068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_145
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9c02e10c4311750800000000000000
+      internalID: 6273853755647642076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_146
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87561653f51bd430800000000000000
+      internalID: 3808662044737427342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_147
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd86b064f5451f320800000000000000
+      internalID: 2589944028888525020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_148
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc212638f0d555e20800000000000000
+      internalID: 3338677019975226061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_149
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9851b1ec7df4161c0800000000000000
+      internalID: -4512237563354081911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_150
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 60
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5c8160d16afe900800000000000000
+      internalID: 715973509361747415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_151
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267dc90e1dc6686c0800000000000000
+      internalID: -4141503158648252574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_152
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89482650b0792dfe0800000000000000
+      internalID: -1165703279944760168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_153
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fc9d16ebb2b5f70800000000000000
+      internalID: 9176976762382962437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_154
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e9c04f0f001a5c0800000000000000
+      internalID: -4206079542100713926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_155
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57672f39c92cd67f0800000000000000
+      internalID: -617623596127062411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_156
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31749c4cc32452580800000000000000
+      internalID: -8852596663759845613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_157
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818176776cc9cd610800000000000000
+      internalID: 1647363939931461656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_158
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280717fe3887321f0800000000000000
+      internalID: -1070879778330808190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_159
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf60a1aa4f41abe80800000000000000
+      internalID: -8162188333597194501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_160
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5315a9d4e487c12b0800000000000000
+      internalID: -5612478757905739467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_161
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ca151118d8f5050800000000000000
+      internalID: 5791503231302610039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_162
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a8d52f3072e0a90800000000000000
+      internalID: -7345891044290098682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_163
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e908511bcdefe13f0800000000000000
+      internalID: -928024249374506850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_164
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479fef0fe8b715490800000000000000
+      internalID: -7759284829123839628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_165
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0391b7b82e8451c10800000000000000
+      internalID: 2023603745412815152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_166
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae61518fb7249eeb0800000000000000
+      internalID: -4690144436719118614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_167
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e42364d0f5804ce0800000000000000
+      internalID: -1422990212847164185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_168
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee86805a12119ea0800000000000000
+      internalID: -5867888935257600283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_169
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7208d6ca7770170800000000000000
+      internalID: 8144610033578026982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_170
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b768c280305653bd0800000000000000
+      internalID: -2651101741941225861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_171
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513155bc991c2fee0800000000000000
+      internalID: -1228706882033216747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_172
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdd10bb353d51d10800000000000000
+      internalID: 2095813558184041929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_173
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e078b3fb10c549a0800000000000000
+      internalID: -6249377681621094175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_174
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf9c11320ab87cc0800000000000000
+      internalID: -3713013374190313525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_175
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c26d8c6076a02460800000000000000
+      internalID: 7214949604835287744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_176
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e65169cd03fa3a0800000000000000
+      internalID: -6652044400634008033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_177
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea4000ac82f27690800000000000000
+      internalID: -7605750134881629467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_178
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8f5430ec6ca6330800000000000000
+      internalID: 3704992231586134236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_179
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216f4d3b290e15c60800000000000000
+      internalID: 7805266549896705554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_180
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2ad461144bfd420800000000000000
+      internalID: 2657040496811942603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_181
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8b0c92a8d76ebd0800000000000000
+      internalID: -2601253702400427814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_182
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a632163925f5472c0800000000000000
+      internalID: -4434814924788522134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_183
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdb66b6163b3ef50800000000000000
+      internalID: 6909563484311567858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_184
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d82a3200bffa540800000000000000
+      internalID: 5021508087557819765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_185
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2aef963a848b0c30800000000000000
+      internalID: 4326697596176296490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_186
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e6855f6f51bcd40800000000000000
+      internalID: 5605598311615065677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_187
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ca618d2835d6490800000000000000
+      internalID: -7751447562198537122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_188
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ded21587e720b80800000000000000
+      internalID: -8430036497261007595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_189
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641be7ca53de2a0e0800000000000000
+      internalID: -2259983248203534010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_190
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d00d0f296bb54500800000000000000
+      internalID: 379915804018016466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_191
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd8dd0ba5b2db070800000000000000
+      internalID: 8123696971360603581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_192
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c46f56fef3856d30800000000000000
+      internalID: 4424087340039759040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_193
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7e124f4c05b3480800000000000000
+      internalID: -8918445830237460558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_194
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 42
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354c1ffef0254d490800000000000000
+      internalID: -7722457232629971885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_195
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 42
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3773526560ff950800000000000000
+      internalID: 6484908955498148801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_196
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 42
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5debaa235552f2570800000000000000
+      internalID: 8444008874195467989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_197
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 80
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0a461a771078d60800000000000000
+      internalID: 7892278485310546110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Binary Land JPN - Everything_198
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 9
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09114dc75b1fc3250800000000000000
+      internalID: 5925876971498377616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NameGame
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 255
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9a84f1359de7240800000000000000
+      internalID: 4791506004599155114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
