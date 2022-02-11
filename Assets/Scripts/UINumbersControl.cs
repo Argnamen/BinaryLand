@@ -10,11 +10,14 @@ public class UINumbersControl : MonoBehaviour
 
     public static UnityAction<int> scoreAction, timeAction, roundAction;
 
+    private int SaveScore;
+
     private float timeScale = 999;
 
     private void ScoreUpdate(int score)
     {
-        TextScore.text = score.ToString();
+        SaveScore += score;
+        TextScore.text = SaveScore.ToString();
     }
 
     private void TimeUpdate(int time)
@@ -27,7 +30,7 @@ public class UINumbersControl : MonoBehaviour
         TextRound.text = round.ToString();
     }
 
-    private void Awake()
+    private void Start()
     {
         scoreAction += ScoreUpdate;
         timeAction += TimeUpdate;

@@ -28,4 +28,9 @@ public class GameManager : MonoBehaviour
         UINumbersControl.timeAction += EndGame;
         UINumbersControl.roundAction += NextLevel;
     }
+
+    private void FixedUpdate()
+    {
+        
+    }
 }

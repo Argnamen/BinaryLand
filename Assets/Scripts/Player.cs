@@ -7,16 +7,19 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Transform GunRotate;
+    [SerializeField] private Rigidbody2D MoveVelocity;
+
     private PlayerCreate playerCreate = new PlayerCreate();
 
     public static UnityAction<Vector2, int> moveAction;
-    public static UnityAction<int> scoreAction;
+
+    private bool isMoveStop = true;
+
+    
 
     private void Move(Vector2 movePoint, int speed)
     {
-        this.GetComponent<Rigidbody2D>().velocity = movePoint.normalized * speed;
-
-        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>());
+        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>(), MoveVelocity);
     }
 
     private void Awake()
