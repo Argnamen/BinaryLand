@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 public class Player : MonoBehaviour
 {
     [SerializeField] private Transform GunRotate;
     [SerializeField] private Rigidbody2D MoveVelocity;
 
-    private PlayerCreate playerCreate = new PlayerCreate();
+    private PlayerCreate playerCreate;
 
     public static UnityAction<Vector2, int> moveAction;
 
@@ -19,11 +18,12 @@ public class Player : MonoBehaviour
 
     private void Move(Vector2 movePoint, int speed)
     {
-        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>(), MoveVelocity);
+        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>());
     }
 
     private void Awake()
     {
+        playerCreate = new PlayerCreate();
         moveAction += Move;
     }
 

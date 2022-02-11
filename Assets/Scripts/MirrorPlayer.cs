@@ -16,7 +16,7 @@ public class MirrorPlayer : MonoBehaviour
     {
         if (movePoint.x != 0)
             movePoint = new Vector2(-movePoint.x, movePoint.y);
-        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>(),MoveVelocity);
+        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>());
     }
 
     private void Awake()

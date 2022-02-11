@@ -9,7 +9,7 @@ public class FinishGame : MonoBehaviour
     {
         if (MirrorPlayerDetected.isMirrorPlayer && PlayerDetected.isPlayer)
         {
-            this.GetComponent<Animator>().enabled = true;
+            //this.GetComponent<Animator>().enabled = true;
             int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
             UINumbersControl.roundAction.Invoke(nextLevel);
         }
