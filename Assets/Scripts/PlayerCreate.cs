@@ -14,103 +14,122 @@ public class PlayerCreate
     {
         GameObject player = animationController.gameObject;
 
-        Vector3Int playerStartPoint = new Vector3Int(
-                (int)Math.Floor(player.transform.position.x + 0.1f),
-                (int)Math.Floor(player.transform.position.y + 0.1f),
-                (int)player.transform.position.z);
+        Vector3 playerFloorPoint = new Vector3(
+            Int32.Parse(Mathf.FloorToInt(player.transform.position.x).ToString()),
+            Int32.Parse(Mathf.FloorToInt(player.transform.position.y).ToString()),
+            player.transform.position.z);
 
-        Vector3Int playerFinishPoint = new Vector3Int(
-            (int)Math.Ceiling(player.transform.position.x),
-            (int)Math.Ceiling(player.transform.position.y),
-            (int)player.transform.position.z);
+        Vector3 playerCeilingPoint = new Vector3(
+            Int32.Parse(Mathf.CeilToInt(player.transform.position.x).ToString()),
+            Int32.Parse(Mathf.CeilToInt(player.transform.position.y).ToString()),
+            player.transform.position.z);
 
-        Debug.Log(playerStartPoint);
-        Debug.Log(playerFinishPoint);
-        if (isMoveStop)
+        if (player.transform.position.x != Mathf.Clamp(player.transform.position.x, playerCeilingPoint.x - 0.1f, playerCeilingPoint.x) &&
+            player.GetComponent<Rigidbody2D>().velocity == Vector2.right)
+            return;
+
+        if (player.transform.position.y != Mathf.Clamp(player.transform.position.y, playerCeilingPoint.y - 0.1f, playerCeilingPoint.y) &&
+            player.GetComponent<Rigidbody2D>().velocity == Vector2.up)
+            return;
+
+        if (player.transform.position.x != Mathf.Clamp(player.transform.position.x, playerFloorPoint.x, playerFloorPoint.x + 0.1f) &&
+           player.GetComponent<Rigidbody2D>().velocity == Vector2.left)
+            return;
+
+        if (player.transform.position.y != Mathf.Clamp(player.transform.position.y, playerFloorPoint.y, playerFloorPoint.y + 0.1f) &&
+           player.GetComponent<Rigidbody2D>().velocity == Vector2.down)
+            return;
+
+        if (movePoint == Vector2.zero &&
+            (animationController.GetBool("Right")
+            || animationController.GetBool("Up")))
         {
+            player.GetComponent<Rigidbody2D>().MovePosition(playerCeilingPoint);
+
+        }
+
+        if (movePoint == Vector2.zero &&
+            (animationController.GetBool("Left")
+            || animationController.GetBool("Down")))
+        {
+            player.GetComponent<Rigidbody2D>().MovePosition(playerFloorPoint);
+        }
+
+
+        if (movePoint.x > 50 && movePoint.x <= 100)
+        {
+           
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.right;
+
+            animationController.SetBool("Right", true);
+
+
+            animationController.SetBool("Left", false);
+            animationController.SetBool("Up", false);
+            animationController.SetBool("Down", false);
+
             isMoveStop = false;
 
-            if (movePoint.x > 50 && movePoint.x <= 100)
-            {
-                player.GetComponent<Rigidbody2D>().velocity = Vector2.right;
-
-                animationController.SetBool("Right", true);
-
-                animationController.SetBool("Left", false);
-                animationController.SetBool("Up", false);
-                animationController.SetBool("Down", false);
-
-                return;
-            }
-            if (movePoint.x < -50 && movePoint.x >= -100)
-            {
-                player.GetComponent<Rigidbody2D>().velocity = Vector2.left;
-
-                animationController.SetBool("Left", true);
-
-                animationController.SetBool("Right", false);
-                animationController.SetBool("Up", false);
-                animationController.SetBool("Down", false);
-
-                return;
-            }
-            if (movePoint.y > 50 && movePoint.y <= 100)
-            {
-                player.GetComponent<Rigidbody2D>().velocity = Vector2.up;
-
-                animationController.SetBool("Up", true);
-
-                animationController.SetBool("Right", false);
-                animationController.SetBool("Left", false);
-                animationController.SetBool("Down", false);
-
-                return;
-            }
-            if (movePoint.y < -50 && movePoint.y >= -100)
-            {
-                player.GetComponent<Rigidbody2D>().velocity = Vector2.down;
-
-                animationController.SetBool("Down", true);
-
-                animationController.SetBool("Right", false);
-                animationController.SetBool("Left", false);
-                animationController.SetBool("Up", false);
-
-                return;
-            }
-            if (movePoint == Vector2.zero)
-            {
-                player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                player.transform.position = playerStartPoint;
-                player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(playerStartPoint.x, playerStartPoint.y));
-
-                animationController.SetBool("Down", false);
-                animationController.SetBool("Right", false);
-                animationController.SetBool("Left", false);
-                animationController.SetBool("Up", false);
-            }
-
+            return;
         }
-
-        if (playerStartPoint == playerFinishPoint)
+        if (movePoint.x < -50 && movePoint.x >= -100)
         {
-            player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(playerStartPoint.x, playerStartPoint.y));
-            isMoveStop = true;
+            
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.left;
+
+            animationController.SetBool("Left", true);
+
+            animationController.SetBool("Right", false);
+            animationController.SetBool("Up", false);
+            animationController.SetBool("Down", false);
+
+            isMoveStop = false;
+
+            return;
         }
-
-        if (player.GetComponent<Rigidbody2D>().velocity == Vector2.zero)
+        if (movePoint.y > 50 && movePoint.y <= 100)
         {
-            player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(playerStartPoint.x, playerStartPoint.y));
-            isMoveStop = true;
+            
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.up;
+
+            animationController.SetBool("Up", true);
+
+            animationController.SetBool("Right", false);
+            animationController.SetBool("Left", false);
+            animationController.SetBool("Down", false);
+
+            isMoveStop = false;
+
+            return;
+        }
+        if (movePoint.y < -50 && movePoint.y >= -100) 
+        {
+            
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.down;
+
+            animationController.SetBool("Down", true);
+
+            animationController.SetBool("Right", false);
+            animationController.SetBool("Left", false);
+            animationController.SetBool("Up", false);
+
+            isMoveStop = false;
+
+            return;
+        } 
+
+        if(movePoint == Vector2.zero)
+        {
+
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            animationController.SetBool("Up", false);
+            animationController.SetBool("Right", false);
+            animationController.SetBool("Left", false);
+            animationController.SetBool("Down", false);
         }
 
     }
 
-    public void UpdateGunRotate(Vector2 movePoint)
-    {
-        Quaternion Up = new Quaternion(0f, 0f, 0f, 0f);
-        Quaternion Down = new Quaternion(0f, 0f, 180f, 0f);
-        Quaternion Rigth = new Quaternion(0f, 0f, -90f, 0f);
-        Quaternion Left = new Quaternion(0f, 0f, 90f, 0f);
-    }
+    
 }

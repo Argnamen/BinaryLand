@@ -7,7 +7,7 @@ public class MirrorPlayer : MonoBehaviour
     [SerializeField] private Transform GunRotate;
     [SerializeField] private Rigidbody2D MoveVelocity;
 
-    private PlayerCreate playerCreate = new PlayerCreate();
+    private PlayerCreate playerCreate;
 
     private bool isMoveStop = true;
 
@@ -21,6 +21,7 @@ public class MirrorPlayer : MonoBehaviour
 
     private void Awake()
     {
+        playerCreate = new PlayerCreate();
         Player.moveAction += Move;
     }
 
