@@ -1,29 +1,36 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Transform GunRotate;
-    [SerializeField] private Rigidbody2D MoveVelocity;
+    private PlayerMoving playerMove;
 
-    private PlayerCreate playerCreate;
+    public static UnityAction<Vector2, float> moveAction;
 
-    public static UnityAction<Vector2, int> moveAction;
+    public static bool IsFinishGame;
 
-    private bool isMoveStop = true;
+    Vector3 newMoveVector, oldMoveVector;
 
-    
-
-    private void Move(Vector2 movePoint, int speed)
+    private void Move(Vector2 movePoint, float speed)
     {
-        playerCreate.StartAnimation(movePoint, this.GetComponent<Animator>());
+
+        Vector3 playerFloorPoint = new Vector3(
+            Int32.Parse(Mathf.FloorToInt(this.transform.position.x).ToString()),
+            Int32.Parse(Mathf.FloorToInt(this.transform.position.y).ToString()),
+            this.transform.position.z);
+
+        if (this.transform.position == playerFloorPoint)
+            newMoveVector = playerMove.Move(movePoint, this.GetComponent<Animator>(), speed);
+
+        this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + newMoveVector, speed / 32);
+
     }
 
     private void Awake()
     {
-        playerCreate = new PlayerCreate();
+        playerMove = new PlayerMoving();
         moveAction += Move;
     }
 

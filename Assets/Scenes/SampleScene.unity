@@ -318,8 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c77e7a51bb3564ca4ace6d51aafe70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GunRotate: {fileID: 1497498843}
-  MoveVelocity: {fileID: 0}
 --- !u!50 &224146775
 Rigidbody2D:
   serializedVersion: 4

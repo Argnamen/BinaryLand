@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class FinishGame : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
     {
-        if (MirrorPlayerDetected.isMirrorPlayer && PlayerDetected.isPlayer)
+        if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
         {
-            //this.GetComponent<Animator>().enabled = true;
+            PlayerMoving.isStartGame = false;
             int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
             UINumbersControl.roundAction.Invoke(nextLevel);
         }
