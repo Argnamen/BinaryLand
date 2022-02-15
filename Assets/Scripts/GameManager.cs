@@ -1,36 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEngine.SceneManagement.SceneManager;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject Joystick;
+
+    public static UnityAction<int> SingleDamage;
+
+    public static UnityAction<int> LevelStart;
+
+    public static UnityAction<Vector2, float> MovePlayer;
+
+    private bool isJoysctick = false;
+
     private void EndGame(int time)
     {
         if (time <= 0)
             LoadScene(0);
     }
 
-    private void NextLevel(int round)
+    private void JoysctickEnabled()
     {
-        try
+        if (Input.GetMouseButton(0) && !isJoysctick)
         {
-            LoadScene(round);
+            Joystick.transform.position = Input.mousePosition;
+            isJoysctick = true;
         }
-        catch
+        else if (!Input.GetMouseButton(0))
         {
-            LoadScene(0);
+            Joystick.transform.position = new Vector3(10000f, 10000f, 0f);
+            isJoysctick = false;
         }
     }
 
     private void Awake()
     {
         UINumbersControl.timeAction += EndGame;
-        UINumbersControl.roundAction += NextLevel;
     }
 
     private void FixedUpdate()
     {
-        
+        JoysctickEnabled();
     }
 }

@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
@@ -27,7 +27,7 @@ public class UINumbersControl : MonoBehaviour
 
     private void RoundUpdate(int round)
     {
-        TextRound.text = round.ToString();
+        TextRound.text = (Int32.Parse(TextRound.ToString()) + round).ToString();
     }
 
     private void Start()

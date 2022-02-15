@@ -17,13 +17,13 @@ public class JoystickControl : MonoBehaviour
             TargetVector = Vector2.ClampMagnitude(TargetVector, 100);
 
             TouchPoint.transform.localPosition = TargetVector;
-            Player.moveAction.Invoke(TargetVector, 1);
+            GameManager.MovePlayer.Invoke(TargetVector, 1);
 
             return;
         }
         TouchPoint.transform.position = transform.position;
         TargetVector = Vector2.zero;
-        Player.moveAction.Invoke(TargetVector, 1);
+        GameManager.MovePlayer.Invoke(TargetVector, 1);
     }
 
     private void Start()

@@ -7,11 +7,9 @@ public class Player : MonoBehaviour
 {
     private PlayerMoving playerMove;
 
-    public static UnityAction<Vector2, float> moveAction;
-
     public static bool IsFinishGame;
 
-    Vector3 newMoveVector, oldMoveVector;
+    Vector3 newMoveVector;
 
     private void Move(Vector2 movePoint, float speed)
     {
@@ -23,6 +21,8 @@ public class Player : MonoBehaviour
 
         if (this.transform.position == playerFloorPoint)
             newMoveVector = playerMove.Move(movePoint, this.GetComponent<Animator>(), speed);
+        if (PlayerMoving.isStartGame == false)
+            this.GetComponent<Animator>().Play("Kiss");
 
         this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + newMoveVector, speed / 32);
 
@@ -31,11 +31,11 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerMove = new PlayerMoving();
-        moveAction += Move;
+        GameManager.MovePlayer += Move;
     }
 
     private void OnDestroy()
     {
-        moveAction -= Move;
+        GameManager.MovePlayer -= Move;
     }
 }

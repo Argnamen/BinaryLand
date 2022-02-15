@@ -22,6 +22,9 @@ public class MirrorPlayer : MonoBehaviour
         if (this.transform.position == playerFloorPoint)
             newMoveVector = playerMove.Move(movePoint, this.GetComponent<Animator>(), speed);
 
+        if (PlayerMoving.isStartGame == false)
+            this.GetComponent<Animator>().Play("Kiss");
+
         this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + newMoveVector, speed / 32);
 
         
@@ -30,11 +33,11 @@ public class MirrorPlayer : MonoBehaviour
     private void Start()
     {
         playerMove = new PlayerMoving();
-        Player.moveAction += Move;
+        GameManager.MovePlayer += Move;
     }
 
     private void OnDestroy()
     {
-        Player.moveAction -= Move;
+        GameManager.MovePlayer -= Move;
     }
 }

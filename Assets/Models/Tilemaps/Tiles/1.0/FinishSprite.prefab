@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4052293664586810796}
   - component: {fileID: 4052293664586810801}
   - component: {fileID: 4052293664586810803}
-  - component: {fileID: 4052293664586810807}
+  - component: {fileID: -2113569921807571239}
   m_Layer: 0
   m_Name: FinishSprite
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4052293664586810807
+--- !u!114 &-2113569921807571239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

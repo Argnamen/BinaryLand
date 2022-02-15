@@ -10,8 +10,7 @@ public class FinishGame : MonoBehaviour
         if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
         {
             PlayerMoving.isStartGame = false;
-            int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
-            UINumbersControl.roundAction.Invoke(nextLevel);
+            GameManager.LevelStart.Invoke(1);
         }
     }
 }

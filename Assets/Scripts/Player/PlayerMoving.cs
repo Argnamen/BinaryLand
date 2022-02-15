@@ -13,8 +13,6 @@ public class PlayerMoving : MonoBehaviour
 
         GameObject player = animationController.gameObject;
 
-
-
         LevelMap = SceneLoader.levelMap;
 
         if ((LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2) && player.GetComponent<MirrorPlayer>())
@@ -27,23 +25,24 @@ public class PlayerMoving : MonoBehaviour
         else if (player.GetComponent<Player>())
             Player.IsFinishGame = false;
 
-        if (PlayerDetected.isPlayer && MirrorPlayerDetected.isMirrorPlayer)
+        if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
         {
-            animationController.Play("Idle");
-
-            animationController.Play("Kiss");
-
             moveVector = Vector3.zero;
         }
         if (isStartGame)
         {
-            Debug.Log(movePoint);
+            int right = LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y];
+            int left = LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y];
+            int up = LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1];
+            int down = LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1];
+
+            if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y] == 3)
+                GameManager.SingleDamage.Invoke(1);
             if (movePoint.x > 71 && movePoint.x <= 100)
             {
                 animationController.Play("Right");
 
-                if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 0 ||
-                    LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2)
+                if (right == 0 || right >= 2)
                     moveVector = Vector3.right;
             }
             if (movePoint.x < -71 && movePoint.x >= -100)
@@ -51,8 +50,7 @@ public class PlayerMoving : MonoBehaviour
                 animationController.Play("Left");
 
 
-                if (LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 0 ||
-                    LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2)
+                if (left == 0 || left >= 2)
                     moveVector = Vector3.left;
             }
             if (movePoint.y > 71 && movePoint.y <= 100)
@@ -60,14 +58,14 @@ public class PlayerMoving : MonoBehaviour
                 animationController.Play("Up");
 
 
-                if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 0)
+                if (up == 0 || up >= 2)
                     moveVector = Vector3.up;
             }
             if (movePoint.y < -71 && movePoint.y >= -100)
             {
                 animationController.Play("Down");
 
-                if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 0)
+                if (down == 0 || down >= 2)
                     moveVector = Vector3.down;
             }
 
@@ -75,21 +73,8 @@ public class PlayerMoving : MonoBehaviour
             {
                 animationController.Play("Idle");
             }
-
-            return moveVector;
         }
-        else
-        {
-            animationController.SetBool("Idle", true);
 
-            animationController.SetBool("Up", false);
-            animationController.SetBool("Right", false);
-            animationController.SetBool("Left", false);
-            animationController.SetBool("Down", false);
-
-            animationController.SetBool("Kiss", true);
-
-            return moveVector;
-        }
+        return moveVector;
     }
 }
