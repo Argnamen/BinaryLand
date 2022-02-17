@@ -13,7 +13,7 @@ public class PlayerMoving : MonoBehaviour
 
         GameObject player = animationController.gameObject;
 
-        LevelMap = SceneLoader.levelMap;
+        LevelMap = SceneLoader.navigationMap;
 
         if ((LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2) && player.GetComponent<MirrorPlayer>())
             MirrorPlayer.IsFinishGame = true;
@@ -72,7 +72,12 @@ public class PlayerMoving : MonoBehaviour
             if (movePoint == Vector2.zero)
             {
                 animationController.Play("Idle");
+                moveVector = Vector3.zero;
             }
+        }
+        else
+        {
+            moveVector = Vector3.zero;
         }
 
         return moveVector;

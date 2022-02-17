@@ -6,6 +6,8 @@ public class MirrorPlayer : MonoBehaviour
 {
     private PlayerMoving playerMove;
 
+    public static Animator animator;
+
     Vector3 newMoveVector, oldMoveVector;
 
     public static bool IsFinishGame;
@@ -22,16 +24,12 @@ public class MirrorPlayer : MonoBehaviour
         if (this.transform.position == playerFloorPoint)
             newMoveVector = playerMove.Move(movePoint, this.GetComponent<Animator>(), speed);
 
-        if (PlayerMoving.isStartGame == false)
-            this.GetComponent<Animator>().Play("Kiss");
-
         this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + newMoveVector, speed / 32);
-
-        
     }
 
     private void Start()
     {
+        animator = this.GetComponent<Animator>();
         playerMove = new PlayerMoving();
         GameManager.MovePlayer += Move;
     }

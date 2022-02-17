@@ -14,6 +14,7 @@ public class Mob : MonoBehaviour
 
     private Vector3 oldMoveVector;
 
+
     private void Move()
     {
         int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
@@ -70,32 +71,52 @@ public class Mob : MonoBehaviour
 
     private void Start()
     {
-        LevelMap = SceneLoader.levelMap;
+        LevelMap = SceneLoader.navigationMap;
     }
     private void FixedUpdate()
     {
-        Vector3 mobFloorPoint = new Vector3(
-        Int32.Parse(Mathf.FloorToInt(this.transform.position.x).ToString()),
-        Int32.Parse(Mathf.FloorToInt(this.transform.position.y).ToString()),
-        this.transform.position.z);
-
-        int idle = LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)];
-
-        if (this.transform.position == mobFloorPoint && (idle != 0f && idle != 3 && idle != 4))
+        if (PlayerMoving.isStartGame)
         {
-            Move();
+            Vector3 mobFloorPoint = new Vector3(
+            Int32.Parse(Mathf.FloorToInt(this.transform.position.x).ToString()),
+            Int32.Parse(Mathf.FloorToInt(this.transform.position.y).ToString()),
+            this.transform.position.z);
+
+            int idle = LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)];
+
+            if (this.transform.position == mobFloorPoint && (idle != 0f && idle != 3 && idle != 4))
+            {
+                Move();
+
+                if (MoveVector == Vector3.left)
+                    this.gameObject.GetComponent<Animator>().Play("Left");
+                if (MoveVector == Vector3.right)
+                    this.gameObject.GetComponent<Animator>().Play("Right");
+            }
+
+            if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 3)
+                LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 3;
+            else if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 2)
+                LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 2;
+            else if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 4)
+                LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 0;
+
+            if (this.transform.position == mobFloorPoint && idle != 3)
+                LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)] = 4;
+
+            this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + MoveVector, Speed / 32);
         }
+    }
 
-        if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 3)
-            LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 3;
-        else if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 2)
-            LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 2;
-        else if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 4)
-            LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 0;
-
-        if (this.transform.position == mobFloorPoint && idle != 3)
-            LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)] = 4;
-
-        this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + MoveVector, Speed / 32);
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Projectile>())
+            Destroy(this.gameObject);
+        if ((collision.GetComponent<Player>() || collision.GetComponent<MirrorPlayer>()) && PlayerMoving.isStartGame)
+        {
+            collision.GetComponent<Animator>().Play("Fail");
+            GameManager.LevelStart.Invoke(-1);
+            PlayerMoving.isStartGame = false;
+        }
     }
 }

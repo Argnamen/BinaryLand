@@ -4,98 +4,109 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private Texture2D[] mapCreateScene;
+    MapLevels mapLevels = new MapLevels();
 
-    [SerializeField] private ColorToPrefab[] ColorMapings;
+    [SerializeField] private GameObject[] ArrowMapings;
 
-    public static int[,] levelMap;
+    public static int[,] builderMap, navigationMap;
 
     private int NextLevel = 0;
 
-
-
     private void Awake()
     {
+        
         GameManager.LevelStart += GenerateScene;
 
         GameManager.LevelStart.Invoke(0);
+
     }
     private void GenerateScene(int level)
     {
-        if (mapCreateScene.Length - 1 >= NextLevel+level)
+        
+        if (level != -1)
         {
-            //UINumbersControl.roundAction.Invoke(1);
-            //UINumbersControl.timeAction.Invoke(999);
-            Player.IsFinishGame = false;
-            MirrorPlayer.IsFinishGame = false;
-            NextLevel += level;
-            StartCoroutine(LoadNextLevel(level));
+            if (level != 2 && PlayerMoving.isStartGame)
+            {
+                if (level == -2)
+                    NextLevel = 0;
+                else
+                    NextLevel += level;
+            }
+                UINumbersControl.roundAction.Invoke(NextLevel);
+                UINumbersControl.timeAction.Invoke(999);
+                Player.IsFinishGame = false;
+                MirrorPlayer.IsFinishGame = false;
+                StartCoroutine(LoadNextLevel(level));
         }
     }
 
     private IEnumerator LoadNextLevel(int level)
     {
-        if (NextLevel - 1 >= 0)
+        builderMap = mapLevels.Levels(NextLevel);
+        if (NextLevel - 1 >= 0 || level == 2 || level == -2)
         {
-            yield return new WaitForSeconds(5f);
-            for (int x = 0; x < mapCreateScene[NextLevel - 1].width; x++)
-                for (int y = 0; y < mapCreateScene[NextLevel - 1].height; y++)
+            yield return new WaitForSeconds(2f);
+            for (int x = 0; x < builderMap.GetLength(0); x++)
+                for (int y = 0; y < builderMap.GetLength(1); y++)
                 {
-                    CleanScene(x, y, NextLevel - 1);
+                    CleanScene(x, y);
                 }
         }
-        levelMap = new int[mapCreateScene[NextLevel].width, mapCreateScene[NextLevel].height];
-        Camera.main.orthographicSize = mapCreateScene[NextLevel].width - 1f;
+        Camera.main.orthographicSize = builderMap.GetLength(0) - 1f;
 
-        for (int x = 0; x < mapCreateScene[NextLevel].width; x++)
-            for (int y = 0; y < mapCreateScene[NextLevel].height; y++)
-            {
-                GenerateTIle(x, y, NextLevel);
-            }
+        builderMap = mapLevels.Levels(NextLevel);
+
         PlayerMoving.isStartGame = true;
+
+        navigationMap = new int[builderMap.GetLength(0), builderMap.GetLength(1)];
+
+        for (int x = 0; x < builderMap.GetLength(0); x++)
+            for (int y = 0; y < builderMap.GetLength(1); y++)
+            {
+                GenerateTIle(x, y);
+            }
         yield return null;
     }
 
-    private void CleanScene(int x, int y, int levelNumber)
+    private void CleanScene(int x, int y)
     {
-        if(levelNumber >= 0)
-        {
-            foreach (Transform child in transform)
-                Destroy(child.gameObject);
-        }
+        foreach (Transform child in transform)
+            Destroy(child.gameObject);
     }
 
-    private void GenerateTIle(int x, int y, int levelNumber)
+    private void GenerateTIle(int x, int y)
     {
-        Color pixelColor = mapCreateScene[levelNumber].GetPixel(x, y);
-
-        if (pixelColor.a == 0)
-            return;
-
-        foreach (ColorToPrefab colorMaping in ColorMapings)
+        if (builderMap[x,y] != 0){
+            Vector2 positionPrefab = new Vector2(x + this.transform.localPosition.x, y + this.transform.localPosition.y);
+            Instantiate(ArrowMapings[builderMap[x,y]], positionPrefab, Quaternion.identity, transform);
+        }
+        switch (builderMap[x,y])
         {
-            if (colorMaping.Color.Equals(pixelColor))
-            {
-                Vector2 positionPrefab = new Vector2(x + this.transform.localPosition.x, y + this.transform.localPosition.y);
-                Instantiate(colorMaping.Prefab, positionPrefab, Quaternion.identity, transform);
-
-                if (colorMaping.Color == Color.black || colorMaping.Color == Color.red)
-                {
-                    levelMap[x, y] = 1;
-                }
-                else if(colorMaping.Color == Color.blue)
-                {
-                    levelMap[x, y] = 2;
-                }
-                else if(colorMaping.Color == Color.magenta)
-                {
-                    levelMap[x, y] = 3;
-                }
-                else
-                {
-                    levelMap[x, y] = 0;
-                }
-            }
+            case 0:
+                navigationMap[x, y] = 0;
+                break;
+            case 1:
+            case 2:
+            case 10:
+            case 11:
+            case 12:
+                navigationMap[x, y] = 1;
+                break;
+            case 3:
+                navigationMap[x, y] = 2;
+                break;
+            case 4:
+            case 9:
+                navigationMap[x, y] = 3;
+                break;
+            case 5:
+            case 8:
+                navigationMap[x, y] = 4;
+                break;
+            case 6:
+            case 7:
+                navigationMap[x, y] = 0;
+                break;
         }
     }
 }

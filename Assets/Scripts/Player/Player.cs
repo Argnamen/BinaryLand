@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     Vector3 newMoveVector;
 
+    public static Animator animator;
+
     private void Move(Vector2 movePoint, float speed)
     {
 
@@ -21,8 +23,7 @@ public class Player : MonoBehaviour
 
         if (this.transform.position == playerFloorPoint)
             newMoveVector = playerMove.Move(movePoint, this.GetComponent<Animator>(), speed);
-        if (PlayerMoving.isStartGame == false)
-            this.GetComponent<Animator>().Play("Kiss");
+        
 
         this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + newMoveVector, speed / 32);
 
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        animator = this.gameObject.GetComponent<Animator>();
         playerMove = new PlayerMoving();
         GameManager.MovePlayer += Move;
     }

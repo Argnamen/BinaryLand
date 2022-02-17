@@ -23,14 +23,18 @@ public class UINumbersControl : MonoBehaviour
     private void TimeUpdate(int time)
     {
         TextTime.text = time.ToString();
+        if (time <= 0)
+        {
+            GameManager.LevelStart.Invoke(-1);
+        }
     } 
 
     private void RoundUpdate(int round)
     {
-        TextRound.text = (Int32.Parse(TextRound.ToString()) + round).ToString();
+        TextRound.text = round.ToString();
     }
 
-    private void Start()
+    private void Awake()
     {
         scoreAction += ScoreUpdate;
         timeAction += TimeUpdate;
@@ -40,6 +44,8 @@ public class UINumbersControl : MonoBehaviour
     private void FixedUpdate()
     {
         timeScale -= Time.deltaTime;
+        if (PlayerMoving.isStartGame == false)
+            timeScale = 999;
         timeAction.Invoke((int)timeScale);
     }
 

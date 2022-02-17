@@ -9,8 +9,10 @@ public class FinishGame : MonoBehaviour
     {
         if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
         {
-            PlayerMoving.isStartGame = false;
+            Player.animator.Play("Kiss");
+            MirrorPlayer.animator.Play("Kiss");
             GameManager.LevelStart.Invoke(1);
+            PlayerMoving.isStartGame = false;
         }
     }
 }

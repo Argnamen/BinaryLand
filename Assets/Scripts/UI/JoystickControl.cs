@@ -23,7 +23,7 @@ public class JoystickControl : MonoBehaviour
         }
         TouchPoint.transform.position = transform.position;
         TargetVector = Vector2.zero;
-        GameManager.MovePlayer.Invoke(TargetVector, 1);
+        //GameManager.MovePlayer.Invoke(TargetVector, 1);
     }
 
     private void Start()

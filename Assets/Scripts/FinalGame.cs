@@ -7,7 +7,6 @@ public class FinalGame : StateMachineBehaviour
 {
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
-        UINumbersControl.roundAction.Invoke(nextLevel);
+        UINumbersControl.roundAction.Invoke(0);
     }
 }

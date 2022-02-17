@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject Joystick;
 
+    [SerializeField] private GameObject FinalLabel;
+
     public static UnityAction<int> SingleDamage;
 
     public static UnityAction<int> LevelStart;
@@ -22,6 +24,11 @@ public class GameManager : MonoBehaviour
             LoadScene(0);
     }
 
+    private void FinalLabelActivate(int level)
+    {
+        if(level == -1)
+            FinalLabel.SetActive(true);
+    }
     private void JoysctickEnabled()
     {
         if (Input.GetMouseButton(0) && !isJoysctick)
@@ -39,6 +46,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         UINumbersControl.timeAction += EndGame;
+        LevelStart += FinalLabelActivate;
     }
 
     private void FixedUpdate()

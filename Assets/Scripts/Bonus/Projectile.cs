@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     public static int[,] LevelMap;
     private void Start()
     {
-        LevelMap = SceneLoader.levelMap;
+        LevelMap = SceneLoader.navigationMap;
     }
     private void FixedUpdate()
     {
@@ -27,12 +27,6 @@ public class Projectile : MonoBehaviour
             if (this.transform.position == FloorPoint)
             {
                 int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
-
-                if (right == 4)
-                {
-                    Debug.Log(1);
-                    Destroy(this.gameObject);
-                }
 
                 if (right == 0 || right >= 2)
                     MoveVector = Vector3.right;
