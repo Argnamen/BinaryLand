@@ -6,6 +6,8 @@ public class Mob : MonoBehaviour
 {
     private bool isCoroutineStop = true;
 
+    private int BearHeals = 2;
+
     public static float Speed = 1f;
 
     private Vector3 MoveVector = Vector3.up;
@@ -13,6 +15,8 @@ public class Mob : MonoBehaviour
     public static int[,] LevelMap;
 
     private Vector3 oldMoveVector;
+
+    private bool isLife = true;
 
 
     private void Move()
@@ -75,7 +79,7 @@ public class Mob : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (PlayerMoving.isStartGame)
+        if (PlayerMoving.isStartGame && isLife)
         {
             Vector3 mobFloorPoint = new Vector3(
             Int32.Parse(Mathf.FloorToInt(this.transform.position.x).ToString()),
@@ -87,12 +91,16 @@ public class Mob : MonoBehaviour
             if (this.transform.position == mobFloorPoint && (idle != 0f && idle != 3 && idle != 4))
             {
                 Move();
-
-                if (MoveVector == Vector3.left)
-                    this.gameObject.GetComponent<Animator>().Play("Left");
-                if (MoveVector == Vector3.right)
-                    this.gameObject.GetComponent<Animator>().Play("Right");
             }
+
+            if (MoveVector == Vector3.left)
+                this.gameObject.GetComponent<Animator>().Play("Left");
+            if (MoveVector == Vector3.right)
+                this.gameObject.GetComponent<Animator>().Play("Right");
+            if (MoveVector == Vector3.up)
+                this.gameObject.GetComponent<Animator>().Play("Up");
+            if (MoveVector == Vector3.down)
+                this.gameObject.GetComponent<Animator>().Play("Down");
 
             if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 3)
                 LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 3;
@@ -105,18 +113,6 @@ public class Mob : MonoBehaviour
                 LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)] = 4;
 
             this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + MoveVector, Speed / 32);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Projectile>())
-            Destroy(this.gameObject);
-        if ((collision.GetComponent<Player>() || collision.GetComponent<MirrorPlayer>()) && PlayerMoving.isStartGame)
-        {
-            collision.GetComponent<Animator>().Play("Fail");
-            GameManager.LevelStart.Invoke(-1);
-            PlayerMoving.isStartGame = false;
         }
     }
 }

@@ -10,12 +10,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject FinalLabel;
 
-    public static UnityAction<int> SingleDamage;
-
-    public static UnityAction<int> LevelStart;
-
-    public static UnityAction<Vector2, float> MovePlayer;
-
     private bool isJoysctick = false;
 
     private void EndGame(int time)
@@ -43,14 +37,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private IEnumerator GameLoop()
+    {
+        yield return new WaitForSeconds(1f);
+    }
+
     private void Awake()
     {
         UINumbersControl.timeAction += EndGame;
-        LevelStart += FinalLabelActivate;
+        EventList.LevelStart += FinalLabelActivate;
     }
 
     private void FixedUpdate()
     {
         JoysctickEnabled();
+    }
+
+    private void OnDestroy()
+    {
+        UINumbersControl.timeAction -= EndGame;
+        EventList.LevelStart -= FinalLabelActivate;
     }
 }

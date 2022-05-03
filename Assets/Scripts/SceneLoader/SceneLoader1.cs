@@ -18,9 +18,9 @@ public class SceneLoader1 : MonoBehaviour
 
     private void Start()
     {
-        GameManager.LevelStart += GenerateScene;
+        EventList.LevelStart += GenerateScene;
 
-        GameManager.LevelStart.Invoke(0);
+        EventList.LevelStart.Invoke(0);
     }
     private void GenerateScene(int level)
     {

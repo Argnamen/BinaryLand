@@ -47,3 +47,12 @@ TagManager:
   - name: Bonus
     uniqueID: 1988257525
     locked: 0
+  - name: Tiles
+    uniqueID: 3823718073
+    locked: 0
+  - name: Mob
+    uniqueID: 4269172873
+    locked: 0
+  - name: Player
+    uniqueID: 3077811965
+    locked: 0

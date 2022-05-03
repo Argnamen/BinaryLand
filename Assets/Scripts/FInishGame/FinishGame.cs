@@ -5,14 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class FinishGame : MonoBehaviour
 {
-    private void Update()
+    private void FixedUpdate()
     {
         if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
         {
-            Player.animator.Play("Kiss");
-            MirrorPlayer.animator.Play("Kiss");
-            GameManager.LevelStart.Invoke(1);
+            Player.IsFinishGame = false;
+            MirrorPlayer.IsFinishGame = false;
+
+            if (Player.isInvertMoveY || MirrorPlayer.isInvertMoveY)
+            {
+                Player.animator.Play("Kiss2");
+                MirrorPlayer.animator.Play("Kiss2");
+            }
+            else if (Player.isInvertMoveX || MirrorPlayer.isInvertMoveX)
+            {
+                Player.animator.Play("Kiss");
+                MirrorPlayer.animator.Play("Kiss");
+            }
+
+            PlayerMoving.isFlight = false;
+            PlayerMoving.isGod = false;
+            PlayerMoving.isSpeed = false;
+
+            EventList.LevelStart.Invoke(1);
+
+            Player.isInvertMoveY = false;
+            Player.isInvertMoveX = false;
+
+            MirrorPlayer.isInvertMoveY = false;
+            MirrorPlayer.isInvertMoveX = false;
+
             PlayerMoving.isStartGame = false;
+
+            return;
         }
     }
 }

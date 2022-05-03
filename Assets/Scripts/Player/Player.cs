@@ -13,8 +13,19 @@ public class Player : MonoBehaviour
 
     public static Animator animator;
 
+    public static bool isInvertMoveY = false, isInvertMoveX = false;
+
+    [SerializeField] private Camera PlayerCamera;
+
     private void Move(Vector2 movePoint, float speed)
     {
+
+        if (isInvertMoveY)
+            if (movePoint.y != 0)
+                movePoint = new Vector2(movePoint.x, -movePoint.y);
+        if (isInvertMoveX)
+            if (movePoint.x != 0)
+                movePoint = new Vector2(-movePoint.x, movePoint.y);
 
         Vector3 playerFloorPoint = new Vector3(
             Int32.Parse(Mathf.FloorToInt(this.transform.position.x).ToString()),
@@ -23,21 +34,26 @@ public class Player : MonoBehaviour
 
         if (this.transform.position == playerFloorPoint)
             newMoveVector = playerMove.Move(movePoint, this.GetComponent<Animator>(), speed);
-        
 
-        this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + newMoveVector, speed / 32);
+
+
+        this.transform.position = Vector3.MoveTowards(
+            this.transform.position,
+            this.transform.position + newMoveVector,
+            speed / 32);
 
     }
 
-    private void Awake()
+    private void OnEnable()
     {
         animator = this.gameObject.GetComponent<Animator>();
         playerMove = new PlayerMoving();
-        GameManager.MovePlayer += Move;
+
+        EventList.MovePlayer += Move;
     }
 
     private void OnDestroy()
     {
-        GameManager.MovePlayer -= Move;
+        EventList.MovePlayer -= Move;
     }
 }
