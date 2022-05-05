@@ -15,11 +15,18 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] private GameObject FinishMenu;
 
+    private void Start()
+    {
+        NextLevel = PlayerPrefs.GetInt("Level");
+    }
+
     private void OnEnable()
     {
-        EventList.LevelStart += GenerateScene;
+        NextLevel = PlayerPrefs.GetInt("Level");
 
-        EventList.LevelStart.Invoke(0);
+        EventList.LevelStart += GenerateScene;
+        
+        EventList.LevelStart.Invoke(PlayerPrefs.GetInt("Level"));
     }
 
     private void OnDisable()
@@ -36,6 +43,8 @@ public class SceneLoader : MonoBehaviour
                     NextLevel = 0;
                 else
                     NextLevel += level;
+
+                PlayerPrefs.SetInt("Level", NextLevel);
             }
 
             CatSceneLoad();
@@ -45,7 +54,7 @@ public class SceneLoader : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
             if(UINumbersControl.roundAction != null)
-                UINumbersControl.roundAction.Invoke(NextLevel);
+                UINumbersControl.roundAction.Invoke(PlayerPrefs.GetInt("Level"));
             if(UINumbersControl.timeAction != null)
                 UINumbersControl.timeAction.Invoke(999);
 
@@ -73,14 +82,30 @@ public class SceneLoader : MonoBehaviour
     }
     private IEnumerator LoadNextLevel(int level)
     {
+        PlayerPrefs.SetInt("Level", NextLevel);
         isStartCoroutine = true;
-        builderMap = mapLevels.Levels(NextLevel);
+        builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
 
         if(builderMap == null)
         {
             CleanScene();
-            FinishMenu.SetActive(true);
-            NextLevel = 0;
+            if (PlayerPrefs.HasKey("Level"))
+            {
+                if (PlayerPrefs.GetInt("Level") == 0)
+                {
+                    FinishMenu.SetActive(true);
+                }
+                else
+                {
+                    FinishMenu.SetActive(false);
+                }
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Level", 0);
+                FinishMenu.SetActive(true);
+            }
+            NextLevel = PlayerPrefs.GetInt("Level");
             yield return null;
         }
 
@@ -105,7 +130,7 @@ public class SceneLoader : MonoBehaviour
             Camera.main.orthographicSize = builderMap.GetLength(1) - 6f;
         }
 
-        builderMap = mapLevels.Levels(NextLevel);
+        builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
 
         PlayerMoving.isStartGame = true;
 
