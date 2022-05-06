@@ -21,4 +21,6 @@ public class EventList
     public static UnityAction<bool, string, string> OnBattle;
 
     public static UnityAction<Vector2, float> MovePlayer;
+
+    public static UnityAction<bool> PlayerAura, MirrorPlayerAura;
 }
