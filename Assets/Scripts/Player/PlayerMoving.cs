@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMoving : MonoBehaviour
 {
-    public static int[,] LevelMap;
+    public static float[,] LevelMap;
 
     public static bool isStartGame = false;
 
@@ -89,10 +89,10 @@ public class PlayerMoving : MonoBehaviour
         {
             try
             {
-                int right = LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y];
-                int left = LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y];
-                int up = LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1];
-                int down = LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1];
+                int right = (int)LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y];
+                int left = (int)LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y];
+                int up = (int)LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1];
+                int down = (int)LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1];
 
                 if (isGod)
                     GodEffect(player);

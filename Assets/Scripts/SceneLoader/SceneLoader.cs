@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] private GameObject[] ArrowMapings;
 
-    public static int[,] builderMap, navigationMap;
+    public static float[,] builderMap, navigationMap;
 
     private static int NextLevel = 0;
 
@@ -93,17 +93,17 @@ public class SceneLoader : MonoBehaviour
             {
                 if (PlayerPrefs.GetInt("Level") == 0)
                 {
-                    FinishMenu.SetActive(true);
+                    //FinishMenu.SetActive(true);
                 }
                 else
                 {
-                    FinishMenu.SetActive(false);
+                    //FinishMenu.SetActive(false);
                 }
             }
             else
             {
                 PlayerPrefs.SetInt("Level", 0);
-                FinishMenu.SetActive(true);
+                //FinishMenu.SetActive(true);
             }
             NextLevel = PlayerPrefs.GetInt("Level");
             yield return null;
@@ -121,20 +121,44 @@ public class SceneLoader : MonoBehaviour
         Screen.SetResolution(9 * 50, 20 * 50, false);
         if (builderMap.GetLength(0) > builderMap.GetLength(1))
         {
-            Camera.main.transform.position = new Vector3((builderMap.GetLength(0) / 2) - 0.5f, builderMap.GetLength(1) / 2, Camera.main.transform.position.z);
-            Camera.main.orthographicSize = builderMap.GetLength(0) - 1f;
+            Camera.main.transform.position = new Vector3((
+                builderMap.GetLength(0) / 2f) - 0.5f,
+                builderMap.GetLength(1) / 2f,
+                Camera.main.transform.position.z);
+
+            if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y < 1200)
+            {
+                Camera.main.orthographicSize = builderMap.GetLength(0) - ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
+            }
+            else if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y >= 1200)
+            {
+                Camera.main.orthographicSize = builderMap.GetLength(0) + ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
+            }
+
         }
         else
         {
-            Camera.main.transform.position = new Vector3((builderMap.GetLength(0) / 2) - 0.5f, builderMap.GetLength(1) / 2, Camera.main.transform.position.z);
-            Camera.main.orthographicSize = builderMap.GetLength(1) - 6f;
+            Camera.main.transform.position = new Vector3((
+                builderMap.GetLength(0) / 2f) - 0.5f,
+                builderMap.GetLength(1) / 2f,
+                Camera.main.transform.position.z);
+            //Camera.main.orthographicSize = builderMap.GetLength(1) - 3f;
+
+            if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y < 1200)
+            {
+                Camera.main.orthographicSize = builderMap.GetLength(0) - ((builderMap.GetLength(0) / 2f) - 0.5f)/4f;
+            }
+            else if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y >= 1200)
+            {
+                Camera.main.orthographicSize = builderMap.GetLength(0) + ((builderMap.GetLength(0) / 2f) - 0.5f)/4f;
+            }
         }
 
         builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
 
         PlayerMoving.isStartGame = true;
 
-        navigationMap = new int[builderMap.GetLength(0), builderMap.GetLength(1)];
+        navigationMap = new float[builderMap.GetLength(0), builderMap.GetLength(1)];
 
         for (int x = 0; x < builderMap.GetLength(0); x++)
             for (int y = 0; y < builderMap.GetLength(1); y++)
@@ -159,9 +183,9 @@ public class SceneLoader : MonoBehaviour
         {
             Vector2 positionPrefab = new Vector2(x, y);
             if (builderMap[x, y] > 12 && builderMap[x, y] != 20)
-                ArrowMapings[builderMap[x, y]].gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
+                ArrowMapings[(int)builderMap[x, y]].gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
 
-            GameObject ins = Instantiate(ArrowMapings[builderMap[x, y]], positionPrefab, Quaternion.identity, transform);
+            GameObject ins = Instantiate(ArrowMapings[(int)builderMap[x, y]], positionPrefab, Quaternion.identity, transform);
             ins.AddComponent<RotateObject>();
 
         }

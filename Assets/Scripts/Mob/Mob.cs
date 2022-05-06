@@ -12,7 +12,7 @@ public class Mob : MonoBehaviour
 
     private Vector3 MoveVector = Vector3.up;
 
-    public static int[,] LevelMap;
+    public static float[,] LevelMap;
 
     private Vector3 oldMoveVector;
 
@@ -21,10 +21,10 @@ public class Mob : MonoBehaviour
 
     private void Move()
     {
-        int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
-        int left = LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
-        int up = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
-        int down = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
+        int right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
+        int left = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
+        int up = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
+        int down = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
 
         oldMoveVector = MoveVector;
 
@@ -86,7 +86,7 @@ public class Mob : MonoBehaviour
             Int32.Parse(Mathf.FloorToInt(this.transform.position.y).ToString()),
             this.transform.position.z);
 
-            int idle = LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)];
+            int idle = (int)LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)];
 
             if (this.transform.position == mobFloorPoint && (idle != 0f && idle != 3 && idle != 4))
             {

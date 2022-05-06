@@ -5,13 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class MapLevels
 {
-    public int[,] Levels(int numberLevel)
+    public float[,] Levels(int numberLevel)
     {
         switch (numberLevel)
         {
             case 1:
                 Player.isInvertMoveY = true;
-                return new int[,] {{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
+                return new float[,] {{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 {2,6,10,0,0,0,10,0,13,0,10,0,10,0,0,0,2},
 {2,0,10,0,10,0,10,0,13,0,10,0,10,0,10,0,2},
 {2,0,10,0,10,0,10,0,12,0,10,0,10,0,10,0,2},
@@ -25,7 +25,7 @@ public class MapLevels
 {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
             case 0:
                 MirrorPlayer.isInvertMoveX = true;
-                return new int[,] {{10,10,10,10,10,10,10,10,10,10,10,10},
+                return new float[,] {{10,10,10,10,10,10,10,10,10,10,10,10},
 {10,10,10,12,0,0,0,10,10,10,10,10},
 {10,10,2,12,0,9,0,0,0,10,10,10},
 {10,0,0,12,0,0,0,0,0,0,10,10},
@@ -46,7 +46,7 @@ public class MapLevels
 
             case 2:
                 Player.isInvertMoveY = true;
-                return new int[,] {
+                return new float[,] {
                    {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 {2,0,0,0,1,5,0,0,0,0,13,20,0,0,0,0,2},
@@ -62,7 +62,7 @@ public class MapLevels
 
             case 3:
                 MirrorPlayer.isInvertMoveX = true;
-                return new int[,] {{1,1,1,1,1,1,1,1,1,1,1,1},
+                return new float[,] {{1,1,1,1,1,1,1,1,1,1,1,1},
 {1,1,1,1,1,1,1,1,1,1,5,1},
 {1,6,0,0,0,1,0,1,0,0,9,1},
 {1,1,1,20,0,20,9,20,0,1,0,1},
@@ -83,7 +83,7 @@ public class MapLevels
 
             case 4:
                 MirrorPlayer.isInvertMoveX = true;
-                return new int[,]
+                return new float[,]
                 {{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 {2,0,1,0,0,14,1,0,13,0,0,13,0,0,0,9,2},
@@ -99,7 +99,7 @@ public class MapLevels
 
             case 5:
                 Player.isInvertMoveY = true;
-                return new int[,] {
+                return new float[,] {
                     {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 {2,0,10,10,10,10,10,2,2,2,12,0,0,5,12,7,2},
 {2,0,10,10,10,0,0,2,2,2,12,0,2,0,12,0,2},

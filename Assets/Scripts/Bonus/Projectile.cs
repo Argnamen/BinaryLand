@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 
     private Vector3 MoveVector = Vector3.zero;
 
-    public static int[,] LevelMap;
+    public static float[,] LevelMap;
     private void Start()
     {
         LevelMap = SceneLoader.navigationMap;
@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
 
             if (this.transform.position == FloorPoint && this.transform.parent.transform.localScale.x == 1)
             {
-                int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
+                int right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
 
                 if (right == 0 || right >= 2)
                     MoveVector = Vector3.right;
@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
 
             else if (this.transform.position == FloorPoint && this.transform.parent.transform.localScale.x == -1)
             {
-                int right = LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
+                int right = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
 
                 if (right == 0 || right >= 2)
                     MoveVector = Vector3.left;
