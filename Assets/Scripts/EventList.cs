@@ -14,7 +14,7 @@ public class EventList
 
     public static UnityAction<bool> WarningText;
 
-    public static UnityAction<int> SingleDamage, SingleSheld, SingleDamagePlayer;
+    public static UnityAction<int> SingleDamage, SingleSheld, SingleDamagePlayer, MassHeal;
 
     public static UnityAction<int> LevelStart;
 

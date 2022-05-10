@@ -38,6 +38,15 @@ public class HPBar : MonoBehaviour
         }
     }
 
+    private void Heal(int healPoints)
+    {
+        if (TryGetComponent<Slider>(out var slider))
+        {
+            HP = HP + ((1 / StartHP) * healPoints);
+            slider.value = HP;
+        }
+    }
+
     private void OnEnable()
     {
         StartHP = HP;
@@ -52,6 +61,7 @@ public class HPBar : MonoBehaviour
         {
             EventList.SingleDamagePlayer += Attack;
             EventList.SingleSheld += Sheld;
+            EventList.MassHeal += Heal;
         }
     }
 
@@ -65,6 +75,7 @@ public class HPBar : MonoBehaviour
         {
             EventList.SingleDamagePlayer -= Attack;
             EventList.SingleSheld -= Sheld;
+            EventList.MassHeal -= Heal;
         }
     }
 }

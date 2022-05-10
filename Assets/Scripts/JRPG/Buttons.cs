@@ -9,55 +9,44 @@ public class Buttons : MonoBehaviour
     public int
         DamagePoints = 1,
         SheldPoints = 1,
+        HealPoints = 1,
         UltimateDamagePoints = 2;
 
     private int UltimateAction = 2, SaveUltimateAction = 2;
 
     private int NumberPlayerAction = 1, SaveNumberPlayerAction = 1;
 
-    private List<int> ActionList = new List<int>(); //1-damage, 2-shild, 3-Ult
-    public async void Attack()
+    private static int[] ActionList = new int[2]; //1-damage, 2-shild, 3-Ult
+    public void Attack(int playerNumber)
     {
-        InterectableUpdate(false);
-
-        await Task.Delay(1 * 500);
-
-        InterectableUpdate(true);
-
-        ActionList.Add(1);
+        ActionList[playerNumber - 1] = 1;
 
         ActionComplite();
     }
 
-    public async void Sheld()
+    public void Sheld()
     {
-
-        InterectableUpdate(false);
-
-        await Task.Delay(1 * 500);
-
-        InterectableUpdate(true);
-
-        ActionList.Add(2);
+        ActionList[0] = 2;
 
         ActionComplite();
     }
 
-    public async void UltimateAttack()
+    public void Heal()
+    {
+        ActionList[1] = 2;
+
+        ActionComplite();
+    }
+
+    public void UltimateAttack()
     {
         EventList.SingleSheld.Invoke(SheldPoints);
 
         EventList.InterectableUpdate.Invoke();
 
-        InterectableUpdate(false);
-
-        await Task.Delay(1 * 500);
-
-        InterectableUpdate(true);
-
         if (UltimateAction <= 0)
         {
-            ActionList.Add(3);
+            ActionList[0] = 3;
 
             UltimateAction = SaveUltimateAction;
         }
@@ -104,20 +93,23 @@ public class Buttons : MonoBehaviour
 
     private async void ActionComplite()
     {
-        EventList.PlayerAura.Invoke(false);
-        EventList.MirrorPlayerAura.Invoke(true);
+        //EventList.PlayerAura.Invoke(false);
+        //EventList.MirrorPlayerAura.Invoke(true);
 
-        if (ActionList.Count == 2)
+        InterectableUpdate(true);
+
+        if (ActionList[0] != 0 && ActionList[1] != 0)
         {
             --UltimateAction;
             //--NumberPlayerAction;
 
-            for (int i = 0; i < ActionList.Count; i++)
+            for (int i = 0; i < ActionList.Length; i++)
             {
                 switch (ActionList[i])
                 {
                     case 2:
-                        EventList.SingleSheld.Invoke(SheldPoints);
+                        if(i == 0)
+                            EventList.SingleSheld.Invoke(SheldPoints);
                         break;
                     case 3:
                         EventList.SingleDamage.Invoke(UltimateDamagePoints);
@@ -133,21 +125,34 @@ public class Buttons : MonoBehaviour
 
             InterectableUpdate(true);
 
-            for (int i = 0; i < ActionList.Count; i++)
+            for (int i = 0; i < ActionList.Length; i++)
             {
                 switch (ActionList[i])
                 {
                     case 1:
                         EventList.SingleDamage.Invoke(DamagePoints);
                         break;
+                    case 2:
+                        if (i == 1)
+                            EventList.MassHeal.Invoke(HealPoints);
+                        break;
                 }
             }
 
             UltimateComplite();
-            ActionList.Clear();
+            CleanActions();
+            //ActionList.Clear();
 
-            EventList.PlayerAura.Invoke(true);
-            EventList.MirrorPlayerAura.Invoke(false);
+            //EventList.PlayerAura.Invoke(true);
+            //EventList.MirrorPlayerAura.Invoke(false);
+        }
+    }
+
+    private void CleanActions()
+    {
+        for (int i = 0; i < ActionList.Length; i++)
+        {
+            ActionList[i] = 0;
         }
     }
 }

@@ -24,4 +24,16 @@ public class AuraActivate : MonoBehaviour
             EventList.MirrorPlayerAura += Activate;
         }
     }
+
+    private void OnDisable()
+    {
+        if (PlayerAura)
+        {
+            EventList.PlayerAura -= Activate;
+        }
+        else if (MirrorPlayerAura)
+        {
+            EventList.MirrorPlayerAura -= Activate;
+        }
+    }
 }
