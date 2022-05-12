@@ -1,9 +1,11 @@
-using System.Collections;
+using System.Collections.Generic;
 using System;
 using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
+    private MobNavigationMap navigationMap = new MobNavigationMap();
+
     private bool isCoroutineStop = true;
 
     private int BearHeals = 2;
@@ -12,71 +14,80 @@ public class Mob : MonoBehaviour
 
     private Vector3 MoveVector = Vector3.up;
 
-    public static float[,] LevelMap;
+    private int[,] LevelMap;
 
     private Vector3 oldMoveVector;
 
     private bool isLife = true;
 
+    private int pointMove = 0;
+
+    private bool MoveStart = true;
 
     private void Move()
     {
-        int right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
-        int left = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
-        int up = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
-        int down = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
+        if (MoveStart)
+        {
+            ++pointMove;
+        }
+        else
+        {
+            
+        }
+
+        int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
+        int left = LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
+        int up = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
+        int down = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
+
+        Debug.Log("Right " + right);
+        Debug.Log("Left " + left);
+        Debug.Log("Up " + up);
+        Debug.Log("Down " + down);
 
         oldMoveVector = MoveVector;
 
-        switch (UnityEngine.Random.Range(0, 4))
+        if (pointMove == right)
         {
-            case 0:
-                if (right == 0 || right == 3 || right == 4)
-                    MoveVector = Vector3.right;
-                else if (left == 0 || left == 3 || left == 4)
-                    MoveVector = Vector3.left;
-                else if (up == 0 || up == 3 || up == 4)
-                    MoveVector = Vector3.up;
-                else if (down == 0 || down == 3 || down == 4)
-                    MoveVector = Vector3.down;
-                break;
-            case 1:
-                if (left == 0 || left == 3 || left == 4)
-                    MoveVector = Vector3.left;
-                else if (right == 0 || right == 3 || right == 4)
-                    MoveVector = Vector3.right;
-                else if (up == 0 || up == 3 || up == 4)
-                    MoveVector = Vector3.up;
-                else if (down == 0 || down == 3 || down == 4)
-                    MoveVector = Vector3.down;
-                break;
-            case 2:
-                if (up == 0 || up == 3 || up == 4)
-                    MoveVector = Vector3.up;
-                else if (left == 0 || left == 3 || left == 4)
-                    MoveVector = Vector3.left;
-                else if (right == 0 || right == 3 || right == 4)
-                    MoveVector = Vector3.right;
-                else if (down == 0 || down == 3 || down == 4)
-                    MoveVector = Vector3.down;
-                break;
-            case 3:
-                if (down == 0 || down == 3 || down == 4)
-                    MoveVector = Vector3.down;
-                else if (up == 0 || up == 3 || up == 4)
-                    MoveVector = Vector3.up;
-                else if (left == 0 || left == 3 || left == 4)
-                    MoveVector = Vector3.left;
-                else if (right == 0 || right == 3 || right == 4)
-                    MoveVector = Vector3.right;
-                break;
+            MoveVector = Vector3.right;
         }
+        else if (pointMove == left)
+        {
+            MoveVector = Vector3.left;
+        }
+        else if (pointMove == up)
+        {
+            MoveVector = Vector3.up;
+        }
+        else if (pointMove == down)
+        {
+            MoveVector = Vector3.down;
+        }
+        else
+        {
+            List<int> list = new List<int>(4) { right, left, up, down };
+
+            list.Sort();
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                if(list[i] != 0)
+                {
+                    pointMove = list[i];
+                    MoveStart = false;
+                    break;
+                }
+            }
+        }
+        
     }
 
     private void Start()
     {
-        LevelMap = SceneLoader.navigationMap;
+        //LevelMap = SceneLoader.navigationMap;
+        LevelMap = navigationMap.Levels(PlayerPrefs.GetInt("Level"));
     }
+
     private void FixedUpdate()
     {
         if (PlayerMoving.isStartGame && isLife)
@@ -86,9 +97,16 @@ public class Mob : MonoBehaviour
             Int32.Parse(Mathf.FloorToInt(this.transform.position.y).ToString()),
             this.transform.position.z);
 
-            int idle = (int)LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)];
+            int idle = LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)];
 
-            if (this.transform.position == mobFloorPoint && (idle != 0f && idle != 3 && idle != 4))
+            //if (this.transform.position == mobFloorPoint && (idle != 0f && idle != 3 && idle != 4))
+            //{
+            //Move();
+            //}
+
+            //Debug.Log(idle + " " + (pointMove));
+
+            if (this.transform.position == mobFloorPoint && (idle == 0))
             {
                 Move();
             }
@@ -102,15 +120,7 @@ public class Mob : MonoBehaviour
             if (MoveVector == Vector3.down)
                 this.gameObject.GetComponent<Animator>().Play("Down");
 
-            if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 3)
-                LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 3;
-            else if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 2)
-                LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 2;
-            else if (LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] == 4)
-                LevelMap[(int)(mobFloorPoint.x + oldMoveVector.x), (int)(mobFloorPoint.y + oldMoveVector.y)] = 0;
-
-            if (this.transform.position == mobFloorPoint && idle != 3)
-                LevelMap[(int)(mobFloorPoint.x + MoveVector.x), (int)(mobFloorPoint.y + MoveVector.y)] = 4;
+            
 
             this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + MoveVector, Speed / 32);
         }

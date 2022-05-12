@@ -7,11 +7,15 @@ public class TextWarning : MonoBehaviour
 {
     private void TextUpdate(bool action)
     {
-        if(TryGetComponent<TextMeshProUGUI>(out var text))
+        if (TryGetComponent<TextMeshProUGUI>(out var text))
         {
             if (action)
             {
-                text.text = "ATTACK";
+                HPBar.BossAction = Random.Range(0, 2);
+                if (HPBar.BossAction == 0)
+                    text.text = "ATTACK";
+                else
+                    text.text = "SHELD";
             }
             else
             {

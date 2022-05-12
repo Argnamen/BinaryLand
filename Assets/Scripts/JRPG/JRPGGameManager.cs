@@ -15,7 +15,7 @@ public class JRPGGameManager : MonoBehaviour
 
         EventList.WarningText.Invoke(false);
 
-        Task.Delay(10);
+        await Task.Delay(10);
 
         EventList.WarningText = null;
     }
@@ -42,6 +42,8 @@ public class JRPGGameManager : MonoBehaviour
     {
         EventList.Win += WinActivate;
         EventList.Lose += LoseActivate;
+
+        //EventList.ButtonActivate.Invoke(false);
     }
 
     private void OnDisable()

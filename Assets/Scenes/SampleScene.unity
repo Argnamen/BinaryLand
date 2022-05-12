@@ -3501,6 +3501,14 @@ PrefabInstance:
       propertyPath: FinishMenu
       value: 
       objectReference: {fileID: 519709238}
+    - target: {fileID: 710301006005932224, guid: 657af5f9640821f4a8639367e18eb900, type: 3}
+      propertyPath: ArrowMapings.Array.data[15]
+      value: 
+      objectReference: {fileID: 7385588161325935930, guid: c4666e0f7808edc43948df7228e2b8b2, type: 3}
+    - target: {fileID: 710301006005932224, guid: 657af5f9640821f4a8639367e18eb900, type: 3}
+      propertyPath: ArrowMapings.Array.data[16]
+      value: 
+      objectReference: {fileID: 7385588161325935930, guid: 86792bd66c838df43b56c71f5a42d1a5, type: 3}
     - target: {fileID: 710301006005932225, guid: 657af5f9640821f4a8639367e18eb900, type: 3}
       propertyPath: m_RootOrder
       value: 0

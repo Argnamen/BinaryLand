@@ -12,6 +12,8 @@ public class Buttons : MonoBehaviour
         HealPoints = 1,
         UltimateDamagePoints = 2;
 
+    public int EvilDamagePoints = 1;
+
     private int UltimateAction = 2, SaveUltimateAction = 2;
 
     private int NumberPlayerAction = 1, SaveNumberPlayerAction = 1;
@@ -21,21 +23,24 @@ public class Buttons : MonoBehaviour
     {
         ActionList[playerNumber - 1] = 1;
 
-        ActionComplite();
+        //ActionComplite();
+        ButtonActivate();
     }
 
     public void Sheld()
     {
         ActionList[0] = 2;
 
-        ActionComplite();
+        //ActionComplite();
+        ButtonActivate();
     }
 
     public void Heal()
     {
         ActionList[1] = 2;
 
-        ActionComplite();
+        //ActionComplite();
+        ButtonActivate();
     }
 
     public void UltimateAttack()
@@ -51,7 +56,8 @@ public class Buttons : MonoBehaviour
             UltimateAction = SaveUltimateAction;
         }
 
-        ActionComplite();
+        //ActionComplite();
+        ButtonActivate();
     }
 
     private async void EvilDamage()
@@ -63,7 +69,9 @@ public class Buttons : MonoBehaviour
 
         if (EventList.SingleDamagePlayer != null)
         {
-            EventList.SingleDamagePlayer.Invoke(DamagePoints);
+            EventList.SingleDamagePlayer.Invoke(EvilDamagePoints);
+
+            EventList.Swipe.Invoke();
         }
 
     }
@@ -85,10 +93,49 @@ public class Buttons : MonoBehaviour
         {
             EventList.InterectableAction.Invoke(action);
         }
+    }
+
+    private void WarningActivate(bool action)
+    {
         if (EventList.WarningText != null)
         {
             EventList.WarningText.Invoke(action);
         }
+    }
+
+    private void ButtonActivate()
+    {
+        if (ActionList[0] != 0 && ActionList[1] != 0)
+        {
+            int kombo = 0;
+
+            for (int i = 0; i < ActionList.Length; i++)
+            {
+                switch (ActionList[i])
+                {
+                    case 1:
+                        ++kombo;
+                        if (i == 1 && kombo == 2)
+                        {
+                            //EventList.SingleDamage.Invoke(DamagePoints * 4);
+
+                            EventList.KomboSkill.Invoke();
+                        }
+                        break;
+                }
+            }
+
+            if (kombo != 2)
+            {
+                EventList.ButtonActivate.Invoke(true);
+            }
+        }
+        else
+        {
+            EventList.ButtonActivate.Invoke(false);
+        }
+
+        InterectableUpdate(true);
     }
 
     private async void ActionComplite()
@@ -97,6 +144,8 @@ public class Buttons : MonoBehaviour
         //EventList.MirrorPlayerAura.Invoke(true);
 
         InterectableUpdate(true);
+
+        EventList.ButtonActivate.Invoke(false);
 
         if (ActionList[0] != 0 && ActionList[1] != 0)
         {
@@ -107,10 +156,6 @@ public class Buttons : MonoBehaviour
             {
                 switch (ActionList[i])
                 {
-                    case 2:
-                        if(i == 0)
-                            EventList.SingleSheld.Invoke(SheldPoints);
-                        break;
                     case 3:
                         EventList.SingleDamage.Invoke(UltimateDamagePoints);
                         break;
@@ -120,27 +165,48 @@ public class Buttons : MonoBehaviour
             EvilDamage();
 
             InterectableUpdate(false);
+            WarningActivate(false);
 
             await Task.Delay(2 * 1000);
 
             InterectableUpdate(true);
+
+            int kombo = 0;
 
             for (int i = 0; i < ActionList.Length; i++)
             {
                 switch (ActionList[i])
                 {
                     case 1:
-                        EventList.SingleDamage.Invoke(DamagePoints);
+                        ++kombo;
+                        if (i == 1 && kombo == 2)
+                        {
+                            //EventList.SingleDamage.Invoke(DamagePoints * 4);
+
+                            //EventList.KomboSkill.Invoke();
+                        }
+                        else if (i == 1)
+                        {
+                            EventList.SingleDamage.Invoke(DamagePoints);
+                        }
                         break;
                     case 2:
                         if (i == 1)
                             EventList.MassHeal.Invoke(HealPoints);
+                        if (i == 0)
+                            EventList.SingleDamage.Invoke(DamagePoints * 2);
                         break;
                 }
             }
 
             UltimateComplite();
             CleanActions();
+
+
+            if (EventList.WarningText != null)
+            {
+                EventList.WarningText.Invoke(true);
+            }
             //ActionList.Clear();
 
             //EventList.PlayerAura.Invoke(true);
@@ -154,5 +220,20 @@ public class Buttons : MonoBehaviour
         {
             ActionList[i] = 0;
         }
+    }
+
+    private void OnEnable()
+    {
+        if (EventList.BattleStart != null)
+        {
+            EventList.BattleStart = null;
+        }
+
+        EventList.BattleStart += ActionComplite;
+    }
+
+    private void OnDestroy()
+    {
+        EventList.BattleStart -= ActionComplite;
     }
 }

@@ -11,10 +11,16 @@ public class EventList
 
     public static UnityAction InterectableUpdate;
     public static UnityAction<bool> InterectableAction;
+    public static UnityAction<bool> ButtonActivate;
+    public static UnityAction BattleStart;
 
     public static UnityAction<bool> WarningText;
 
-    public static UnityAction<int> SingleDamage, SingleSheld, SingleDamagePlayer, MassHeal;
+    public static UnityAction<int> SingleDamage, SingleEvilSheld, SingleSheld, SingleDamagePlayer, MassHeal;
+
+    public static UnityAction KomboSkill;
+
+    public static UnityAction Swipe;
 
     public static UnityAction<int> LevelStart;
 
