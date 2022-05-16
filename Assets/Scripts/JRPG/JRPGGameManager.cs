@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class JRPGGameManager : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class JRPGGameManager : MonoBehaviour
 
         EventList.SingleDamagePlayer = null;
 
-        EventList.WarningText.Invoke(false);
+        if (EventList.WarningText != null)
+        {
+            EventList.WarningText.Invoke(false);
+        }
 
         await Task.Delay(10);
 

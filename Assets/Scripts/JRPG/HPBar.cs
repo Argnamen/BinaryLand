@@ -17,6 +17,9 @@ public class HPBar : MonoBehaviour
 
     public static int BossAction = 0;
 
+    private static int Damage;
+    private static int PlayerAction = 0;
+
     private void Attack(int damage)
     {
         if(TryGetComponent<Slider>(out var slider))
@@ -39,14 +42,30 @@ public class HPBar : MonoBehaviour
             {
                 if (BossAction == 0)
                 {
-                    damage = Random.Range(0, damage + 1);
+                    if (PlayerAction == 0)
+                    {
+                        Damage = Random.Range(0, damage + 1);
+                        ++PlayerAction;
+                    }
+                    else
+                    {
+                        PlayerAction = 0;
+                    }
 
-                    if(damage == 0)
+                    if(Damage == 0)
                     {
                         Dodge();
                     }
+                    if(Damage >= damage)
+                    {
+                        Krit();
+                    }
 
-                    HP = HP - ((1 / StartHP) * damage);
+                    HP = HP - ((1 / StartHP) * Damage);
+                    if (HP > 1)
+                    {
+                        HP = 1;
+                    }
                     slider.value = HP;
                 }
             }
@@ -85,6 +104,18 @@ public class HPBar : MonoBehaviour
         if (TextDodged != null)
         {
             TextDodged.text = "Dodge";
+
+            await Task.Delay(1 * 1000);
+
+            TextDodged.text = "";
+        }
+    }
+
+    private async void Krit()
+    {
+        if (TextDodged != null)
+        {
+            TextDodged.text = "Critical";
 
             await Task.Delay(1 * 1000);
 

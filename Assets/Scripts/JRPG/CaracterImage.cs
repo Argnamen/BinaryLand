@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 public class CaracterImage : MonoBehaviour
 {
     private static List<GameObject> ImageList = new List<GameObject>();
+    private static List<Vector3> ImageListTransform = new List<Vector3>();
 
     private void Sort()
     {
+        RandomActionList();
+
         GameObject saveObject;
         for (int k = 0; k < ImageList.Count; k++)
             for (int i = 0; i < ImageList.Count; i++)
@@ -30,44 +33,103 @@ public class CaracterImage : MonoBehaviour
                     }
                 }
             }
+
+        //RandomSort();
     }
 
-    private async void ImageSvipeAnimation()
+    private void RandomSort()
+    {
+        GameObject saveObject;
+
+        for (int i = 0; i < Buttons.ActionList.Count; i++)
+        {
+            switch (Buttons.ActionList[i])
+            {
+                case 1:
+                    saveObject = ImageList[i];
+                    ImageList[i] = ImageList[1];
+                    ImageList[1] = saveObject;
+                    break;
+                case 2:
+                    saveObject = ImageList[i];
+                    ImageList[i] = ImageList[2];
+                    ImageList[2] = saveObject;
+                    break;
+                case 50:
+                    saveObject = ImageList[i];
+                    ImageList[i] = ImageList[0];
+                    ImageList[0] = saveObject;
+                    break;
+            }
+        }
+    }
+    private void RandomActionList()
+    {
+        //1 - player, 2 - mirplayer, 5 - boss
+        switch(Random.Range(0, 3))
+        {
+            case 0:
+                Buttons.ActionList = new List<int>(3) { 1, 2, 50 };
+                break;
+            case 1:
+                Buttons.ActionList = new List<int>(3) { 1, 50, 2 };
+                break;
+            case 2:
+                Buttons.ActionList = new List<int>(3) { 50, 1, 2 };
+                break;
+        }
+
+        switch (Random.Range(0, 2))
+        {
+            case 0:
+                for(int i = 0; i < Buttons.ActionList.Count; i++)
+                {
+                    if(Buttons.ActionList[i] == 1)
+                    {
+                        Buttons.ActionList[i] = 2;
+                    }
+                    else if (Buttons.ActionList[i] == 2)
+                    {
+                        Buttons.ActionList[i] = 1;
+                    }
+                }
+                break;
+        }
+
+    }
+
+    private void ImageSvipeAnimation()
     {
         Sort();
 
         for(int i = 0; i < ImageList.Count; i++) 
         {
-
-            if (this.gameObject == ImageList[0])
+            switch (Buttons.ActionList[i])
             {
-                this.gameObject.transform.DOLocalMoveY(ImageList[ImageList.Count - 1].transform.localPosition.y, 0.5f);
+                case 1:
+                    ImageList[1].transform.DOLocalMoveY(ImageListTransform[i].y, 0.5f);
+                    break;
+                case 2:
+                    ImageList[2].transform.DOLocalMoveY(ImageListTransform[i].y, 0.5f);
+                    break;
+                case 50:
+                    ImageList[0].transform.DOLocalMoveY(ImageListTransform[i].y, 0.5f);
+                    break;
             }
-            else if (this.gameObject == ImageList[1])
-            {
-                this.gameObject.transform.DOLocalMoveY(ImageList[0].transform.localPosition.y, 0.5f);
-            }
-            else if (this.gameObject == ImageList[2])
-            {
-                this.gameObject.transform.DOLocalMoveY(ImageList[1].transform.localPosition.y, 0.5f);
-            }
-
-            await Task.Delay(1 * 500);
         }
     }
 
-    private async void StartImageSvipeAnimation()
-    {
-        Sort();
-
-
-    }
-
-        private void OnEnable()
+    private void OnEnable()
     {
         ImageList.Add(this.gameObject);
+        ImageListTransform.Add(this.gameObject.transform.localPosition);
 
         EventList.Swipe += ImageSvipeAnimation;
+
+        if (ImageList.Count == 3)
+        {
+            EventList.Swipe.Invoke();
+        }
     }
 
     private void OnDestroy()

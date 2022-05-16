@@ -49,10 +49,6 @@ public class SceneLoader : MonoBehaviour
 
             CatSceneLoad();
 
-            if (NextLevel == 7)
-            {
-                SceneManager.LoadScene(2);
-            }
             if(UINumbersControl.roundAction != null)
                 UINumbersControl.roundAction.Invoke(PlayerPrefs.GetInt("Level"));
             if(UINumbersControl.timeAction != null)
@@ -155,6 +151,11 @@ public class SceneLoader : MonoBehaviour
         }
 
         builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
+
+        if(builderMap == null)
+        {
+            SceneManager.LoadScene(2);
+        }
 
         PlayerMoving.isStartGame = true;
 

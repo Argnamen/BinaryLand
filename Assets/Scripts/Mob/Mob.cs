@@ -32,7 +32,13 @@ public class Mob : MonoBehaviour
         }
         else
         {
-            
+            --pointMove;
+        }
+
+        if(pointMove == 0)
+        {
+            MoveStart = true;
+            Move();
         }
 
         int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
@@ -40,10 +46,10 @@ public class Mob : MonoBehaviour
         int up = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
         int down = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
 
-        Debug.Log("Right " + right);
-        Debug.Log("Left " + left);
-        Debug.Log("Up " + up);
-        Debug.Log("Down " + down);
+        //Debug.Log("Right " + right);
+        //Debug.Log("Left " + left);
+        //Debug.Log("Up " + up);
+        //Debug.Log("Down " + down);
 
         oldMoveVector = MoveVector;
 
@@ -73,11 +79,25 @@ public class Mob : MonoBehaviour
             {
                 if(list[i] != 0)
                 {
-                    pointMove = list[i];
-                    MoveStart = false;
+                    if (MoveStart)
+                    {
+                        MoveStart = false;
+
+                        pointMove = list[i] + 1;
+                    }
+                    else
+                    {
+                        MoveStart = true;
+
+                        pointMove = list[i] - 1;
+
+                    }
                     break;
                 }
             }
+
+            //Debug.Log(MoveStart);
+            Move();
         }
         
     }

@@ -18,10 +18,32 @@ public class Buttons : MonoBehaviour
 
     private int NumberPlayerAction = 1, SaveNumberPlayerAction = 1;
 
-    private static int[] ActionList = new int[2]; //1-damage, 2-shild, 3-Ult
+    private static int[] ActionMass = new int[2]; //1-damage, 2-shild, 3-Ult
+    public static List<int> ActionList = new List<int>(); 
+    //11-skill1 player, 12-skill2 player, 21-skill1 MirPlayer, 22-skill2 MirPlayer, 50-boss
+
+    private void ActionListSearch(int playerNumber, int skillNumber)
+    {
+        for(int i = 0; i < ActionList.Count; i++)
+        {
+            if(ActionList[i] == playerNumber)
+            {
+                ActionList[i] = playerNumber * 10 + skillNumber;
+            }
+        }
+    }
     public void Attack(int playerNumber)
     {
-        ActionList[playerNumber - 1] = 1;
+        switch (playerNumber - 1)
+        {
+            case 0:
+                ActionListSearch(1, 1);
+                break;
+            case 1:
+                ActionListSearch(2, 1);
+                break;
+        }
+        ActionMass[playerNumber - 1] = 1;
 
         //ActionComplite();
         ButtonActivate();
@@ -29,7 +51,9 @@ public class Buttons : MonoBehaviour
 
     public void Sheld()
     {
-        ActionList[0] = 2;
+        ActionListSearch(1, 2);
+
+        ActionMass[0] = 2;
 
         //ActionComplite();
         ButtonActivate();
@@ -37,7 +61,9 @@ public class Buttons : MonoBehaviour
 
     public void Heal()
     {
-        ActionList[1] = 2;
+        ActionListSearch(2, 2);
+
+        ActionMass[1] = 2;
 
         //ActionComplite();
         ButtonActivate();
@@ -51,7 +77,7 @@ public class Buttons : MonoBehaviour
 
         if (UltimateAction <= 0)
         {
-            ActionList[0] = 3;
+            ActionMass[0] = 3;
 
             UltimateAction = SaveUltimateAction;
         }
@@ -71,7 +97,6 @@ public class Buttons : MonoBehaviour
         {
             EventList.SingleDamagePlayer.Invoke(EvilDamagePoints);
 
-            EventList.Swipe.Invoke();
         }
 
     }
@@ -105,27 +130,37 @@ public class Buttons : MonoBehaviour
 
     private void ButtonActivate()
     {
-        if (ActionList[0] != 0 && ActionList[1] != 0)
+        if (ActionList != null && ((ActionList[0] / 10) * (ActionList[1] / 10) * (ActionList[2] / 10) == 10))
         {
             int kombo = 0;
 
-            for (int i = 0; i < ActionList.Length; i++)
+            Debug.Log(ActionList[0] + " " + ActionList[1] + " " + ActionList[2]);
+
+            for (int i = 0; i < ActionList.Count; i++)
             {
                 switch (ActionList[i])
                 {
-                    case 1:
+                    case 11:
                         ++kombo;
-                        if (i == 1 && kombo == 2)
+                        break;
+                    case 21:
+                        ++kombo;
+                        break;
+                    case 50:
+                        if (i != 2)
                         {
-                            //EventList.SingleDamage.Invoke(DamagePoints * 4);
-
-                            EventList.KomboSkill.Invoke();
+                            kombo = 0;
                         }
                         break;
                 }
             }
+            if (kombo == 2)
+            {
+                //EventList.SingleDamage.Invoke(DamagePoints * 4);
 
-            if (kombo != 2)
+                EventList.KomboSkill.Invoke();
+            }
+            else if (kombo != 2)
             {
                 EventList.ButtonActivate.Invoke(true);
             }
@@ -147,78 +182,55 @@ public class Buttons : MonoBehaviour
 
         EventList.ButtonActivate.Invoke(false);
 
-        if (ActionList[0] != 0 && ActionList[1] != 0)
+        InterectableUpdate(false);
+        WarningActivate(false);
+
+        for (int i = 0; i < ActionList.Count; i++)
         {
-            --UltimateAction;
-            //--NumberPlayerAction;
-
-            for (int i = 0; i < ActionList.Length; i++)
+            switch (ActionList[i])
             {
-                switch (ActionList[i])
-                {
-                    case 3:
-                        EventList.SingleDamage.Invoke(UltimateDamagePoints);
-                        break;
-                }
+                case 11:
+                    EventList.SingleDamage.Invoke(DamagePoints);
+                    break;
+                case 12:
+                    EventList.SingleSheld.Invoke(DamagePoints);
+                    break;
+                case 21:
+                    EventList.SingleDamage.Invoke(DamagePoints);
+                    break;
+                case 22:
+                    EventList.MassHeal.Invoke(DamagePoints);
+                    break;
+                case 50:
+                    EvilDamage();
+
+                    await Task.Delay(2 * 1000);
+
+                    InterectableUpdate(true);
+                    break;
             }
-
-            EvilDamage();
-
-            InterectableUpdate(false);
-            WarningActivate(false);
-
-            await Task.Delay(2 * 1000);
-
-            InterectableUpdate(true);
-
-            int kombo = 0;
-
-            for (int i = 0; i < ActionList.Length; i++)
-            {
-                switch (ActionList[i])
-                {
-                    case 1:
-                        ++kombo;
-                        if (i == 1 && kombo == 2)
-                        {
-                            //EventList.SingleDamage.Invoke(DamagePoints * 4);
-
-                            //EventList.KomboSkill.Invoke();
-                        }
-                        else if (i == 1)
-                        {
-                            EventList.SingleDamage.Invoke(DamagePoints);
-                        }
-                        break;
-                    case 2:
-                        if (i == 1)
-                            EventList.MassHeal.Invoke(HealPoints);
-                        if (i == 0)
-                            EventList.SingleDamage.Invoke(DamagePoints * 2);
-                        break;
-                }
-            }
-
-            UltimateComplite();
-            CleanActions();
-
-
-            if (EventList.WarningText != null)
-            {
-                EventList.WarningText.Invoke(true);
-            }
-            //ActionList.Clear();
-
-            //EventList.PlayerAura.Invoke(true);
-            //EventList.MirrorPlayerAura.Invoke(false);
         }
+
+
+        if (EventList.WarningText != null)
+        {
+            EventList.WarningText.Invoke(true);
+        }
+        //ActionList.Clear();
+
+        //EventList.PlayerAura.Invoke(true);
+        //EventList.MirrorPlayerAura.Invoke(false);
+
+        ActionList.Clear();
+
+        EventList.Swipe.Invoke();
     }
 
     private void CleanActions()
     {
-        for (int i = 0; i < ActionList.Length; i++)
+        for (int i = 0; i < ActionMass.Length; i++)
         {
-            ActionList[i] = 0;
+            ActionMass[i] = 0;
         }
     }
 

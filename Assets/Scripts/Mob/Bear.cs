@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bear : MonoBehaviour
 {
 
-    private int Heals = 2;
+    private int Heals = 1;
 
     public bool isDeath = false;
 
