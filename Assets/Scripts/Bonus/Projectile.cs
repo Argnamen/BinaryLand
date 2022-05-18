@@ -70,6 +70,8 @@ public class Projectile : MonoBehaviour
             {
                 int up = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
 
+                Debug.Log((int)this.transform.position.y + 1);
+
                 if (up == 0 || up >= 2)
                     MoveVector = Vector3.up;
                 else
@@ -77,6 +79,43 @@ public class Projectile : MonoBehaviour
                     MoveVector = Vector3.zero;
                     Destroy(this.gameObject);
                 }
+            }
+        }
+
+        if (MoveVector == Vector3.up)
+        {
+            int up = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
+            if (up == 1)
+            {
+                MoveVector = Vector3.zero;
+                Destroy(this.gameObject);
+            }
+        }
+        else if (MoveVector == Vector3.down)
+        {
+            int down = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
+            if (down == 1)
+            {
+                MoveVector = Vector3.zero;
+                Destroy(this.gameObject);
+            }
+        }
+        else if (MoveVector == Vector3.right)
+        {
+            int right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
+            if (right == 1)
+            {
+                MoveVector = Vector3.zero;
+                Destroy(this.gameObject);
+            }
+        }
+        else if (MoveVector == Vector3.left)
+        {
+            int left = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
+            if (left == 1)
+            {
+                MoveVector = Vector3.zero;
+                Destroy(this.gameObject);
             }
         }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bear : MonoBehaviour
 {
 
-    private int Heals = 1;
+    [SerializeField] private int Heals = 1;
 
     public bool isDeath = false;
 
@@ -33,7 +33,7 @@ public class Bear : MonoBehaviour
         if (collision.TryGetComponent<Water>(out var i))
             if (i.isPlayer == true)
             {
-                if (Heals == 1)
+                if (Heals <= 0.5)
                 {
                     this.GetComponent<Animator>().Play("Death");
                     UINumbersControl.scoreAction.Invoke(200);

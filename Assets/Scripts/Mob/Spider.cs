@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spider : MonoBehaviour
 {
     [SerializeField] private GameObject Web;
+
+    [SerializeField] private float Heals = 1;
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<Projectile>())
@@ -21,8 +23,15 @@ public class Spider : MonoBehaviour
         {
             if (i.isPlayer == true)
             {
-                this.GetComponent<Animator>().Play("Death");
-                UINumbersControl.scoreAction.Invoke(100);
+                if (Heals <= 0.5)
+                {
+                    this.GetComponent<Animator>().Play("Death");
+                    UINumbersControl.scoreAction.Invoke(100);
+                }
+                else
+                {
+                    --Heals;
+                }
             }
         }
 

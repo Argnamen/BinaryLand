@@ -13,7 +13,7 @@ public class PlayerMoving : MonoBehaviour
         isGod = false,
         isSpeed = false;
 
-    private static float Timer = 1f;
+    private static float Timer = 3f;
     public void FLightEffect()
     {
         Timer -= Time.fixedDeltaTime;
