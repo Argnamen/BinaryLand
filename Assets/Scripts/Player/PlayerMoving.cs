@@ -13,10 +13,11 @@ public class PlayerMoving : MonoBehaviour
         isGod = false,
         isSpeed = false;
 
-    private float Timer = 1f;
+    private static float Timer = 1f;
     public void FLightEffect()
     {
         Timer -= Time.fixedDeltaTime;
+        Debug.Log(Timer);
         if (Timer <= 0)
         {
             isFlight = false;
@@ -27,14 +28,23 @@ public class PlayerMoving : MonoBehaviour
     public void GodEffect(GameObject player)
     {
         if (player.TryGetComponent<BoxCollider2D>(out var dis))
+        {
             dis.enabled = false;
+            Player.GodMod = true;
+            MirrorPlayer.GodMod = true;
+        }
         Timer -= Time.fixedDeltaTime;
+        Debug.Log(Timer);
         if (Timer <= 0)
         {
             isGod = false;
             Timer = 1;
             if (player.TryGetComponent<BoxCollider2D>(out var en))
+            {
                 en.enabled = true;
+                Player.GodMod = false;
+                MirrorPlayer.GodMod = false;
+            }
         }
     }
 
@@ -42,6 +52,7 @@ public class PlayerMoving : MonoBehaviour
     {
         Timer -= Time.fixedDeltaTime;
         JoystickControl.Speed = 2;
+        Debug.Log(Timer);
         if (Timer <= 0)
         {
             JoystickControl.Speed = 1;
@@ -100,6 +111,11 @@ public class PlayerMoving : MonoBehaviour
                 if (isSpeed)
                     SpeedEffect(player);
 
+                if (isFlight)
+                {
+                    FLightEffect();
+                }
+
                 if (movePoint.x > 71 && movePoint.x <= 100)
                 {
                     animationController.Play("Right");
@@ -108,7 +124,7 @@ public class PlayerMoving : MonoBehaviour
                     {
                         moveVector = Vector3.right;
                     }
-                    else if (isFlight)
+                    else if (isFlight && right != -1)
                     {
                         moveVector = Vector3.right;
                         FLightEffect();
@@ -123,7 +139,7 @@ public class PlayerMoving : MonoBehaviour
                     {
                         moveVector = Vector3.left;
                     }
-                    else if (isFlight)
+                    else if (isFlight && left != -1)
                     {
                         moveVector = Vector3.left;
                         FLightEffect();
@@ -138,7 +154,7 @@ public class PlayerMoving : MonoBehaviour
                     {
                         moveVector = Vector3.up;
                     }
-                    else if (isFlight)
+                    else if (isFlight && up != -1)
                     {
                         moveVector = Vector3.up;
                         FLightEffect();
@@ -152,7 +168,7 @@ public class PlayerMoving : MonoBehaviour
                     {
                         moveVector = Vector3.down;
                     }
-                    else if (isFlight)
+                    else if (isFlight && down != -1)
                     {
                         moveVector = Vector3.down;
                         FLightEffect();

@@ -14,9 +14,16 @@ public class MirrorPlayer : MonoBehaviour
 
     public static bool isInvertMoveY = false, isInvertMoveX = false;
 
+    public static bool GodMod = false;
+
     [SerializeField] private Camera PlayerCamera;
     private void Move(Vector2 movePoint, float speed)
     {
+        if (!GodMod)
+        {
+            this.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
         if (isInvertMoveY)
             if (movePoint.y != 0)
                 movePoint = new Vector2(movePoint.x, -movePoint.y);

@@ -190,16 +190,20 @@ public class Buttons : MonoBehaviour
             switch (ActionList[i])
             {
                 case 11:
-                    EventList.SingleDamage.Invoke(DamagePoints);
+                    if (EventList.SingleDamage != null)
+                        EventList.SingleDamage.Invoke(DamagePoints);
                     break;
                 case 12:
-                    EventList.SingleSheld.Invoke(DamagePoints);
+                    if (EventList.SingleSheld != null)
+                        EventList.SingleSheld.Invoke(DamagePoints);
                     break;
                 case 21:
-                    EventList.SingleDamage.Invoke(DamagePoints);
+                    if(EventList.SingleDamage != null)
+                        EventList.SingleDamage.Invoke(DamagePoints);
                     break;
                 case 22:
-                    EventList.MassHeal.Invoke(DamagePoints);
+                    if (EventList.MassHeal != null)
+                        EventList.MassHeal.Invoke(DamagePoints);
                     break;
                 case 50:
                     EvilDamage();
@@ -223,7 +227,8 @@ public class Buttons : MonoBehaviour
 
         ActionList.Clear();
 
-        EventList.Swipe.Invoke();
+        if(EventList.Swipe != null)
+            EventList.Swipe.Invoke();
     }
 
     private void CleanActions()

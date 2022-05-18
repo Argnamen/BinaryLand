@@ -30,8 +30,16 @@ public class PlayerCaracterButtron : MonoBehaviour
 
     private void SetCharactersButtons(bool status)
     {
-        CharactersButtons[0].gameObject.SetActive(status);
-        CharactersButtons[1].gameObject.SetActive(status);
+        if (CharactersButtons[0] != null)
+        {
+            CharactersButtons[0].gameObject.SetActive(status);
+            CharactersButtons[1].gameObject.SetActive(status);
+        }
+
+        else
+        {
+            return;
+        }
 
         ActionButtons.SetActive(false);
     }

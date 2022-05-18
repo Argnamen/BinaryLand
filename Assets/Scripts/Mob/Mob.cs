@@ -35,23 +35,19 @@ public class Mob : MonoBehaviour
             --pointMove;
         }
 
-        if(pointMove == 0)
-        {
-            MoveStart = true;
-            Move();
-        }
-
         int right = LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
         int left = LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
         int up = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
         int down = LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
 
-        //Debug.Log("Right " + right);
-        //Debug.Log("Left " + left);
-        //Debug.Log("Up " + up);
-        //Debug.Log("Down " + down);
 
-        oldMoveVector = MoveVector;
+        if (pointMove == 0 && MoveStart == false)
+        {
+            //Debug.Log(pointMove);
+
+            MoveStart = true;
+            Move();
+        }
 
         if (pointMove == right)
         {
@@ -71,6 +67,13 @@ public class Mob : MonoBehaviour
         }
         else
         {
+            //Debug.Log("Right " + right);
+            //Debug.Log("Left " + left);
+            //Debug.Log("Up " + up);
+            //Debug.Log("Down " + down);
+
+            //Debug.Log(pointMove);
+
             List<int> list = new List<int>(4) { right, left, up, down };
 
             list.Sort();

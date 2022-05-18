@@ -115,6 +115,13 @@ public class SceneLoader : MonoBehaviour
         }
         Screen.fullScreen = false;
         Screen.SetResolution(9 * 50, 20 * 50, false);
+
+        if(builderMap == null)
+        {
+            SceneManager.LoadScene(2);
+            yield break;
+        }
+
         if (builderMap.GetLength(0) > builderMap.GetLength(1))
         {
             Camera.main.transform.position = new Vector3((
@@ -186,8 +193,12 @@ public class SceneLoader : MonoBehaviour
             if (builderMap[x, y] > 12 && builderMap[x, y] != 20)
                 ArrowMapings[(int)builderMap[x, y]].gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
 
-            GameObject ins = Instantiate(ArrowMapings[(int)builderMap[x, y]], positionPrefab, Quaternion.identity, transform);
-            ins.AddComponent<RotateObject>();
+            GameObject ins = Instantiate(
+                ArrowMapings[(int)builderMap[x, y]],
+                positionPrefab,
+                ArrowMapings[(int)builderMap[x, y]].transform.rotation,
+                transform);
+            //ins.AddComponent<RotateObject>();
 
         }
         switch (builderMap[x,y])
@@ -195,9 +206,11 @@ public class SceneLoader : MonoBehaviour
             case 0:
                 navigationMap[x, y] = 0;
                 break;
+            case 10:
+                navigationMap[x, y] = -1;
+                break;
             case 1:
             case 2:
-            case 10:
             case 11:
             case 12:
             case 13:
@@ -210,6 +223,8 @@ public class SceneLoader : MonoBehaviour
             case 4:
             case 9:
             case 14:
+            case 15:
+            case 16:
                 navigationMap[x, y] = 3;
                 break;
             case 5:
