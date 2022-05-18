@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private bool isCoroutineStop = true;
 
-    public static float Speed = 1f;
+    public float Speed = 1f;
 
     private Vector3 MoveVector = Vector3.zero;
 
