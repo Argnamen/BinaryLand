@@ -13,9 +13,9 @@ public class TextWarning : MonoBehaviour
             {
                 HPBar.BossAction = Random.Range(0, 2);
                 if (HPBar.BossAction == 0)
-                    text.text = "ATTACK";
+                    text.text = "";
                 else
-                    text.text = "SHELD";
+                    text.text = "";
             }
             else
             {
