@@ -1237,6 +1237,7 @@ GameObject:
   - component: {fileID: 220016260}
   - component: {fileID: 220016262}
   - component: {fileID: 220016261}
+  - component: {fileID: 220016263}
   m_Layer: 5
   m_Name: VSImage
   m_TagString: Untagged
@@ -1301,6 +1302,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220016259}
   m_CullTransparentMesh: 1
+--- !u!114 &220016263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220016259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1773242b41146214abb4fb0692b69995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WarningText: {fileID: 1556321109}
 --- !u!1 &226116606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1526,7 @@ MonoBehaviour:
   HP: 50
   IsEvil: 1
   TextDodged: {fileID: 1798367641}
+  FillArea: {fileID: 0}
 --- !u!1 &261296207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,9 +1923,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9daf962d4d64fb94f86d16e0f3cb17f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 50
+  HP: 80
   IsEvil: 1
   TextDodged: {fileID: 1400740641}
+  FillArea: {fileID: 1058976786}
 --- !u!114 &329344993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2354,6 +2370,7 @@ MonoBehaviour:
   HP: 4
   IsEvil: 0
   TextDodged: {fileID: 0}
+  FillArea: {fileID: 0}
 --- !u!1 &473747917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,6 +2881,7 @@ MonoBehaviour:
   HP: 20
   IsEvil: 0
   TextDodged: {fileID: 674833169}
+  FillArea: {fileID: 0}
 --- !u!114 &566252719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3344,11 +3362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932c9d1d23a25294bacc3a4eb924e347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagePoints: 1
-  SheldPoints: 1
+  DamagePoints: 5
+  SheldPoints: 10
   HealPoints: 5
   UltimateDamagePoints: 2
-  EvilDamagePoints: 1
+  EvilDamagePoints: 5
 --- !u!1 &637159648
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,9 +5515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9daf962d4d64fb94f86d16e0f3cb17f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 29
+  HP: 20
   IsEvil: 0
   TextDodged: {fileID: 2072160852}
+  FillArea: {fileID: 261296207}
 --- !u!114 &1155174141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6419,6 +6438,7 @@ MonoBehaviour:
   HP: 4
   IsEvil: 0
   TextDodged: {fileID: 0}
+  FillArea: {fileID: 0}
 --- !u!1 &1400740639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6762,6 +6782,7 @@ MonoBehaviour:
   HP: 20
   IsEvil: 0
   TextDodged: {fileID: 606860732}
+  FillArea: {fileID: 0}
 --- !u!114 &1434704322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7290,7 +7311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1482dbce654844b9ba1c753cbea5d80, type: 2}
   m_sharedMaterial: {fileID: 7374927986402738804, guid: c1482dbce654844b9ba1c753cbea5d80, type: 2}
@@ -7317,7 +7338,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 1000
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7822,8 +7843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03b123ee6c86a444a134c7477b67ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputLagMicsec: 500
+  InputLagMicsec: 200
   KomboTimerSec: 5
+  DamageBonus: 2
 --- !u!1 &1651119642
 GameObject:
   m_ObjectHideFlags: 0
@@ -7877,9 +7899,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9daf962d4d64fb94f86d16e0f3cb17f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 29
+  HP: 20
   IsEvil: 0
   TextDodged: {fileID: 881589668}
+  FillArea: {fileID: 1456930220}
 --- !u!114 &1651119645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8655,11 +8678,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932c9d1d23a25294bacc3a4eb924e347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagePoints: 1
-  SheldPoints: 1
+  DamagePoints: 5
+  SheldPoints: 10
   HealPoints: 5
   UltimateDamagePoints: 2
-  EvilDamagePoints: 1
+  EvilDamagePoints: 5
 --- !u!1 &1798367639
 GameObject:
   m_ObjectHideFlags: 0

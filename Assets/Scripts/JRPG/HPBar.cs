@@ -13,6 +13,8 @@ public class HPBar : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI TextDodged;
 
+    [SerializeField] private GameObject FillArea;
+
     private float StartHP;
 
     public static int BossAction = 0;
@@ -34,7 +36,9 @@ public class HPBar : MonoBehaviour
                         slider.value = HP;
                         break;
                     case 1:
-
+                        HP = HP - ((1 / StartHP) * damage);
+                        Debug.Log(HP);
+                        slider.value = HP;
                         break;
                 }
             }
@@ -44,7 +48,7 @@ public class HPBar : MonoBehaviour
                 {
                     if (PlayerAction == 0)
                     {
-                        Damage = Random.Range(0, damage + 1);
+                        Damage = Random.Range(1, damage - 1);
                         ++PlayerAction;
                     }
                     else
@@ -58,7 +62,27 @@ public class HPBar : MonoBehaviour
                     }
                     if(Damage >= damage)
                     {
+                        Damage *= 4;
                         Krit();
+                    }
+
+                    HP = HP - ((1 / StartHP) * Damage);
+                    if (HP > 1)
+                    {
+                        HP = 1;
+                    }
+                    slider.value = HP;
+                }
+                else if (BossAction == 1)
+                {
+                    if (PlayerAction == 0)
+                    {
+                        Damage = 10;
+                        ++PlayerAction;
+                    }
+                    else
+                    {
+                        PlayerAction = 0;
                     }
 
                     HP = HP - ((1 / StartHP) * Damage);
@@ -72,10 +96,12 @@ public class HPBar : MonoBehaviour
 
             if(HP <= 0 && IsEvil)
             {
+                FillArea.SetActive(false);
                 EventList.Win.Invoke();
             }
             else if(HP <= 0)
             {
+                FillArea.SetActive(false);
                 EventList.Lose.Invoke();
             }
         }

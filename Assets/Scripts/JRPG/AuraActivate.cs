@@ -7,7 +7,9 @@ public class AuraActivate : MonoBehaviour
     [SerializeField] private bool PlayerAura, MirrorPlayerAura;
     private void Activate(bool status)
     {
-        if(TryGetComponent<SpriteRenderer>(out var spriteRenderer))
+        if(EventList.WarningText != null)
+            EventList.WarningText.Invoke(false);
+        if (TryGetComponent<SpriteRenderer>(out var spriteRenderer))
         {
             spriteRenderer.enabled = status;
         }

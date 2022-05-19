@@ -34,7 +34,7 @@ public class UINumbersControl : MonoBehaviour
         TextRound.text = round.ToString();
     }
 
-    private void Awake()
+    private void OnEnable()
     {
         scoreAction += ScoreUpdate;
         timeAction += TimeUpdate;
@@ -43,6 +43,7 @@ public class UINumbersControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        roundAction.Invoke(PlayerPrefs.GetInt("Level")+1);
         timeScale -= Time.deltaTime;
         if (PlayerMoving.isStartGame == false)
             timeScale = 999;

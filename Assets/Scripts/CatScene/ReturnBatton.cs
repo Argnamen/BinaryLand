@@ -7,6 +7,6 @@ public class ReturnBatton : MonoBehaviour
 {
     public void Return()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

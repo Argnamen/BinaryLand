@@ -91,33 +91,7 @@ public class Projectile : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if (MoveVector == Vector3.down)
-        {
-            int down = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
-            if (down == 1)
-            {
-                MoveVector = Vector3.zero;
-                Destroy(this.gameObject);
-            }
-        }
-        else if (MoveVector == Vector3.right)
-        {
-            int right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
-            if (right == 1)
-            {
-                MoveVector = Vector3.zero;
-                Destroy(this.gameObject);
-            }
-        }
-        else if (MoveVector == Vector3.left)
-        {
-            int left = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
-            if (left == 1)
-            {
-                MoveVector = Vector3.zero;
-                Destroy(this.gameObject);
-            }
-        }
+        
 
         this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + MoveVector, Speed / 32);
     }

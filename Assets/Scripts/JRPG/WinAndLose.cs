@@ -8,7 +8,7 @@ public class WinAndLose : MonoBehaviour
     public void Win()
     {
         PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Lose()

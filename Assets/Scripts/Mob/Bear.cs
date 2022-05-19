@@ -40,6 +40,7 @@ public class Bear : MonoBehaviour
                 }
                 else
                 {
+                    collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     --Heals;
                 }
             }

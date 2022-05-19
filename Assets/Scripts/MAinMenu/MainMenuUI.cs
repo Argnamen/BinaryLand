@@ -8,11 +8,11 @@ public class MainMenuUI : MonoBehaviour
     public void NewGame()
     {
         PlayerPrefs.SetInt("Level", 0);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Continue()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

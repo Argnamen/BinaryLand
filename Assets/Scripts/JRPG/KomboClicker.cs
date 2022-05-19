@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class KomboClicker : MonoBehaviour
 {
-    [SerializeField] private int InputLagMicsec = 500;
+    [SerializeField] private int InputLagMicsec = 200;
     [SerializeField] private int KomboTimerSec = 5;
+    [SerializeField] private int DamageBonus = 2;
 
     private bool ClickComplite = true;
 
@@ -23,7 +24,7 @@ public class KomboClicker : MonoBehaviour
         {
             ClickComplite = false;
 
-            DamagePoints += 5;
+            DamagePoints += DamageBonus;
 
             await Task.Delay(InputLagMicsec);
 
