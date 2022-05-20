@@ -10,6 +10,8 @@ public class JRPGGameManager : MonoBehaviour
 
     private async void WinActivate()
     {
+        EventList.Swipe = null;
+
         WinIcon.SetActive(true);
 
         EventList.SingleDamagePlayer = null;
@@ -26,6 +28,8 @@ public class JRPGGameManager : MonoBehaviour
 
     private void LoseActivate()
     {
+        EventList.Swipe = null;
+
         LoseIcon.SetActive(true);
 
         EventList.SingleDamagePlayer = null;

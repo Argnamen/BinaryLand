@@ -153,12 +153,18 @@ public class Buttons : MonoBehaviour
                         }
                         break;
                 }
+
+                if(kombo == 2)
+                {
+                    ActionList[i-1] = 30;
+                }
             }
             if (kombo == 2)
             {
                 //EventList.SingleDamage.Invoke(DamagePoints * 4);
 
-                EventList.KomboSkill.Invoke();
+                EventList.ButtonActivate.Invoke(true);
+                //EventList.KomboSkill.Invoke();
             }
             else if (kombo != 2)
             {
@@ -185,8 +191,19 @@ public class Buttons : MonoBehaviour
         InterectableUpdate(false);
         WarningActivate(false);
 
+        bool isSwipe = true;
+
         for (int i = 0; i < ActionList.Count; i++)
         {
+            if(ActionList[i] == 30)
+            {
+                EventList.KomboSkill.Invoke();
+                ActionList[i] = 0;
+                ActionList[i + 1] = 0;
+                isSwipe = false;
+
+                await Task.Delay(5 * 1000);
+            }
             switch (ActionList[i])
             {
                 case 11:
@@ -227,8 +244,10 @@ public class Buttons : MonoBehaviour
 
         ActionList.Clear();
 
-        if(EventList.Swipe != null)
+        if (EventList.Swipe != null && isSwipe)
             EventList.Swipe.Invoke();
+        else
+            isSwipe = true;
     }
 
     private void CleanActions()

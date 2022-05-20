@@ -61,6 +61,8 @@ public class PlayerMoving : MonoBehaviour
         }
     }
 
+    private static bool isLeft = false, isRight = false, isUp = false, isDown = false;
+
     public Vector3 Move(Vector2 movePoint, Animator animationController, float speed)
     {
 
@@ -70,25 +72,73 @@ public class PlayerMoving : MonoBehaviour
 
         LevelMap = SceneLoader.navigationMap;
 
-        if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<MirrorPlayer>())
+        if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<MirrorPlayer>() && !isLeft)
+        {
             MirrorPlayer.IsFinishGame = true;
-        else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<MirrorPlayer>())
+            isLeft = true;
+            isRight = false;
+            isUp = false;
+            isDown = false;
+        }
+        else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<MirrorPlayer>() && !isDown)
+        {
             MirrorPlayer.IsFinishGame = true;
-        else if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<MirrorPlayer>())
+            isDown = true;
+            isUp = false;
+            isRight = false;
+            isLeft = false;
+        }
+        else if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<MirrorPlayer>() && !isRight)
+        {
             MirrorPlayer.IsFinishGame = true;
-        else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<MirrorPlayer>())
+            isRight = true;
+            isLeft = false;
+            isUp = false;
+            isDown = false;
+        }
+        else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<MirrorPlayer>() && !isUp)
+        {
             MirrorPlayer.IsFinishGame = true;
+            isUp = true;
+            isDown = false;
+            isRight = false;
+            isLeft = false;
+        }
         else if (player.GetComponent<MirrorPlayer>())
             MirrorPlayer.IsFinishGame = false;
 
-        if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<Player>())
+        if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<Player>() && !isRight)
+        {
             Player.IsFinishGame = true;
-        else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<Player>())
+            isRight = true;
+            isLeft = false;
+            isUp = false;
+            isDown = false;
+        }
+        else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<Player>() && !isUp)
+        {
             Player.IsFinishGame = true;
-        else if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<Player>())
+            isUp = true;
+            isDown = false;
+            isRight = false;
+            isLeft = false;
+        }
+        else if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<Player>() && !isLeft)
+        {
             Player.IsFinishGame = true;
-        else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<Player>())
+            isLeft = true;
+            isRight = false;
+            isUp = false;
+            isDown = false;
+        }
+        else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<Player>() && !isDown)
+        {
             Player.IsFinishGame = true;
+            isDown = true;
+            isUp = false;
+            isRight = false;
+            isLeft = false;
+        }
         else if (player.GetComponent<Player>())
             Player.IsFinishGame = false;
 

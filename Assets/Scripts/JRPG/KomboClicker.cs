@@ -61,7 +61,10 @@ public class KomboClicker : MonoBehaviour
         this.gameObject.SetActive(false);
 
         await Task.Delay(5);
-        EventList.BattleStart.Invoke();
+        await Task.Delay(1 * 1000);
+        if (EventList.Swipe != null)
+            EventList.Swipe.Invoke();
+        //EventList.BattleStart.Invoke();
     }
 
     private async void DeactivateStartScene()

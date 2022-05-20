@@ -15,12 +15,16 @@ public class HPBar : MonoBehaviour
 
     [SerializeField] private GameObject FillArea;
 
+    [SerializeField] private bool IsKrit, IsDodge, IsMagic;
+
     private float StartHP;
 
     public static int BossAction = 0;
 
     private static int Damage;
     private static int PlayerAction = 0;
+
+    private bool IsSheld = false;
 
     private void Attack(int damage)
     {
@@ -41,6 +45,9 @@ public class HPBar : MonoBehaviour
                         slider.value = HP;
                         break;
                 }
+
+                if(damage != 0)
+                    EventList.EvilDamageText.Invoke("" + damage);
             }
             else
             {
@@ -48,24 +55,53 @@ public class HPBar : MonoBehaviour
                 {
                     if (PlayerAction == 0)
                     {
-                        Damage = Random.Range(1, damage - 1);
+                        if (IsSheld)
+                        {
+                            Damage = 0;
+                        }
+                        else
+                        {
+                            Damage = Random.Range(1, damage + 2);
+                        }
+
                         ++PlayerAction;
+
                     }
                     else
                     {
                         PlayerAction = 0;
                     }
 
-                    if(Damage == 0)
+                    if (Damage == 1)
                     {
-                        Dodge();
+                        if (IsDodge)
+                        {
+                            Damage = 0;
+                            Dodge();
+                        }
+                        else
+                            Damage = 1;
                     }
-                    if(Damage >= damage)
+                    if (Damage == damage + 1)
                     {
-                        Damage *= 4;
-                        Krit();
+                        if (IsKrit)
+                        {
+                            Damage *= 2;
+                            Krit();
+                        }
+                        else
+                        {
+                            Damage = damage;
+                        }
                     }
 
+                    if(Damage == 0)
+                    {
+                        IsSheld = false;
+                    }
+
+                    if (damage != 0)
+                        EventList.PlayerDamageText.Invoke("" + Damage);
                     HP = HP - ((1 / StartHP) * Damage);
                     if (HP > 1)
                     {
@@ -78,6 +114,7 @@ public class HPBar : MonoBehaviour
                     if (PlayerAction == 0)
                     {
                         Damage = 10;
+                        Magic();
                         ++PlayerAction;
                     }
                     else
@@ -85,6 +122,8 @@ public class HPBar : MonoBehaviour
                         PlayerAction = 0;
                     }
 
+                    if (damage != 0)
+                        EventList.PlayerDamageText.Invoke("" + Damage);
                     HP = HP - ((1 / StartHP) * Damage);
                     if (HP > 1)
                     {
@@ -109,9 +148,14 @@ public class HPBar : MonoBehaviour
 
     private void Sheld(int sheldPoints)
     {
+        if(!IsSheld)
+        {
+            IsSheld = true;
+        }
+
         if (TryGetComponent<Slider>(out var slider))
         {
-            HP = HP + ((1 / StartHP) * sheldPoints);
+            //HP = HP + ((1 / StartHP) * sheldPoints);
             //slider.value = HP;
         }
     }
@@ -127,25 +171,37 @@ public class HPBar : MonoBehaviour
 
     private async void Dodge()
     {
-        if (TextDodged != null)
+        if (EventList.DodgeTextUpdate != null)
         {
-            TextDodged.text = "Dodge";
+            EventList.DodgeTextUpdate.Invoke("Dodge");
 
             await Task.Delay(1 * 1000);
 
-            TextDodged.text = "";
+            EventList.DodgeTextUpdate.Invoke("");
         }
     }
 
     private async void Krit()
     {
-        if (TextDodged != null)
+        if (EventList.DodgeTextUpdate != null)
         {
-            TextDodged.text = "Critical";
+            EventList.DodgeTextUpdate.Invoke("Critical");
 
             await Task.Delay(1 * 1000);
 
-            TextDodged.text = "";
+            EventList.DodgeTextUpdate.Invoke("");
+        }
+    }
+
+    private async void Magic()
+    {
+        if (EventList.DodgeTextUpdate != null && IsMagic)
+        {
+            EventList.DodgeTextUpdate.Invoke("Magic");
+
+            await Task.Delay(1 * 1000);
+
+            EventList.DodgeTextUpdate.Invoke("");
         }
     }
 
