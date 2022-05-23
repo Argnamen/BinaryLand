@@ -47,6 +47,8 @@ public class MirrorPlayer : MonoBehaviour
         animator = this.GetComponent<Animator>();
         playerMove = new PlayerMoving();
 
+        animator.Play("Idle");
+
         EventList.MovePlayer += Move;
     }
 

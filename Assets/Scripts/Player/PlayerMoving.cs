@@ -227,8 +227,12 @@ public class PlayerMoving : MonoBehaviour
 
                 if (movePoint == Vector2.zero)
                 {
-                    animationController.Play("Idle");
+                    animationController.speed = 0;
                     moveVector = Vector3.zero;
+                }
+                else
+                {
+                    animationController.speed = 1;
                 }
             }
 

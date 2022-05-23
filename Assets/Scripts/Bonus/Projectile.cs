@@ -28,8 +28,16 @@ public class Projectile : MonoBehaviour
 
             if (this.transform.position == FloorPoint && (this.transform.parent.transform.localRotation.eulerAngles.z == 0 && this.transform.parent.transform.localRotation.eulerAngles.y == 0))
             {
-                int left = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
+                int left = -1;
 
+                try
+                {
+                    left = (int)LevelMap[(int)this.transform.position.x - 1, (int)this.transform.position.y];
+                }
+                catch
+                {
+
+                }
                 if (left == 0 || left >= 2)
                     MoveVector = Vector3.left;
                 else
@@ -41,8 +49,15 @@ public class Projectile : MonoBehaviour
 
             else if (this.transform.position == FloorPoint && this.transform.parent.transform.localRotation.eulerAngles.y == 180)
             {
-                int right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
+                int right = -1;
+                try
+                {
+                    right = (int)LevelMap[(int)this.transform.position.x + 1, (int)this.transform.position.y];
+                }
+                catch
+                {
 
+                }
                 Debug.Log(this.transform.parent.transform.localRotation.eulerAngles.z);
                 if (right == 0 || right >= 2)
                     MoveVector = Vector3.right;
@@ -55,7 +70,16 @@ public class Projectile : MonoBehaviour
 
             else if (this.transform.position == FloorPoint && this.transform.parent.transform.localRotation.eulerAngles.z == 90)
             {
-                int down = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
+                int down = -1;
+
+                try
+                {
+                    down = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y - 1];
+                }
+                catch
+                {
+
+                }
 
                 if (down == 0 || down >= 2)
                     MoveVector = Vector3.down;
@@ -68,7 +92,16 @@ public class Projectile : MonoBehaviour
 
             else if (this.transform.position == FloorPoint && this.transform.parent.transform.localRotation.eulerAngles.z == 270)
             {
-                int up = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
+                int up = -1;
+
+                try
+                {
+                    up = (int)LevelMap[(int)this.transform.position.x, (int)this.transform.position.y + 1];
+                }
+                catch
+                {
+
+                }
 
                 Debug.Log((int)this.transform.position.y + 1);
 

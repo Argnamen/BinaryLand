@@ -54,6 +54,8 @@ public class Player : MonoBehaviour
         animator = this.gameObject.GetComponent<Animator>();
         playerMove = new PlayerMoving();
 
+        animator.Play("Idle");
+
         EventList.MovePlayer += Move;
     }
 
