@@ -130,53 +130,56 @@ public class Buttons : MonoBehaviour
 
     private void ButtonActivate()
     {
-        if (ActionList != null && ((ActionList[0] / 10) * (ActionList[1] / 10) * (ActionList[2] / 10) == 10))
+        if (ActionList != null)
         {
-            int kombo = 0;
-
-            Debug.Log(ActionList[0] + " " + ActionList[1] + " " + ActionList[2]);
-
-            for (int i = 0; i < ActionList.Count; i++)
+            if (((ActionList[0] / 10) * (ActionList[1] / 10) * (ActionList[2] / 10)) == 10)
             {
-                switch (ActionList[i])
+                int kombo = 0;
+
+                Debug.Log(ActionList[0] + " " + ActionList[1] + " " + ActionList[2]);
+
+                for (int i = 0; i < ActionList.Count; i++)
                 {
-                    case 11:
-                        ++kombo;
-                        break;
-                    case 21:
-                        ++kombo;
-                        break;
-                    case 50:
-                        if (i != 2)
-                        {
-                            kombo = 0;
-                        }
-                        break;
-                }
+                    switch (ActionList[i])
+                    {
+                        case 11:
+                            ++kombo;
+                            break;
+                        case 21:
+                            ++kombo;
+                            break;
+                        case 50:
+                            if (i != 2)
+                            {
+                                kombo = 0;
+                            }
+                            break;
+                    }
 
-                if(kombo == 2)
+                    if (kombo == 2)
+                    {
+                        ActionList[i - 1] = 30;
+                    }
+                }
+                if (kombo == 2)
                 {
-                    ActionList[i-1] = 30;
+                    //EventList.SingleDamage.Invoke(DamagePoints * 4);
+
+                    EventList.ButtonActivate.Invoke(true);
+                    //EventList.KomboSkill.Invoke();
+                }
+                else if (kombo != 2)
+                {
+                    EventList.ButtonActivate.Invoke(true);
                 }
             }
-            if (kombo == 2)
+            else
             {
-                //EventList.SingleDamage.Invoke(DamagePoints * 4);
-
-                EventList.ButtonActivate.Invoke(true);
-                //EventList.KomboSkill.Invoke();
+                EventList.ButtonActivate.Invoke(false);
             }
-            else if (kombo != 2)
-            {
-                EventList.ButtonActivate.Invoke(true);
-            }
-        }
-        else
-        {
-            EventList.ButtonActivate.Invoke(false);
-        }
 
-        InterectableUpdate(true);
+            InterectableUpdate(true);
+        }
     }
 
     private async void ActionComplite()

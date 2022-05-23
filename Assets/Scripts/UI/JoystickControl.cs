@@ -7,7 +7,7 @@ public class JoystickControl : MonoBehaviour
     [SerializeField] private GameObject TouchPoint;
     private Vector2 TargetVector;
 
-    public static int Speed = 1;
+    public static int Speed = 2;
 
     private void Movement()
     {
