@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneJRPG.unity
     guid: 3a79a8605c96c8344b51ebceec5c9c5b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CatScene.unity
     guid: fbf523cec0999a54ba5eb20a8314a65e
   m_configObjects: {}

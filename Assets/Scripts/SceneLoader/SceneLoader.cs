@@ -15,6 +15,8 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] private GameObject FinishMenu;
 
+    private static bool IsCameraTrasform = false;
+
     private void Start()
     {
         NextLevel = PlayerPrefs.GetInt("Level");
@@ -23,6 +25,8 @@ public class SceneLoader : MonoBehaviour
     private void OnEnable()
     {
         NextLevel = PlayerPrefs.GetInt("Level");
+
+        IsCameraTrasform = true;
 
         EventList.LevelStart += GenerateScene;
         
@@ -35,6 +39,16 @@ public class SceneLoader : MonoBehaviour
     }
     private void GenerateScene(int level)
     {
+
+        if(PlayerPrefs.GetInt("Level") == 5 && kostil)
+        {
+            IsCameraTrasform = true;
+            kostil = false;
+        }
+        else
+        {
+            kostil = true;
+        }
         if (level != -1)
         {
             if (level != 2 && PlayerMoving.isStartGame)
@@ -47,7 +61,7 @@ public class SceneLoader : MonoBehaviour
                 PlayerPrefs.SetInt("Level", NextLevel);
             }
 
-            CatSceneLoad();
+            //CatSceneLoad();
 
             if(UINumbersControl.roundAction != null)
                 UINumbersControl.roundAction.Invoke(PlayerPrefs.GetInt("Level"));
@@ -76,6 +90,8 @@ public class SceneLoader : MonoBehaviour
             CatSceneActivate = true;
         }
     }
+
+    private static bool kostil = true;
     private IEnumerator LoadNextLevel(int level)
     {
         PlayerPrefs.SetInt("Level", NextLevel);
@@ -122,6 +138,36 @@ public class SceneLoader : MonoBehaviour
             yield break;
         }
 
+        if (IsCameraTrasform)
+        {
+            CameraTrasform();
+            IsCameraTrasform = false;
+        }
+
+        builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
+
+        if(builderMap == null)
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        PlayerMoving.isStartGame = true;
+
+        navigationMap = new float[builderMap.GetLength(0), builderMap.GetLength(1)];
+
+        for (int x = 0; x < builderMap.GetLength(0); x++)
+            for (int y = 0; y < builderMap.GetLength(1); y++)
+            {
+                GenerateTIle(x, y);
+            }
+
+        isStartCoroutine = false;
+
+        yield return null;
+    }
+
+    private void CameraTrasform()
+    {
         if (builderMap.GetLength(0) > builderMap.GetLength(1))
         {
             Camera.main.transform.position = new Vector3((
@@ -149,36 +195,14 @@ public class SceneLoader : MonoBehaviour
 
             if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y < 1200)
             {
-                Camera.main.orthographicSize = builderMap.GetLength(0) - ((builderMap.GetLength(0) / 2f) - 0.5f)/4f;
+                Camera.main.orthographicSize = builderMap.GetLength(0) - ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
             }
             else if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y >= 1200)
             {
-                Camera.main.orthographicSize = builderMap.GetLength(0) + ((builderMap.GetLength(0) / 2f) - 0.5f)/4f;
+                Camera.main.orthographicSize = builderMap.GetLength(0) + ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
             }
         }
-
-        builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
-
-        if(builderMap == null)
-        {
-            SceneManager.LoadScene(2);
-        }
-
-        PlayerMoving.isStartGame = true;
-
-        navigationMap = new float[builderMap.GetLength(0), builderMap.GetLength(1)];
-
-        for (int x = 0; x < builderMap.GetLength(0); x++)
-            for (int y = 0; y < builderMap.GetLength(1); y++)
-            {
-                GenerateTIle(x, y);
-            }
-
-        isStartCoroutine = false;
-
-        yield return null;
     }
-
     private void CleanScene()
     {
         foreach (Transform child in transform)
