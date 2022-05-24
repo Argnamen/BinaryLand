@@ -43,7 +43,7 @@ public class Buttons : MonoBehaviour
                 ActionListSearch(2, 1);
                 break;
         }
-        ActionMass[playerNumber - 1] = 1;
+        //ActionMass[playerNumber - 1] = 1;
 
         //ActionComplite();
         ButtonActivate();
@@ -53,7 +53,7 @@ public class Buttons : MonoBehaviour
     {
         ActionListSearch(1, 2);
 
-        ActionMass[0] = 2;
+        //ActionMass[0] = 2;
 
         //ActionComplite();
         ButtonActivate();
@@ -63,7 +63,7 @@ public class Buttons : MonoBehaviour
     {
         ActionListSearch(2, 2);
 
-        ActionMass[1] = 2;
+        //ActionMass[1] = 2;
 
         //ActionComplite();
         ButtonActivate();
@@ -77,7 +77,7 @@ public class Buttons : MonoBehaviour
 
         if (UltimateAction <= 0)
         {
-            ActionMass[0] = 3;
+            //ActionMass[0] = 3;
 
             UltimateAction = SaveUltimateAction;
         }
@@ -246,6 +246,7 @@ public class Buttons : MonoBehaviour
         //EventList.MirrorPlayerAura.Invoke(false);
 
         ActionList.Clear();
+        ActionList = new List<int>(3);
 
         if (EventList.Swipe != null && isSwipe)
             EventList.Swipe.Invoke();

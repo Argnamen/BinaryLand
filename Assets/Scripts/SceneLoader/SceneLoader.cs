@@ -39,11 +39,17 @@ public class SceneLoader : MonoBehaviour
     }
     private void GenerateScene(int level)
     {
-
-        if(PlayerPrefs.GetInt("Level") == 5 && kostil)
+        if (PlayerPrefs.GetInt("Level") + 1 == 6)
         {
             IsCameraTrasform = true;
+            SceneManager.LoadScene(3);
+        }
+
+        if (kostil)
+        {
             kostil = false;
+
+            Debug.Log(1);
         }
         else
         {
@@ -58,6 +64,8 @@ public class SceneLoader : MonoBehaviour
                 else
                     NextLevel += level;
 
+                if (PlayerPrefs.GetInt("Level") != 0)
+                    SceneManager.LoadScene(3 + PlayerPrefs.GetInt("Level"));
                 PlayerPrefs.SetInt("Level", NextLevel);
             }
 
@@ -168,20 +176,21 @@ public class SceneLoader : MonoBehaviour
 
     private void CameraTrasform()
     {
+        Debug.Log(builderMap.GetLength(0) + " " + builderMap.GetLength(1));
         if (builderMap.GetLength(0) > builderMap.GetLength(1))
         {
-            Camera.main.transform.position = new Vector3((
+            Camera.main.transform.localPosition = new Vector3((
                 builderMap.GetLength(0) / 2f) - 0.5f,
                 builderMap.GetLength(1) / 2f,
                 Camera.main.transform.position.z);
 
             if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y < 1200)
             {
-                Camera.main.orthographicSize = builderMap.GetLength(0) - ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
+                Camera.main.orthographicSize = builderMap.GetLength(0);// - ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
             }
             else if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y >= 1200)
             {
-                Camera.main.orthographicSize = builderMap.GetLength(0) + ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
+                Camera.main.orthographicSize = builderMap.GetLength(0);// + ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
             }
 
         }
@@ -193,13 +202,13 @@ public class SceneLoader : MonoBehaviour
                 Camera.main.transform.position.z);
             //Camera.main.orthographicSize = builderMap.GetLength(1) - 3f;
 
-            if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y < 1200)
+            if (Screen.height < 1400)
             {
-                Camera.main.orthographicSize = builderMap.GetLength(0) - ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
+                Camera.main.orthographicSize = builderMap.GetLength(0) - (float)((float)Screen.height / (float)Screen.width);
             }
-            else if (Camera.main.WorldToScreenPoint(Camera.main.transform.position).y >= 1200)
+            else if (Screen.height >= 1400)
             {
-                Camera.main.orthographicSize = builderMap.GetLength(0) + ((builderMap.GetLength(0) / 2f) - 0.5f) / 4f;
+                Camera.main.orthographicSize = builderMap.GetLength(0) + (float)((float)Screen.height / (float)Screen.width);
             }
         }
     }
@@ -229,10 +238,10 @@ public class SceneLoader : MonoBehaviour
         {
             case 0:
                 navigationMap[x, y] = 0;
-                break;
+                return;
             case 10:
                 navigationMap[x, y] = -1;
-                break;
+                return;
             case 1:
             case 2:
             case 11:
@@ -240,25 +249,27 @@ public class SceneLoader : MonoBehaviour
             case 13:
             case 20:
                 navigationMap[x, y] = 1;
-                break;
+                return;
             case 3:
                 navigationMap[x, y] = 2;
-                break;
+                return;
             case 4:
             case 9:
             case 14:
             case 15:
             case 16:
                 navigationMap[x, y] = 3;
-                break;
+                return;
             case 5:
             case 8:
                 navigationMap[x, y] = 4;
-                break;
+                return;
             case 6:
             case 7:
                 navigationMap[x, y] = 0;
-                break;
+                return;
         }
+
+        navigationMap[x, y] = 1;
     }
 }

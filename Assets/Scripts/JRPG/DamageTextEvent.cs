@@ -31,9 +31,9 @@ public class DamageTextEvent : MonoBehaviour
     private void OnDestroy()
     {
         if (!IsEvil)
-            EventList.PlayerDamageText += TextUpdate;
+            EventList.PlayerDamageText -= TextUpdate;
         else
-            EventList.EvilDamageText += TextUpdate;
+            EventList.EvilDamageText -= TextUpdate;
     }
 
 

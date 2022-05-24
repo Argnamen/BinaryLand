@@ -17,6 +17,7 @@ public class EventList
     public static UnityAction<bool> WarningText;
     public static UnityAction<string> DodgeTextUpdate;
     public static UnityAction<string> PlayerDamageText, EvilDamageText;
+    public static UnityAction DamageKomboText;
 
     public static UnityAction<int> SingleDamage, SingleEvilSheld, SingleSheld, SingleDamagePlayer, MassHeal;
 

@@ -13,6 +13,6 @@ public class WinAndLose : MonoBehaviour
 
     public void Lose()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }

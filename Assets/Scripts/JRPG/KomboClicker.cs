@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using TMPro;
+using DG.Tweening;
 
 public class KomboClicker : MonoBehaviour
 {
     [SerializeField] private int InputLagMicsec = 200;
     [SerializeField] private int KomboTimerSec = 5;
     [SerializeField] private int DamageBonus = 2;
+    [SerializeField] private TextMeshProUGUI DamageNumber;
 
     private bool ClickComplite = true;
 
@@ -27,6 +30,10 @@ public class KomboClicker : MonoBehaviour
             DamagePoints += DamageBonus;
 
             await Task.Delay(InputLagMicsec);
+
+            DamageNumber.text = "" + DamageBonus;
+
+            DamageNumber.gameObject.GetComponent<DamageTextAnimation>().Animation();
 
             ClickComplite = true;
 

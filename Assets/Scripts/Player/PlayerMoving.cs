@@ -51,11 +51,11 @@ public class PlayerMoving : MonoBehaviour
     public void SpeedEffect(GameObject player)
     {
         Timer -= Time.fixedDeltaTime;
-        JoystickControl.Speed = 4;
+        JoystickControl.Speed = 2;
         Debug.Log(Timer);
         if (Timer <= 0)
         {
-            JoystickControl.Speed = 2;
+            JoystickControl.Speed = 1;
             isSpeed = false;
             Timer = 1f;
         }
