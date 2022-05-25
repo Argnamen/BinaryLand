@@ -71,7 +71,7 @@ public class SceneLoader : MonoBehaviour
 
                 if (PlayerPrefs.GetInt("Level") != 0)
                 {
-                    SceneManager.LoadScene(3 + PlayerPrefs.GetInt("Level"));
+                    SceneManager.LoadScene(32);
                     return;
                 }
                 PlayerPrefs.SetInt("Level", NextLevel);

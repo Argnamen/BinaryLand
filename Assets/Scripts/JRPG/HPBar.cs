@@ -9,7 +9,7 @@ public class HPBar : MonoBehaviour
 {
     [SerializeField] private float HP = 1;
 
-    [SerializeField] private bool IsEvil;
+    [SerializeField] private int IsEvil;
 
     [SerializeField] private TextMeshProUGUI TextDodged;
 
@@ -30,7 +30,7 @@ public class HPBar : MonoBehaviour
     {
         if(TryGetComponent<Slider>(out var slider))
         {
-            if (IsEvil)
+            if (IsEvil == 1 || IsEvil == 2)
             {
                 switch (BossAction)
                 {
@@ -133,7 +133,7 @@ public class HPBar : MonoBehaviour
                 }
             }
 
-            if(HP <= 0 && IsEvil)
+            if(HP <= 0 && (IsEvil == 1|| IsEvil == 2))
             {
                 FillArea.SetActive(false);
                 EventList.Win.Invoke();
@@ -211,7 +211,7 @@ public class HPBar : MonoBehaviour
 
         HP = 1;
 
-        if (IsEvil)
+        if (IsEvil == 1|| IsEvil == 2)
         {
             EventList.SingleDamage += Attack;
         }
@@ -225,7 +225,7 @@ public class HPBar : MonoBehaviour
 
     private void OnDisable()
     {
-        if (IsEvil)
+        if (IsEvil == 1 || IsEvil == 2)
         {
             EventList.SingleDamage -= Attack;
         }
