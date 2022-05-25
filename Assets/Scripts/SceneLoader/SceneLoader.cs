@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -17,20 +18,24 @@ public class SceneLoader : MonoBehaviour
 
     private static bool IsCameraTrasform = false;
 
-    private void Start()
+    private void Awake()
     {
         NextLevel = PlayerPrefs.GetInt("Level");
+        builderMap = mapLevels.Levels(NextLevel);
+        navigationMap = mapLevels.Levels(NextLevel);
     }
 
-    private void OnEnable()
+    private async void OnEnable()
     {
-        NextLevel = PlayerPrefs.GetInt("Level");
+        //NextLevel = PlayerPrefs.GetInt("Level");
 
-        IsCameraTrasform = true;
+        CameraTrasform();
 
         EventList.LevelStart += GenerateScene;
-        
-        EventList.LevelStart.Invoke(PlayerPrefs.GetInt("Level"));
+
+        await Task.Delay(100);
+
+        EventList.LevelStart.Invoke(NextLevel);
     }
 
     private void OnDisable()
@@ -42,7 +47,7 @@ public class SceneLoader : MonoBehaviour
         if (PlayerPrefs.GetInt("Level") + 1 == 6)
         {
             IsCameraTrasform = true;
-            SceneManager.LoadScene(3);
+            //SceneManager.LoadScene(3);
         }
 
         if (kostil)
@@ -65,14 +70,17 @@ public class SceneLoader : MonoBehaviour
                     NextLevel += level;
 
                 if (PlayerPrefs.GetInt("Level") != 0)
+                {
                     SceneManager.LoadScene(3 + PlayerPrefs.GetInt("Level"));
+                    return;
+                }
                 PlayerPrefs.SetInt("Level", NextLevel);
             }
 
             //CatSceneLoad();
 
             if(UINumbersControl.roundAction != null)
-                UINumbersControl.roundAction.Invoke(PlayerPrefs.GetInt("Level"));
+                UINumbersControl.roundAction.Invoke(NextLevel);
             if(UINumbersControl.timeAction != null)
                 UINumbersControl.timeAction.Invoke(999);
 
@@ -104,7 +112,7 @@ public class SceneLoader : MonoBehaviour
     {
         PlayerPrefs.SetInt("Level", NextLevel);
         isStartCoroutine = true;
-        builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
+        builderMap = mapLevels.Levels(NextLevel);
 
         if(builderMap == null)
         {
@@ -125,7 +133,7 @@ public class SceneLoader : MonoBehaviour
                 PlayerPrefs.SetInt("Level", 0);
                 //FinishMenu.SetActive(true);
             }
-            NextLevel = PlayerPrefs.GetInt("Level");
+            //NextLevel = PlayerPrefs.GetInt("Level");
             yield return null;
         }
 
@@ -148,11 +156,11 @@ public class SceneLoader : MonoBehaviour
 
         if (IsCameraTrasform)
         {
-            CameraTrasform();
+            //CameraTrasform();
             IsCameraTrasform = false;
         }
 
-        builderMap = mapLevels.Levels(PlayerPrefs.GetInt("Level"));
+        builderMap = mapLevels.Levels(NextLevel);
 
         if(builderMap == null)
         {
@@ -176,7 +184,7 @@ public class SceneLoader : MonoBehaviour
 
     private void CameraTrasform()
     {
-        Debug.Log(builderMap.GetLength(0) + " " + builderMap.GetLength(1));
+        //Debug.Log(builderMap.GetLength(0) + " " + builderMap.GetLength(1));
         if (builderMap.GetLength(0) > builderMap.GetLength(1))
         {
             Camera.main.transform.localPosition = new Vector3((
