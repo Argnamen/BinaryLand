@@ -13,7 +13,9 @@ public class StartGame : MonoBehaviour
     public void Restart()
     {
         this.gameObject.transform.parent.gameObject.SetActive(false);
-        EventList.LevelStart.Invoke(-2);
+
+        if (EventList.LevelStart != null)
+            EventList.LevelStart.Invoke(-2);
     }
 
     private IEnumerator Load()

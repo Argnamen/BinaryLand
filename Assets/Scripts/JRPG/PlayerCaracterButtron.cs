@@ -10,7 +10,10 @@ public class PlayerCaracterButtron : MonoBehaviour
     [SerializeField] private GameObject AlternativPlayerButtons;
     public void PlayerButtons()
     {
-        EventList.PlayerAura.Invoke(true);
+        if(EventList.PlayerAura != null)
+            EventList.PlayerAura.Invoke(true);
+
+        if(EventList.MirrorPlayerAura != null)
         EventList.MirrorPlayerAura.Invoke(false);
 
         SetCharactersButtons(false);
@@ -20,7 +23,10 @@ public class PlayerCaracterButtron : MonoBehaviour
 
     public void MirrorPlayerButtons()
     {
-        EventList.PlayerAura.Invoke(false);
+        if(EventList.PlayerAura != null)
+            EventList.PlayerAura.Invoke(false);
+
+        if(EventList.MirrorPlayerAura != null)
         EventList.MirrorPlayerAura.Invoke(true);
 
         SetCharactersButtons(false);

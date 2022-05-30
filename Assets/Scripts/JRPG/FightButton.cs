@@ -13,7 +13,8 @@ public class FightButton : MonoBehaviour
 
     public void FightStart()
     {
-        EventList.BattleStart.Invoke();
+        if (EventList.BattleStart != null)
+            EventList.BattleStart.Invoke();
     }
 
     private async void DeactivateStartScene()

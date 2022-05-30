@@ -40,8 +40,12 @@ public class Spider : MonoBehaviour
         if ((collision.GetComponent<Player>() || collision.GetComponent<MirrorPlayer>()) && PlayerMoving.isStartGame)
         {
             collision.GetComponent<Animator>().Play("Fail");
-            EventList.LevelStart.Invoke(-1);
-            PlayerMoving.isStartGame = false;
+
+            if (EventList.LevelStart != null)
+            {
+                EventList.LevelStart.Invoke(-1);
+                PlayerMoving.isStartGame = false;
+            }
         }
     }
     

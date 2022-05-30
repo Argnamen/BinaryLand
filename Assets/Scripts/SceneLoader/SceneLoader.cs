@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ public class SceneLoader : MonoBehaviour
 {
     private MapLevels mapLevels = new MapLevels();
 
-    [SerializeField] private GameObject[] ArrowMapings;
+    [SerializeField] private List<GameObject> ArrowMapings;
 
     public static float[,] builderMap, navigationMap;
 
@@ -35,7 +36,8 @@ public class SceneLoader : MonoBehaviour
 
         await Task.Delay(100);
 
-        EventList.LevelStart.Invoke(NextLevel);
+        if(EventList.LevelStart != null)
+            EventList.LevelStart.Invoke(NextLevel);
     }
 
     private void OnDisable()
@@ -117,23 +119,7 @@ public class SceneLoader : MonoBehaviour
         if(builderMap == null)
         {
             CleanScene();
-            if (PlayerPrefs.HasKey("Level"))
-            {
-                if (PlayerPrefs.GetInt("Level") == 0)
-                {
-                    //FinishMenu.SetActive(true);
-                }
-                else
-                {
-                    //FinishMenu.SetActive(false);
-                }
-            }
-            else
-            {
-                PlayerPrefs.SetInt("Level", 0);
-                //FinishMenu.SetActive(true);
-            }
-            //NextLevel = PlayerPrefs.GetInt("Level");
+            
             yield return null;
         }
 
@@ -178,6 +164,8 @@ public class SceneLoader : MonoBehaviour
             }
 
         isStartCoroutine = false;
+
+        GC.Collect();
 
         yield return null;
     }
@@ -233,7 +221,7 @@ public class SceneLoader : MonoBehaviour
             Vector2 positionPrefab = new Vector2(x, y);
             if (builderMap[x, y] > 12 && builderMap[x, y] != 20)
                 ArrowMapings[(int)builderMap[x, y]].gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
-
+                
             GameObject ins = Instantiate(
                 ArrowMapings[(int)builderMap[x, y]],
                 positionPrefab,

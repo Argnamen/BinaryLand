@@ -624,6 +624,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -4912,6 +4913,207 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      NES - Binary Land JPN - Everything_16: 2476079898256518408
+      NES - Binary Land JPN - Everything_154: -4206079542100713926
+      NES - Binary Land JPN - Everything_195: 6484908955498148801
+      NES - Binary Land JPN - Everything_152: -1165703279944760168
+      NES - Binary Land JPN - Everything_173: -6249377681621094175
+      NES - Binary Land JPN - Everything_158: -1070879778330808190
+      NES - Binary Land JPN - Everything_159: -8162188333597194501
+      NES - Binary Land JPN - Everything_84: 6718711330819361423
+      NES - Binary Land JPN - Everything_141: 4233016482004630874
+      NES - Binary Land JPN - Everything_100: 4198668875795615892
+      NES - Binary Land JPN - Everything_102: -4980645936047589265
+      NES - Binary Land JPN - Everything_59: -6057231124237322146
+      NES - Binary Land JPN - Everything_14: -1255400639766836843
+      NES - Binary Land JPN - Everything_160: -5612478757905739467
+      NES - Binary Land JPN - Everything_70: 180130218646920195
+      ManGreenClick(2): -7290614608703083790
+      NES - Binary Land JPN - Everything_32: -8268600947464769944
+      ManGreenLeft(1): 3966931142029040213
+      NameGame: 4791506004599155114
+      NES - Binary Land JPN - Everything_81: 654611822979182965
+      NES - Binary Land JPN - Everything_72: 7615547782637578032
+      NES - Binary Land JPN - Everything_146: 3808662044737427342
+      NES - Binary Land JPN - Everything_126: 4116316800560066251
+      NES - Binary Land JPN - Everything_165: 2023603745412815152
+      NES - Binary Land JPN - Everything_177: -7605750134881629467
+      NES - Binary Land JPN - Everything_171: -1228706882033216747
+      NES - Binary Land JPN - Everything_198: 5925876971498377616
+      NES - Binary Land JPN - Everything_73: -4122727175832563657
+      NES - Binary Land JPN - Everything_50: -2739536416759589702
+      NES - Binary Land JPN - Everything_17: -7807325779317066854
+      NES - Binary Land JPN - Everything_43: 1480534800585753731
+      NES - Binary Land JPN - Everything_91: 5378052337001680099
+      NES - Binary Land JPN - Everything_19: 4956360553700461867
+      NES - Binary Land JPN - Everything_55: 7843050770519319576
+      NES - Binary Land JPN - Everything_184: 5021508087557819765
+      ManGreenFinal(1): -7865135227123472863
+      NES - Binary Land JPN - Everything_89: -9061471681899598029
+      ManGreenStay: 5810243788024820035
+      NES - Binary Land JPN - Everything_40: 7909917781401529071
+      NES - Binary Land JPN - Everything_51: 8288838058488863143
+      NES - Binary Land JPN - Everything_109: 6758830313458872696
+      NES - Binary Land JPN - Everything_176: -6652044400634008033
+      NES - Binary Land JPN - Everything_179: 7805266549896705554
+      NES - Binary Land JPN - Everything_175: 7214949604835287744
+      NES - Binary Land JPN - Everything_24: -25363879997403996
+      ManGreenLeft(2): -7075615306728255342
+      NES - Binary Land JPN - Everything_18: 5968137327929350572
+      NES - Binary Land JPN - Everything_36: 4614686997726652082
+      NES - Binary Land JPN - Everything_71: 1112819579551821632
+      NES - Binary Land JPN - Everything_105: -5702577893621672590
+      NES - Binary Land JPN - Everything_118: -8240006080585759423
+      NES - Binary Land JPN - Everything_74: 5244334111145253740
+      NES - Binary Land JPN - Everything_167: -1422990212847164185
+      ManGreenDown(2): 6283797042121969537
+      NES - Binary Land JPN - Everything_21: 1358680717909899305
+      NES - Binary Land JPN - Everything_107: 1004461437292457971
+      NES - Binary Land JPN - Everything_144: 122735884364172068
+      NES - Binary Land JPN - Everything_103: 4626267771849232141
+      NES - Binary Land JPN - Everything_69: 2634775824531997459
+      NES - Binary Land JPN - Everything_41: 5677256424476761498
+      NES - Binary Land JPN - Everything_88: 6032019930780694865
+      NES - Binary Land JPN - Everything_27: -1831053732765792195
+      NES - Binary Land JPN - Everything_111: -574058063902926406
+      NES - Binary Land JPN - Everything_172: 2095813558184041929
+      NES - Binary Land JPN - Everything_114: 7514026358030955917
+      NES - Binary Land JPN - Everything_108: -5599973754849653661
+      NES - Binary Land JPN - Everything_82: 4302589727614126377
+      NES - Binary Land JPN - Everything_151: -4141503158648252574
+      NES - Binary Land JPN - Everything_90: 1334555466004528194
+      NES - Binary Land JPN - Everything_60: -1749042198209325592
+      NES - Binary Land JPN - Everything_197: 7892278485310546110
+      NES - Binary Land JPN - Everything_136: -2065774524733956972
+      NES - Binary Land JPN - Everything_170: -2651101741941225861
+      NES - Binary Land JPN - Everything_166: -4690144436719118614
+      NES - Binary Land JPN - Everything_121: -3104191277698974467
+      NES - Binary Land JPN - Everything_181: -2601253702400427814
+      NES - Binary Land JPN - Everything_127: -6940568905760947567
+      NES - Binary Land JPN - Everything_125: 6178209980184370249
+      NES - Binary Land JPN - Everything_148: 3338677019975226061
+      NES - Binary Land JPN - Everything_20: -1751038236352083203
+      NES - Binary Land JPN - Everything_169: 8144610033578026982
+      NES - Binary Land JPN - Everything_119: 3671299598678218617
+      NES - Binary Land JPN - Everything_52: 6469755234221491319
+      NES - Binary Land JPN - Everything_33: 3974619912418421469
+      NES - Binary Land JPN - Everything_95: 6144202315638418452
+      ManGreenUp(2): 1070880505084156222
+      NES - Binary Land JPN - Everything_79: -1897811222076970658
+      NES - Binary Land JPN - Everything_161: 5791503231302610039
+      NES - Binary Land JPN - Everything_116: -3295799720487124038
+      NES - Binary Land JPN - Everything_117: 8251850838711740788
+      NES - Binary Land JPN - Everything_129: 1237571476059461851
+      NES - Binary Land JPN - Everything_145: 6273853755647642076
+      NES - Binary Land JPN - Everything_120: 3933254038950618964
+      NES - Binary Land JPN - Everything_64: 8733834054222598050
+      ManGreenUp(1): 3500853750154373358
+      NES - Binary Land JPN - Everything_123: -4903615499085879515
+      NES - Binary Land JPN - Everything_134: -7552591778921877146
+      NES - Binary Land JPN - Everything_150: 715973509361747415
+      NES - Binary Land JPN - Everything_155: -617623596127062411
+      NES - Binary Land JPN - Everything_174: -3713013374190313525
+      NES - Binary Land JPN - Everything_34: 9039453513705942611
+      NES - Binary Land JPN - Everything_26: -2939688535385264044
+      NES - Binary Land JPN - Everything_62: 2482308189542732392
+      NES - Binary Land JPN - Everything_133: -1135488771333408966
+      NES - Binary Land JPN - Everything_99: -4671370328317986726
+      NES - Binary Land JPN - Everything_38: -6982711729323453060
+      NES - Binary Land JPN - Everything_192: 4424087340039759040
+      NES - Binary Land JPN - Everything_124: 9108558341094267540
+      NES - Binary Land JPN - Everything_94: -4453790355958675223
+      ManGreenDown(3): 5628371518247911066
+      NES - Binary Land JPN - Everything_66: 864999265903544112
+      NES - Binary Land JPN - Everything_45: 7765797889937442898
+      NES - Binary Land JPN - Everything_49: 6025824540873377977
+      NES - Binary Land JPN - Everything_80: 1221280240406575361
+      NES - Binary Land JPN - Everything_39: -6449742937085345809
+      NES - Binary Land JPN - Everything_147: 2589944028888525020
+      NES - Binary Land JPN - Everything_157: 1647363939931461656
+      NES - Binary Land JPN - Everything_29: -6502927613414658808
+      ManGreenDown(1): 6647273937526163490
+      NES - Binary Land JPN - Everything_57: 5300322692779385893
+      ManGreenLeft(3): 7290419888840888281
+      NES - Binary Land JPN - Everything_58: -9185896463571463199
+      NES - Binary Land JPN - Everything_101: -2975754769545908014
+      NES - Binary Land JPN - Everything_97: -3323364593291923878
+      NES - Binary Land JPN - Everything_93: 9148177648484844153
+      NES - Binary Land JPN - Everything_139: 4983787840193358915
+      NES - Binary Land JPN - Everything_113: -3535527932927794947
+      NES - Binary Land JPN - Everything_164: -7759284829123839628
+      ManGreenClick(1): -6972479501186044963
+      NES - Binary Land JPN - Everything_37: 1114112646455454963
+      NES - Binary Land JPN - Everything_83: 5386733413635804049
+      NES - Binary Land JPN - Everything_63: 3949400934543004783
+      NES - Binary Land JPN - Everything_86: -19094562752745958
+      NES - Binary Land JPN - Everything_163: -928024249374506850
+      NES - Binary Land JPN - Everything_54: -3002249107425470318
+      NES - Binary Land JPN - Everything_186: 5605598311615065677
+      NES - Binary Land JPN - Everything_46: -8075241483469608769
+      NES - Binary Land JPN - Everything_196: 8444008874195467989
+      NES - Binary Land JPN - Everything_194: -7722457232629971885
+      NES - Binary Land JPN - Everything_47: -7911336267885787131
+      NES - Binary Land JPN - Everything_98: 477004977348538249
+      NES - Binary Land JPN - Everything_178: 3704992231586134236
+      NES - Binary Land JPN - Everything_142: -68445247507578798
+      NES - Binary Land JPN - Everything_22: 5099389754746045268
+      NES - Binary Land JPN - Everything_149: -4512237563354081911
+      NES - Binary Land JPN - Everything_61: -1300827040547362725
+      NES - Binary Land JPN - Everything_132: 1758371389940781015
+      NES - Binary Land JPN - Everything_187: -7751447562198537122
+      NES - Binary Land JPN - Everything_191: 8123696971360603581
+      NES - Binary Land JPN - Everything_78: -7782492671443515870
+      NES - Binary Land JPN - Everything_56: 5641545910963720941
+      NES - Binary Land JPN - Everything_190: 379915804018016466
+      NES - Binary Land JPN - Everything_23: 471771823194543547
+      NES - Binary Land JPN - Everything_140: -2019898113776679342
+      NES - Binary Land JPN - Everything_75: 1910684969193612978
+      NES - Binary Land JPN - Everything_138: 8338869465685186330
+      NES - Binary Land JPN - Everything_162: -7345891044290098682
+      NES - Binary Land JPN - Everything_168: -5867888935257600283
+      NES - Binary Land JPN - Everything_128: 9003601197237153535
+      NES - Binary Land JPN - Everything_130: 3415425946362904542
+      NES - Binary Land JPN - Everything_28: -6137714970927273546
+      NES - Binary Land JPN - Everything_44: -4295535688318408358
+      ManGreenFinal(2): 8285663218321701011
+      NES - Binary Land JPN - Everything_65: -2771842342984826607
+      NES - Binary Land JPN - Everything_76: 122052562381892983
+      NES - Binary Land JPN - Everything_67: -6075660510122289776
+      NES - Binary Land JPN - Everything_85: 4629050496093877841
+      NES - Binary Land JPN - Everything_15: -3267033450630879290
+      NES - Binary Land JPN - Everything_87: -2695600858696719324
+      NES - Binary Land JPN - Everything_153: 9176976762382962437
+      NES - Binary Land JPN - Everything_135: 3164693512428865981
+      NES - Binary Land JPN - Everything_182: -4434814924788522134
+      NES - Binary Land JPN - Everything_35: -2018339888785698123
+      NES - Binary Land JPN - Everything_92: -1017471052395911442
+      NES - Binary Land JPN - Everything_137: 7192902885789300323
+      NES - Binary Land JPN - Everything_188: -8430036497261007595
+      NES - Binary Land JPN - Everything_131: -6694933641785913220
+      NES - Binary Land JPN - Everything_185: 4326697596176296490
+      NES - Binary Land JPN - Everything_122: -8233034759598656451
+      NES - Binary Land JPN - Everything_30: -5090947662396748563
+      NES - Binary Land JPN - Everything_156: -8852596663759845613
+      NES - Binary Land JPN - Everything_143: -4936799772236044252
+      NES - Binary Land JPN - Everything_180: 2657040496811942603
+      ManGreenUp(3): 5689885839377546351
+      NES - Binary Land JPN - Everything_53: 2511737309319857842
+      NES - Binary Land JPN - Everything_42: 1076952119965251518
+      NES - Binary Land JPN - Everything_104: 5701987913110425403
+      NES - Binary Land JPN - Everything_31: -961868357385377343
+      NES - Binary Land JPN - Everything_77: 4524946235343237878
+      NES - Binary Land JPN - Everything_115: -5402250902086404838
+      NES - Binary Land JPN - Everything_96: -3529496940133120763
+      NES - Binary Land JPN - Everything_112: -7802211810856292403
+      NES - Binary Land JPN - Everything_189: -2259983248203534010
+      NES - Binary Land JPN - Everything_68: -5500280345314660255
+      NES - Binary Land JPN - Everything_193: -8918445830237460558
+      NES - Binary Land JPN - Everything_183: 6909563484311567858
+      NES - Binary Land JPN - Everything_106: -4200399501530719430
+      NES - Binary Land JPN - Everything_48: -8430324254793589044
+      NES - Binary Land JPN - Everything_25: -3125766751575758898
+      NES - Binary Land JPN - Everything_110: -5846370594958767652
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

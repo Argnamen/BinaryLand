@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreen : MonoBehaviour
 {
-    private void OnEnable()
+    private AsyncOperation asyncOperation = new AsyncOperation();
+    private void Update()
     {
         StartCoroutine(Load());
     }
 
     private IEnumerator Load()
     {
-        AsyncOperation asyncOperation = new AsyncOperation();
         if (PlayerPrefs.HasKey("Level"))
         {
             if (PlayerPrefs.GetInt("Level") == 0)

@@ -20,7 +20,8 @@ public class SceneLoader1 : MonoBehaviour
     {
         EventList.LevelStart += GenerateScene;
 
-        EventList.LevelStart.Invoke(0);
+        while (EventList.LevelStart != null)
+            EventList.LevelStart.Invoke(0);
     }
     private void GenerateScene(int level)
     {

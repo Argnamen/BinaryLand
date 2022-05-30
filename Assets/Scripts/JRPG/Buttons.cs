@@ -71,9 +71,11 @@ public class Buttons : MonoBehaviour
 
     public void UltimateAttack()
     {
-        EventList.SingleSheld.Invoke(SheldPoints);
+        if(EventList.SingleSheld != null)
+            EventList.SingleSheld.Invoke(SheldPoints);
 
-        EventList.InterectableUpdate.Invoke();
+        if (EventList.InterectableUpdate != null)
+            EventList.InterectableUpdate.Invoke();
 
         if (UltimateAction <= 0)
         {
@@ -88,8 +90,11 @@ public class Buttons : MonoBehaviour
 
     private async void EvilDamage()
     {
-        EventList.PlayerAura.Invoke(false);
-        EventList.MirrorPlayerAura.Invoke(false);
+        if(EventList.PlayerAura != null)
+            EventList.PlayerAura.Invoke(false);
+
+        if(EventList.MirrorPlayerAura != null)
+            EventList.MirrorPlayerAura.Invoke(false);
 
         await Task.Delay(1 * 500);
 
@@ -165,17 +170,20 @@ public class Buttons : MonoBehaviour
                 {
                     //EventList.SingleDamage.Invoke(DamagePoints * 4);
 
-                    EventList.ButtonActivate.Invoke(true);
+                    if(EventList.ButtonActivate != null)
+                        EventList.ButtonActivate.Invoke(true);
                     //EventList.KomboSkill.Invoke();
                 }
                 else if (kombo != 2)
-                {
-                    EventList.ButtonActivate.Invoke(true);
+
+                    if (EventList.ButtonActivate != null)
+                        EventList.ButtonActivate.Invoke(true);
                 }
-            }
+            
             else
             {
-                EventList.ButtonActivate.Invoke(false);
+                if (EventList.ButtonActivate != null)
+                    EventList.ButtonActivate.Invoke(false);
             }
 
             InterectableUpdate(true);
@@ -189,7 +197,8 @@ public class Buttons : MonoBehaviour
 
         InterectableUpdate(true);
 
-        EventList.ButtonActivate.Invoke(false);
+        if (EventList.ButtonActivate != null)
+            EventList.ButtonActivate.Invoke(false);
 
         InterectableUpdate(false);
         WarningActivate(false);

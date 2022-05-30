@@ -25,7 +25,8 @@ public class UINumbersControl : MonoBehaviour
         TextTime.text = time.ToString();
         if (time <= 0)
         {
-            EventList.LevelStart.Invoke(-1);
+            if (EventList.LevelStart != null)
+                EventList.LevelStart.Invoke(-1);
         }
     } 
 

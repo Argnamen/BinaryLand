@@ -101,7 +101,8 @@ public class HPBar : MonoBehaviour
                     }
 
                     if (damage != 0)
-                        EventList.PlayerDamageText.Invoke("" + Damage);
+                        if (EventList.PlayerDamageText != null)
+                            EventList.PlayerDamageText.Invoke("" + Damage);
                     HP = HP - ((1 / StartHP) * Damage);
                     if (HP > 1)
                     {
@@ -123,7 +124,8 @@ public class HPBar : MonoBehaviour
                     }
 
                     if (damage != 0)
-                        EventList.PlayerDamageText.Invoke("" + Damage);
+                        if (EventList.PlayerDamageText != null)
+                            EventList.PlayerDamageText.Invoke("" + Damage);
                     HP = HP - ((1 / StartHP) * Damage);
                     if (HP > 1)
                     {
@@ -136,12 +138,15 @@ public class HPBar : MonoBehaviour
             if(HP <= 0 && (IsEvil == 1|| IsEvil == 2))
             {
                 FillArea.SetActive(false);
-                EventList.Win.Invoke();
+                if(EventList.Win != null)
+                    EventList.Win.Invoke();
             }
             else if(HP <= 0)
             {
                 FillArea.SetActive(false);
-                EventList.Lose.Invoke();
+
+                if (EventList.Lose != null)
+                    EventList.Lose.Invoke();
             }
         }
     }

@@ -52,16 +52,20 @@ public class KomboClicker : MonoBehaviour
 
         this.GetComponent<Button>().enabled = true;
 
-        EventList.ButtonActivate.Invoke(false);
+        if(EventList.ButtonActivate != null)
+            EventList.ButtonActivate.Invoke(false);
 
         await Task.Delay(5);
-        EventList.WarningText.Invoke(false);
+
+        if(EventList.WarningText != null)
+            EventList.WarningText.Invoke(false);
 
         await Task.Delay(KomboTimerSec * 1000);
 
         this.GetComponent<Button>().enabled = false;
-
-        EventList.SingleDamage.Invoke(DamagePoints);
+        
+        if(EventList.SingleDamage != null)
+            EventList.SingleDamage.Invoke(DamagePoints);
 
         await Task.Delay(5);
 
@@ -78,7 +82,8 @@ public class KomboClicker : MonoBehaviour
     {
         await Task.Delay(1);
 
-        EventList.SingleDamage.Invoke(DamagePoints);
+        if(EventList.SingleDamage != null)
+            EventList.SingleDamage.Invoke(DamagePoints);
 
         this.gameObject.SetActive(false);
     }

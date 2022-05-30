@@ -37,12 +37,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private IEnumerator GameLoop()
-    {
-        yield return new WaitForSeconds(1f);
-    }
-
-    private void Awake()
+    private void OnEnable()
     {
         UINumbersControl.timeAction += EndGame;
         EventList.LevelStart += FinalLabelActivate;

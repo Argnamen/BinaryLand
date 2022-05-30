@@ -70,180 +70,183 @@ public class PlayerMoving : MonoBehaviour
 
         GameObject player = animationController.gameObject;
 
-        LevelMap = SceneLoader.navigationMap;
+        if (SceneLoader.navigationMap != null)
+        {
+            LevelMap = SceneLoader.navigationMap;
 
-        if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<MirrorPlayer>() && !isLeft)
-        {
-            MirrorPlayer.IsFinishGame = true;
-            isLeft = true;
-            isRight = false;
-            isUp = false;
-            isDown = false;
-        }
-        else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<MirrorPlayer>() && !isDown)
-        {
-            MirrorPlayer.IsFinishGame = true;
-            isDown = true;
-            isUp = false;
-            isRight = false;
-            isLeft = false;
-        }
-        else if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<MirrorPlayer>() && !isRight)
-        {
-            MirrorPlayer.IsFinishGame = true;
-            isRight = true;
-            isLeft = false;
-            isUp = false;
-            isDown = false;
-        }
-        else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<MirrorPlayer>() && !isUp)
-        {
-            MirrorPlayer.IsFinishGame = true;
-            isUp = true;
-            isDown = false;
-            isRight = false;
-            isLeft = false;
-        }
-        else if (player.GetComponent<MirrorPlayer>())
-            MirrorPlayer.IsFinishGame = false;
-
-        if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<Player>() && !isRight)
-        {
-            Player.IsFinishGame = true;
-            isRight = true;
-            isLeft = false;
-            isUp = false;
-            isDown = false;
-        }
-        else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<Player>() && !isUp)
-        {
-            Player.IsFinishGame = true;
-            isUp = true;
-            isDown = false;
-            isRight = false;
-            isLeft = false;
-        }
-        else if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<Player>() && !isLeft)
-        {
-            Player.IsFinishGame = true;
-            isLeft = true;
-            isRight = false;
-            isUp = false;
-            isDown = false;
-        }
-        else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<Player>() && !isDown)
-        {
-            Player.IsFinishGame = true;
-            isDown = true;
-            isUp = false;
-            isRight = false;
-            isLeft = false;
-        }
-        else if (player.GetComponent<Player>())
-            Player.IsFinishGame = false;
-
-        if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
-        {
-            moveVector = Vector3.zero;
-        }
-        if (isStartGame)
-        {
-            try
+            if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<MirrorPlayer>() && !isLeft)
             {
-                int right = (int)LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y];
-                int left = (int)LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y];
-                int up = (int)LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1];
-                int down = (int)LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1];
-
-                if (isGod)
-                    GodEffect(player);
-
-                if (isSpeed)
-                    SpeedEffect(player);
-
-                if (isFlight)
-                {
-                    FLightEffect();
-                }
-
-                if (movePoint.x > 71 && movePoint.x <= 100)
-                {
-                    animationController.Play("Right");
-
-                    if ((right == 0 || right >= 2) && !isFlight)
-                    {
-                        moveVector = Vector3.right;
-                    }
-                    else if (isFlight && right != -1)
-                    {
-                        moveVector = Vector3.right;
-                        FLightEffect();
-                    }
-                }
-                if (movePoint.x < -71 && movePoint.x >= -100)
-                {
-                    animationController.Play("Left");
-
-
-                    if ((left == 0 || left >= 2) && !isFlight)
-                    {
-                        moveVector = Vector3.left;
-                    }
-                    else if (isFlight && left != -1)
-                    {
-                        moveVector = Vector3.left;
-                        FLightEffect();
-                    }
-                }
-                if (movePoint.y > 71 && movePoint.y <= 100)
-                {
-                    animationController.Play("Up");
-
-
-                    if ((up == 0 || up >= 2) && !isFlight)
-                    {
-                        moveVector = Vector3.up;
-                    }
-                    else if (isFlight && up != -1)
-                    {
-                        moveVector = Vector3.up;
-                        FLightEffect();
-                    }
-                }
-                if (movePoint.y < -71 && movePoint.y >= -100)
-                {
-                    animationController.Play("Down");
-
-                    if ((down == 0 || down >= 2) && !isFlight)
-                    {
-                        moveVector = Vector3.down;
-                    }
-                    else if (isFlight && down != -1)
-                    {
-                        moveVector = Vector3.down;
-                        FLightEffect();
-                    }
-                }
-
-                if (movePoint == Vector2.zero)
-                {
-                    animationController.speed = 0;
-                    moveVector = Vector3.zero;
-                }
-                else
-                {
-                    animationController.speed = 1;
-                }
+                MirrorPlayer.IsFinishGame = true;
+                isLeft = true;
+                isRight = false;
+                isUp = false;
+                isDown = false;
             }
+            else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<MirrorPlayer>() && !isDown)
+            {
+                MirrorPlayer.IsFinishGame = true;
+                isDown = true;
+                isUp = false;
+                isRight = false;
+                isLeft = false;
+            }
+            else if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<MirrorPlayer>() && !isRight)
+            {
+                MirrorPlayer.IsFinishGame = true;
+                isRight = true;
+                isLeft = false;
+                isUp = false;
+                isDown = false;
+            }
+            else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<MirrorPlayer>() && !isUp)
+            {
+                MirrorPlayer.IsFinishGame = true;
+                isUp = true;
+                isDown = false;
+                isRight = false;
+                isLeft = false;
+            }
+            else if (player.GetComponent<MirrorPlayer>())
+                MirrorPlayer.IsFinishGame = false;
 
-            catch
+            if (LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y] == 2 && player.GetComponent<Player>() && !isRight)
+            {
+                Player.IsFinishGame = true;
+                isRight = true;
+                isLeft = false;
+                isUp = false;
+                isDown = false;
+            }
+            else if (LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1] == 2 && player.GetComponent<Player>() && !isUp)
+            {
+                Player.IsFinishGame = true;
+                isUp = true;
+                isDown = false;
+                isRight = false;
+                isLeft = false;
+            }
+            else if ((LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y] == 2) && player.GetComponent<Player>() && !isLeft)
+            {
+                Player.IsFinishGame = true;
+                isLeft = true;
+                isRight = false;
+                isUp = false;
+                isDown = false;
+            }
+            else if ((LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1] == 2) && player.GetComponent<Player>() && !isDown)
+            {
+                Player.IsFinishGame = true;
+                isDown = true;
+                isUp = false;
+                isRight = false;
+                isLeft = false;
+            }
+            else if (player.GetComponent<Player>())
+                Player.IsFinishGame = false;
+
+            if (Player.IsFinishGame && MirrorPlayer.IsFinishGame)
             {
                 moveVector = Vector3.zero;
             }
-        }
-        else
-        {
-            moveVector = Vector3.zero;
+            if (isStartGame)
+            {
+                try
+                {
+                    int right = (int)LevelMap[(int)player.transform.position.x + 1, (int)player.transform.position.y];
+                    int left = (int)LevelMap[(int)player.transform.position.x - 1, (int)player.transform.position.y];
+                    int up = (int)LevelMap[(int)player.transform.position.x, (int)player.transform.position.y + 1];
+                    int down = (int)LevelMap[(int)player.transform.position.x, (int)player.transform.position.y - 1];
+
+                    if (isGod)
+                        GodEffect(player);
+
+                    if (isSpeed)
+                        SpeedEffect(player);
+
+                    if (isFlight)
+                    {
+                        FLightEffect();
+                    }
+
+                    if (movePoint.x > 71 && movePoint.x <= 100)
+                    {
+                        animationController.Play("Right");
+
+                        if ((right == 0 || right >= 2) && !isFlight)
+                        {
+                            moveVector = Vector3.right;
+                        }
+                        else if (isFlight && right != -1)
+                        {
+                            moveVector = Vector3.right;
+                            FLightEffect();
+                        }
+                    }
+                    if (movePoint.x < -71 && movePoint.x >= -100)
+                    {
+                        animationController.Play("Left");
+
+
+                        if ((left == 0 || left >= 2) && !isFlight)
+                        {
+                            moveVector = Vector3.left;
+                        }
+                        else if (isFlight && left != -1)
+                        {
+                            moveVector = Vector3.left;
+                            FLightEffect();
+                        }
+                    }
+                    if (movePoint.y > 71 && movePoint.y <= 100)
+                    {
+                        animationController.Play("Up");
+
+
+                        if ((up == 0 || up >= 2) && !isFlight)
+                        {
+                            moveVector = Vector3.up;
+                        }
+                        else if (isFlight && up != -1)
+                        {
+                            moveVector = Vector3.up;
+                            FLightEffect();
+                        }
+                    }
+                    if (movePoint.y < -71 && movePoint.y >= -100)
+                    {
+                        animationController.Play("Down");
+
+                        if ((down == 0 || down >= 2) && !isFlight)
+                        {
+                            moveVector = Vector3.down;
+                        }
+                        else if (isFlight && down != -1)
+                        {
+                            moveVector = Vector3.down;
+                            FLightEffect();
+                        }
+                    }
+
+                    if (movePoint == Vector2.zero)
+                    {
+                        animationController.speed = 0;
+                        moveVector = Vector3.zero;
+                    }
+                    else
+                    {
+                        animationController.speed = 1;
+                    }
+                }
+
+                catch
+                {
+                    moveVector = Vector3.zero;
+                }
+            }
+            else
+            {
+                moveVector = Vector3.zero;
+            }
         }
 
         return moveVector;

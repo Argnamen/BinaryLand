@@ -27,7 +27,8 @@ public class FinishGame : MonoBehaviour
             PlayerMoving.isGod = false;
             PlayerMoving.isSpeed = false;
 
-            EventList.LevelStart.Invoke(1);
+            if(EventList.LevelStart != null)
+                EventList.LevelStart.Invoke(1);
 
             Player.isInvertMoveY = false;
             Player.isInvertMoveX = false;
